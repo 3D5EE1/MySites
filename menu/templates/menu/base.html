@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{%  static 'images/rypy.ico' %}" type="gif">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu/menu.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+  </head>
+  <body>
+    <div class="container">
+        {% block menu %}{% endblock %}
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{%  static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{%  static 'js/popper.js' %}"></script>
+    <!-- <script src="{% static 'js/bootstrap.js' %}"></script> -->
+    <script type="text/javascript" src="{% static 'js/menu/menu.js' %}"></script>
+  </body>
+</html>
+
+
+
+
+

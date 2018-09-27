@@ -1,0 +1,10 @@
+.container {
+    background: #FFFFFF;
+    margin-top: 200px;
+}
+
+.col-md-6 {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
