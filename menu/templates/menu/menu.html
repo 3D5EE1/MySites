@@ -1,22 +1,16 @@
 {% extends 'menu/base.html' %}
-{% load static %}
 
 {% block title %}
     start menu
 {% endblock %}
 
 {% block menu %}
-    <div class="row">
-        <div class="col-md-6">
-            <a href="{% url 'menu1' %}" class="menu">
-                <img src="https://placehold.it/800x400" alt="div block" class="img-thumbnail">
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a href="{% url 'menu2' %}" class="menu">
-                <img src="https://placehold.it/800x400" alt="div block" class="img-thumbnail">
-            </a>
-        </div>
+    <div class="content">
+      <div class="row">
+        <div class="block" id="img1"><a href="{% url 'menu1' %}"></a></div>
+        <div class="block" id="img2"><a href="{% url 'menu2' %}"></a></div>
+      </div>
     </div>
 {% endblock %}
+
 
