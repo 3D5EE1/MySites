@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    {% block icon %}{% endblock %}
+    {% block css %}{% endblock %}
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+  </head>
+  <body>
+    {% block start_navbar %}{% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block start_footer %}{% endblock %}
+
+    {% block js %}{% endblock %}
+  </body>
+</html>
