@@ -25,7 +25,7 @@ SECRET_KEY = 'vnkc@#d4)wi%y3yp2f-ki7_nv@qydh23@!70)n%#h601amvkly'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['python-projects-evgeny-i-gurin.cs50.io']
 
 
 # Application definition
@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'menu',
-    'art3d'
+    'art3d',
+    'cinema',
+    'company',
+    'detective',
+    'games',
+    'shop',
+    'tatoo',
 ]
 
 MIDDLEWARE = [
