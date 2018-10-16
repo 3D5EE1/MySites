@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'games',
     'shop',
     'tatoo',
+    'planets',
 ]
 
 MIDDLEWARE = [
