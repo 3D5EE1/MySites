@@ -5,9 +5,3 @@ from django.shortcuts import render
 
 def menu(request):
     return render(request, 'menu/menu.html')
-
-def menu1(request):
-    return render(request, 'menu/menu1.html')
-
-def menu2(request):
-    return render(request, 'menu/menu2.html')

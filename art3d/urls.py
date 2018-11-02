@@ -17,5 +17,5 @@ from django.urls import path
 from art3d import views
 
 urlpatterns = [
-    path('', views.art, name='art'),
+    path('', views.art, name='art3d'),
 ]

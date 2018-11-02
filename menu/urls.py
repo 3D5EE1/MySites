@@ -18,6 +18,4 @@ from menu import views
 
 urlpatterns = [
     path('', views.menu, name='menu'),
-    path('menu1', views.menu1, name='menu1'),
-    path('menu2', views.menu2, name='menu2'),
 ]
