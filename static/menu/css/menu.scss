@@ -3,6 +3,10 @@ $white-shadow: 0 0 0 10px #fff, 0 0 0 11px $blue-border;
 $hover:  $white-shadow, 0 0 25px 14px rgba(33, 143, 217, 17);
 
 @mixin picture-setting1($size) {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
   -webkit-background-size: $size;
      -moz-background-size: $size;
       -ms-background-size: $size;
@@ -33,7 +37,7 @@ $hover:  $white-shadow, 0 0 25px 14px rgba(33, 143, 217, 17);
 body {
     margin: 0;
     padding: 0;
-    background: url(http://subtlepatterns.com/patterns/concrete_seamless.png);
+    background: url(https://subtlepatterns.com/patterns/concrete_seamless.png);
 }
 
 .content {
@@ -62,19 +66,11 @@ body {
 
 
 #img1::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
   background: url(https://www.celebritycruises.co.uk/getmedia/4dd289ff-ee46-40ab-9ecf-7079a1a26089/norway-bergen.jpg?width=1700&height=900&ext=.jpg);
   @include picture-setting1(cover);
 }
 
 #img2::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
   background: url(https://drwyjmricaxm7.cloudfront.net/repository/self-guided-norway-tour-oslo-to-bergen-in-oslo-347963_crop_flip_800_450_f2f2f2_center-center.jpg);
   @include picture-setting1(cover);
 }
