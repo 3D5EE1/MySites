@@ -1,7 +1,16 @@
 ;(function () {
-    const audio = document.querySelector(`#sound`);
-    const blocks = document.getElementsByClassName('a');
-    for (let block of blocks) {
-        block.onmouseover = () => audio.play();
+	let target;
+    const info = document.querySelectorAll(`p`);
+	const mySites = document.querySelectorAll('a');
+    for (let site of mySites) {
+    	site.onmouseover = function () {
+            for (let inf of info) {
+                if (site.dataset.img === inf.dataset.img) {
+					inf.style.display = 'inline';
+				target = inf;
+                }
+			}
+		}
+		site.onmouseout = () => target.style.display = 'none';
     }
 })();
