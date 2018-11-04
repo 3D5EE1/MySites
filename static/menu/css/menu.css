@@ -1,12 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|PT+Sans");
 * {
   box-sizing: border-box; }
 
 body {
   margin: 0;
   padding: 0;
-  background: url(https://subtlepatterns.com/patterns/concrete_seamless.png); }
+  background: url(https://subtlepatterns.com/patterns/concrete_seamless.png);
+  font-family: 'Comfortaa', cursive, 'PT Sans', sans-serif, Arial;
+  font-size: 18px;
+  text-shadow: 0 1px 0 #eee, 3px 3px 3px #999; }
 
 p {
+  display: none; }
+
+.info {
   display: none; }
 
 .content {
@@ -76,6 +83,7 @@ p {
     justify-content: center; }
 
   .info {
+    display: block;
     position: relative;
     top: -70px; }
 
@@ -130,6 +138,7 @@ p {
     justify-content: center; }
 
   .info {
+    display: block;
     position: relative;
     top: -70px; }
 

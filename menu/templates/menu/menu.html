@@ -1,10 +1,22 @@
-{% extends 'menu/base.html' %}
+{% extends 'base_apps.html' %}
+{% load static %}
+
+{% block icon %}
+    <link rel="icon" href="{% static 'menu/img/menu.ico' %}" type="icon">
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'menu/css/menu.css' %}">
+{% endblock %}
 
 {% block title %}
     start menu
 {% endblock %}
 
-{% block menu %}
+
+{% block navbar %}{% endblock %}
+
+{% block content %}
     <div class="content-info">
         <div class="info">
             <p data-img="img1">инвормация о блоке номер 1</p>
@@ -28,7 +40,7 @@
         </div>
     </div>
     <div class="content">
-      <div class="block" id="img1"><a data-img="img1" href="{% url 'art3d' %}"></a></div>
+      <div class="block" id="img1"><a data-img="img1" href="{% url 'tatoo' %}"></a></div>
       <div class="block" id="img2"><a data-img="img2" href="{% url 'art3d' %}"></a></div>
       <div class="block" id="img3"><a data-img="img3" href="{% url 'art3d' %}"></a></div>
       <div class="block" id="img4"><a data-img="img4" href="{% url 'art3d' %}"></a></div>
@@ -46,7 +58,13 @@
       <div class="block" id="img16"><a data-img="img16" href="{% url 'art3d' %}"></a></div>
       <div class="block" id="img17"><a data-img="img17" href="{% url 'art3d' %}"></a></div>
       <div class="block" id="img18"><a data-img="img18" href="{% url 'art3d' %}"></a></div>
-    </div
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block js %}
+    <script src="{% static 'menu/js/menu.js' %}"></script>
 {% endblock %}
 
 
