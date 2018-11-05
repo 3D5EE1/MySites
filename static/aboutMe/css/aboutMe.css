@@ -2,52 +2,98 @@
   box-sizing: border-box; }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/brickwall.png);
-  font-family: 'Comfortaa', cursive, 'PT Sans', sans-serif, Arial;
-  font-size: 18px;
-  text-shadow: 0 1px 0 #eee, 3px 3px 3px #999; }
+    margin: 0;
+    padding: 0;
+    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/brickwall.png);
+    font-family: 'Comfortaa', cursive, 'PT Sans', sans-serif, Arial;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #eee, 3px 3px 3px #999; }
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 .content-name {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 0 auto; }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto; }
 
 h1 {
-  margin: 15px;
-  letter-spacing: 5px;
-  color: #0ABAF5; }
+    margin: 15px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #6035ff; }
 
 h3 {
-  margin: 15px;
-  text-align: center;
-  color: #456678; }
+    margin: 15px;
+    text-align: center;
+    color: #25333e; }
 
 .content {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 20px auto; }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 20px auto; }
 
-.content a {
-  font-size: 34px; }
+.photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 2px 2px 6px 2px rgba(2, 2, 2, 0.35);
+    margin: 0 7% 0 0; }
 
-.foto {
-  width: 300px;
-  height: 300px;
-  margin: 0 7% 0 0; }
-
-.foto img {
-  max-width: 100%;
-  border-radius: 20px;
-  height: auto; }
+.photo img {
+    max-width: 100%;
+    height: auto; }
 
 .info {
-  margin: 0 0 0 7%; }
+    margin: 0 0 0 7%;
+    text-align: center;
+}
 
 .contacts {
-  margin: 20% 0; }
+    margin: 40% 0; }
+
+.link {
+    display: inline-block;
+    background-size: 100%;
+    width: 50px;
+    height: 50px;
+    text-indent: -999em;
+    text-align: left;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: all .3s;
+}
+
+.link.linkedin {
+    background: url(/static/aboutMe/img/linkedin.svg);
+}
 
 /*# sourceMappingURL=aboutMe.css.map */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
