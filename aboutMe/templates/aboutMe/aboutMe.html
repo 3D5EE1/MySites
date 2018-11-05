@@ -19,11 +19,32 @@
 {% endblock %}
 
 {% block content %}
-    <h5>Hello world!!!</h5>
+    <div class="content-name">
+        <div class="name">
+            <h1>Evgeny Gurin</h1>
+            <h3>Full Stack Developer</h3>
+        </div>
+    </div>
+    <div class="content">
+        <div class="foto">
+            <img src="{% static 'aboutMe/img/evgeny.jpg' %}" alt="">
+        </div>
+        <div class="info">
+            <div class="mysite"></div>
+                <a href="https://python-projects-evgeny-i-gurin.cs50.io:8080/menu">my projects</a>
+            </div>
+            <div class="contacts">
+                <h3>contacts</h3>
+                <a href="#">linkedin</a>
+                <a href="#">github</a>
+                <a href="#">mail</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block footer %}{% endblock %}
 
 {% block js %}
-    <script src="{% static 'tatoo/aboutMe/aboutMe.js' %}"></script>
+    <script src="{% static 'aboutMe/js/aboutMe.js' %}"></script>
 {% endblock %}

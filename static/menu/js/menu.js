@@ -1,6 +1,6 @@
 ;(function () {
 	let target;
-    const info = document.querySelectorAll(`p`);
+    const info = document.querySelectorAll('p');
 	const mySites = document.querySelectorAll('a');
     for (let site of mySites) {
     	site.onmouseover = function () {

@@ -1,0 +1,64 @@
+$name-color: #0ABAF5;
+$text-color: #456678;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/brickwall.png);
+    font-family: 'Comfortaa', cursive, 'PT Sans', sans-serif, Arial;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #eee, 3px 3px 3px #999; }
+
+.content-name {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto; }
+
+h1 {
+   margin: 15px;
+   letter-spacing: 5px;
+   color: $name-color;
+}
+
+h3 {
+  margin: 15px;
+  text-align: center;
+  color: $text-color;
+}
+
+
+.content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.content a {
+  font-size: 34px;
+}
+
+.foto {
+  width: 300px;
+  height: 300px;
+  margin: 0 7% 0 0;
+}
+
+.foto img {
+    max-width: 100%;
+    border-radius: 20px;
+    height: auto;
+}
+
+.info {
+  margin: 0 0 0 7%;
+}
+
+.contacts {
+  margin: 20% 0;
+}
