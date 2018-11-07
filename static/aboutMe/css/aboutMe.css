@@ -18,9 +18,9 @@ body {
 .name h1 {
   margin: 15px;
   letter-spacing: 5px;
-  color: #6035ff; }
+  color: #283b8c; }
 .name h3 {
-  margin: 15px;
+  margin: 20px;
   text-align: center;
   color: #25333e; }
 
@@ -32,16 +32,20 @@ body {
 
 .content .photo {
   width: 300px;
-  height: 300px;
-  margin: 0 7% 0 0; }
+  margin: 0 4% 0 0; }
 
 .photo img {
   max-width: 100%;
   border-radius: 20px;
-  height: auto; }
+  height: auto;
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2); }
 
 .info {
-  margin: 0 0 0 7%; }
+  margin: 0 6% 0 4%; }
+
+.mySite {
+  margin: 50px;
+  text-align: center; }
 
 .mySite h2 a {
   text-decoration: none; }
@@ -50,38 +54,57 @@ body {
   text-decoration: underline; }
 
 .contacts {
-  margin: 20% 0; }
+  margin: 40% 0; }
 
 .contacts h3 {
   text-align: center; }
 
 .link {
+  margin: 15px;
   display: inline-block;
-  background-size: 100%;
   width: 50px;
   height: 50px;
-  text-indent: -999em;
-  text-align: left;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  margin-bottom: 5px;
   transition: all .3s; }
 
-.icon + .icon {
-  margin-left: 20px; }
-
-.link:hover {
-  margin-top: -1px;
-  margin-bottom: 1px;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); }
-
 .link.linkedin {
-  background: url("aboutMe/img/linkedin.svg"); }
+  background: url("../img/linkedin.svg"); }
 
 .link.mail {
   background: url("../img/mail.svg"); }
 
 .link.github {
   background: url("../img/github.svg"); }
+
+@keyframes link {
+  15% {
+    transform: translateX(9px); }
+  30% {
+    transform: translateX(-9px); }
+  40% {
+    transform: translateX(6px); }
+  50% {
+    transform: translateX(-6px); }
+  65% {
+    transform: translateX(3px); }
+  100% {
+    transform: translateX(0); } }
+.link:hover {
+  animation: link .6s ease;
+  animation-iteration-count: 1; }
+
+@media (max-width: 450px) {
+  .content .photo {
+    margin: 0; }
+
+  .mySite {
+    margin: 0; }
+
+  .contacts {
+    margin: 0; } }
+@media (max-width: 645px) {
+  .contacts {
+    margin: 0; } }
 
 /*# sourceMappingURL=aboutMe.css.map */

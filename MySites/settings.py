@@ -40,13 +40,15 @@ INSTALLED_APPS = [
     'aboutMe',
     'art3d',
     'cinema',
+    'comingSoon',
     'company',
     'detective',
     'games',
     'menu',
     'planets',
     'shop',
-    'tatoo',
+    'stickers',
+    'tattoo',
 ]
 
 MIDDLEWARE = [

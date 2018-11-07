@@ -88,6 +88,87 @@ p {
   @include picture-setting1(cover);
 }
 
+#img3::before {
+  background: url(https://www.celebritycruises.co.uk/getmedia/4dd289ff-ee46-40ab-9ecf-7079a1a26089/norway-bergen.jpg?width=1700&height=900&ext=.jpg);
+  @include picture-setting1(cover);
+}
+
+#img4::before {
+  background: url(https://drwyjmricaxm7.cloudfront.net/repository/self-guided-norway-tour-oslo-to-bergen-in-oslo-347963_crop_flip_800_450_f2f2f2_center-center.jpg);
+  @include picture-setting1(cover);
+}
+
+#img5::before {
+  background: url(https://www.celebritycruises.co.uk/getmedia/4dd289ff-ee46-40ab-9ecf-7079a1a26089/norway-bergen.jpg?width=1700&height=900&ext=.jpg);
+  @include picture-setting1(cover);
+}
+
+#img6::before {
+  background: url(https://drwyjmricaxm7.cloudfront.net/repository/self-guided-norway-tour-oslo-to-bergen-in-oslo-347963_crop_flip_800_450_f2f2f2_center-center.jpg);
+  @include picture-setting1(cover);
+}
+
+#img7::before {
+  background: url(https://www.celebritycruises.co.uk/getmedia/4dd289ff-ee46-40ab-9ecf-7079a1a26089/norway-bergen.jpg?width=1700&height=900&ext=.jpg);
+  @include picture-setting1(cover);
+}
+
+#img8::before {
+  background: url(https://drwyjmricaxm7.cloudfront.net/repository/self-guided-norway-tour-oslo-to-bergen-in-oslo-347963_crop_flip_800_450_f2f2f2_center-center.jpg);
+  @include picture-setting1(cover);
+}
+
+#img9::before {
+  background: url(https://www.celebritycruises.co.uk/getmedia/4dd289ff-ee46-40ab-9ecf-7079a1a26089/norway-bergen.jpg?width=1700&height=900&ext=.jpg);
+  @include picture-setting1(cover);
+}
+
+#img10::before {
+  background: url(https://drwyjmricaxm7.cloudfront.net/repository/self-guided-norway-tour-oslo-to-bergen-in-oslo-347963_crop_flip_800_450_f2f2f2_center-center.jpg);
+  @include picture-setting1(cover);
+}
+
+#img11::before {
+  background: url(https://www.celebritycruises.co.uk/getmedia/4dd289ff-ee46-40ab-9ecf-7079a1a26089/norway-bergen.jpg?width=1700&height=900&ext=.jpg);
+  @include picture-setting1(cover);
+}
+
+#img12::before {
+  background: url(https://drwyjmricaxm7.cloudfront.net/repository/self-guided-norway-tour-oslo-to-bergen-in-oslo-347963_crop_flip_800_450_f2f2f2_center-center.jpg);
+  @include picture-setting1(cover);
+}
+
+#img13::before {
+  background: url(https://www.celebritycruises.co.uk/getmedia/4dd289ff-ee46-40ab-9ecf-7079a1a26089/norway-bergen.jpg?width=1700&height=900&ext=.jpg);
+  @include picture-setting1(cover);
+}
+
+#img14::before {
+  background: url(https://drwyjmricaxm7.cloudfront.net/repository/self-guided-norway-tour-oslo-to-bergen-in-oslo-347963_crop_flip_800_450_f2f2f2_center-center.jpg);
+  @include picture-setting1(cover);
+}
+
+#img15::before {
+  background: url(https://www.celebritycruises.co.uk/getmedia/4dd289ff-ee46-40ab-9ecf-7079a1a26089/norway-bergen.jpg?width=1700&height=900&ext=.jpg);
+  @include picture-setting1(cover);
+}
+
+#img16::before {
+  background: url(https://drwyjmricaxm7.cloudfront.net/repository/self-guided-norway-tour-oslo-to-bergen-in-oslo-347963_crop_flip_800_450_f2f2f2_center-center.jpg);
+  @include picture-setting1(cover);
+}
+
+#img17::before {
+  background: url(https://www.celebritycruises.co.uk/getmedia/4dd289ff-ee46-40ab-9ecf-7079a1a26089/norway-bergen.jpg?width=1700&height=900&ext=.jpg);
+  @include picture-setting1(cover);
+}
+
+#img18::before {
+  background: url(https://drwyjmricaxm7.cloudfront.net/repository/self-guided-norway-tour-oslo-to-bergen-in-oslo-347963_crop_flip_800_450_f2f2f2_center-center.jpg);
+  @include picture-setting1(cover);
+}
+
+
 @media (max-width: 320px) {
     .content {
         max-width: 100%;
@@ -157,7 +238,85 @@ p {
         @include picture-setting3();
     }
 
+    #img3::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
 
+    #img4::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img5::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img6::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img7::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img8::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img9::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img10::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img11::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img12::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img13::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img14::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img15::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img16::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img17::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img18::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
 }
 
 @media (min-width: 1200px) {
@@ -206,6 +365,86 @@ p {
     #img2::before {
         @include picture-setting2(16deg);
         @include picture-setting3();
+    }
+
+    #img3::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img4::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img5::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img6::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img7::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img8::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img9::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img10::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img11::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img12::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img13::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img14::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img15::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img16::before {
+        @include picture-setting2(16deg);
+        @include picture-setting3();
+    }
+
+    #img17::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
+    }
+
+    #img18::before {
+      @include picture-setting2(16deg);
+      @include picture-setting3();
     }
 
 }
