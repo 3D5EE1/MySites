@@ -1,5 +1,5 @@
-$name-color: #0ABAF5;
-$text-color: #456678;
+$name-color: #6035ff;
+$text-color: #25333e;
 
 * {
     box-sizing: border-box;
@@ -17,20 +17,21 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 0 auto; }
+  margin: 0 auto;}
 
-h1 {
-   margin: 15px;
-   letter-spacing: 5px;
-   color: $name-color;
+.name {
+  h1 {
+     margin: 15px;
+     letter-spacing: 5px;
+     color: $name-color;
+  }
+
+  h3 {
+    margin: 15px;
+    text-align: center;
+    color: $text-color;
+  }
 }
-
-h3 {
-  margin: 15px;
-  text-align: center;
-  color: $text-color;
-}
-
 
 .content {
   display: flex;
@@ -39,17 +40,13 @@ h3 {
   margin: 20px auto;
 }
 
-.content a {
-  font-size: 34px;
-}
-
-.foto {
+.content .photo {
   width: 300px;
   height: 300px;
   margin: 0 7% 0 0;
 }
 
-.foto img {
+.photo img {
     max-width: 100%;
     border-radius: 20px;
     height: auto;
@@ -59,6 +56,60 @@ h3 {
   margin: 0 0 0 7%;
 }
 
+.mySite h2 a {
+  text-decoration: none;
+}
+
+.mySite h2 a:hover {
+  text-decoration: underline;
+}
+
 .contacts {
   margin: 20% 0;
 }
+
+.contacts h3 {
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+  text-indent: -999em;
+  text-align: left;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: all .3s; }
+
+.icon + .icon {
+  margin-left: 20px; }
+
+.link:hover {
+  margin-top: -1px;
+  margin-bottom: 1px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); }
+
+.link.linkedin {
+  background: url("aboutMe/img/linkedin.svg"); }
+
+.link.mail {
+  background: url("../img/mail.svg"); }
+
+.link.github {
+  background: url("../img/github.svg"); }
+
+
+
+
+
+
+
+
+
+
+
+
+

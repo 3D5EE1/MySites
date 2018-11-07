@@ -1,8 +1,13 @@
 {% extends 'base_apps.html' %}
 {% load static %}
 
+{% block meta %}
+    <meta name="description" content="Сайт-визитка разработчик Евгений Гурин.">
+    <meta name="keywords" content="Evgeny Gurin, Evgeny, Gurin, Python, Django, JS">
+{% endblock %}
+
 {% block icon %}
-    <link rel="icon" href="{% static 'aboutMe/img/rypy.ico' %}" type="icon">
+    <link rel="icon" href="{% static 'aboutMe/img/rypy.ico' %}" type="ico">
 {% endblock %}
 
 {% block css %}
@@ -15,7 +20,6 @@
 
 
 {% block navbar %}
-
 {% endblock %}
 
 {% block content %}
@@ -31,19 +35,20 @@
         </div>
         <div class="info">
             <div class="mySite">
-                <h2><a href="http://127.0.0.1:8000/menu">my projects</a></h2>
+                <h2><a href="https://python-projects-evgeny-i-gurin.cs50.io:8080/menu">my projects</a></h2>
             </div>
             <div class="contacts">
                 <h3>contacts</h3>
-                <a class="link" id="linkedin" href="https://www.linkedin.com/in/евгений-гурин-a26584172/"></a>
-                <a class="link" id="github" href="https://github.com/3D5EE1"></a>
-                <a class="link" id="mail" href="#"></a>
+                <a class="link linkedin" href="https://www.linkedin.com/in/евгений-гурин-a26584172/"></a>
+                <a class="link github" href="https://github.com/3D5EE1"></a>
+                <a class="link mail" href="#"></a>
             </div>
         </div>
     </div>
 {% endblock %}
 
-{% block footer %}{% endblock %}
+{% block footer %}
+{% endblock %}
 
 {% block js %}
     <script src="{% static 'aboutMe/js/aboutMe.js' %}"></script>

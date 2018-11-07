@@ -2,98 +2,86 @@
   box-sizing: border-box; }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/brickwall.png);
-    font-family: 'Comfortaa', cursive, 'PT Sans', sans-serif, Arial;
-    font-size: 18px;
-    text-shadow: 0 1px 0 #eee, 3px 3px 3px #999; }
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+  margin: 0;
+  padding: 0;
+  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/brickwall.png);
+  font-family: 'Comfortaa', cursive, 'PT Sans', sans-serif, Arial;
+  font-size: 18px;
+  text-shadow: 0 1px 0 #eee, 3px 3px 3px #999; }
 
 .content-name {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 0 auto; }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto; }
 
-h1 {
-    margin: 15px;
-    text-align: center;
-    letter-spacing: 5px;
-    color: #6035ff; }
-
-h3 {
-    margin: 15px;
-    text-align: center;
-    color: #25333e; }
+.name h1 {
+  margin: 15px;
+  letter-spacing: 5px;
+  color: #6035ff; }
+.name h3 {
+  margin: 15px;
+  text-align: center;
+  color: #25333e; }
 
 .content {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 20px auto; }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 20px auto; }
 
-.photo {
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 2px 2px 6px 2px rgba(2, 2, 2, 0.35);
-    margin: 0 7% 0 0; }
+.content .photo {
+  width: 300px;
+  height: 300px;
+  margin: 0 7% 0 0; }
 
 .photo img {
-    max-width: 100%;
-    height: auto; }
+  max-width: 100%;
+  border-radius: 20px;
+  height: auto; }
 
 .info {
-    margin: 0 0 0 7%;
-    text-align: center;
-}
+  margin: 0 0 0 7%; }
+
+.mySite h2 a {
+  text-decoration: none; }
+
+.mySite h2 a:hover {
+  text-decoration: underline; }
 
 .contacts {
-    margin: 40% 0; }
+  margin: 20% 0; }
+
+.contacts h3 {
+  text-align: center; }
 
 .link {
-    display: inline-block;
-    background-size: 100%;
-    width: 50px;
-    height: 50px;
-    text-indent: -999em;
-    text-align: left;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    margin-bottom: 5px;
-    transition: all .3s;
-}
+  display: inline-block;
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+  text-indent: -999em;
+  text-align: left;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: all .3s; }
+
+.icon + .icon {
+  margin-left: 20px; }
+
+.link:hover {
+  margin-top: -1px;
+  margin-bottom: 1px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); }
 
 .link.linkedin {
-    background: url(/static/aboutMe/img/linkedin.svg);
-}
+  background: url("aboutMe/img/linkedin.svg"); }
+
+.link.mail {
+  background: url("../img/mail.svg"); }
+
+.link.github {
+  background: url("../img/github.svg"); }
 
 /*# sourceMappingURL=aboutMe.css.map */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
