@@ -19,3 +19,4 @@ from tattoo import views
 urlpatterns = [
     path('', views.tattoo, name='tattoo'),
 ]
+
