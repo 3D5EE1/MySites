@@ -18,5 +18,11 @@ from aboutMe import views
 
 urlpatterns = [
     path('', views.aboutMe, name='aboutMe'),
+    path('aboutMe/_main', views.main, name='main'),
+    path('aboutMe/', views.test),
+    path('aboutMe/page<int:num>', views.test),
+    path('aboutMe/test-request', views.test_request),
+    path('aboutMe/form-handler', views.form),
+    path('aboutMe/template', views.template)
 ]
 
