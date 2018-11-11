@@ -30,5 +30,7 @@ urlpatterns = [
     path('shop', include('shop.urls')),
     path('stickers', include('stickers.urls')),
     path('tattoo', include('tattoo.urls')),
+    path('test_templates', include('test_templates.urls')),
+    path('test_models', include('test_models.urls')),
 ]
 

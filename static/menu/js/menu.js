@@ -7,10 +7,11 @@
             for (let inf of info) {
                 if (site.dataset.img === inf.dataset.img) {
 					inf.style.display = 'inline';
-				target = inf;
+					target = inf;
+				    break;
                 }
 			}
-		}
+		};
 		site.onmouseout = () => target.style.display = 'none';
     }
 })();

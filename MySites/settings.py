@@ -25,7 +25,7 @@ SECRET_KEY = 'vnkc@#d4)wi%y3yp2f-ki7_nv@qydh23@!70)n%#h601amvkly'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['python-projects-evgeny-i-gurin.cs50.io','127.0.0.1']
+ALLOWED_HOSTS = ['python-projects-evgeny-i-gurin.cs50.io', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'shop',
     'stickers',
     'tattoo',
+    'test_templates',
+    'test_models',
 ]
 
 MIDDLEWARE = [
@@ -116,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'Asia/Yekaterinburg'
 
