@@ -1,2 +1,6 @@
+pip
 django
+pytz
 psycopg2
+setuptools
+pillow

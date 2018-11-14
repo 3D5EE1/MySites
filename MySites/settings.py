@@ -94,7 +94,7 @@ DATABASES = {
         'NAME': 'MySites',
         'USER': 'MySitesAdmin',
         'PASSWORD': 'PassOfMySites',
-        'HOST': 'database',
+        'HOST': 'rypy.ru',
         'PORT': '5432',
     }
 }
