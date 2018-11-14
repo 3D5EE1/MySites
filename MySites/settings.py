@@ -91,9 +91,9 @@ WSGI_APPLICATION = 'MySites.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'MySites',
-        'USER': 'MySitesAdmin',
-        'PASSWORD': 'PassOfMySites',
+        'NAME': 'database_name',
+        'USER': 'database_user',
+        'PASSWORD': 'database_password',
         'HOST': 'rypy.ru',
         'PORT': '5432',
     }
