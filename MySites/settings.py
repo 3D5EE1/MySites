@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'MySites.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'my_site_db',
+        'NAME': 'mysite_db',
         'USER': 'admin',
         'PASSWORD': 'mega$ecretp@ss',
-        'HOST': 'database_1',
+        'HOST': 'postgres1',
         'PORT': '5432',
     }
 }
