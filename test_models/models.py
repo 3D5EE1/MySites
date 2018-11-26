@@ -24,8 +24,11 @@ class TestModels(models.Model):
         return f'{self.text_field} {self.email_field}'
 
     class Meta:
-        verbose_name = "Пример полей"
         verbose_name_plural = 'Примеры полей'
+        verbose_name = "Пример полей"
+
+
+# -----------------------------------------------------------------------------
 
 
 class Author(models.Model):
@@ -35,31 +38,34 @@ class Author(models.Model):
     date_birth = models.DateField(auto_now=False, verbose_name="дата рождения")
 
     def __str__(self):
-        return f'{self.name} {self.patronymic} {self.surname}'
+        return f'{self.surname} {self.name} {self.patronymic}'
 
     class Meta:
-        verbose_name = "Автор"
         verbose_name_plural = 'Авторы'
+        verbose_name = "Автор"
 
 
 class Book(models.Model):
     CHOICE_GENRE = (
-        ('comedy', 'комедия'),
-        ('tragedy', 'трагедия'),
-        ('drama', 'драма')
+        ('комедия', 'комедия'),
+        ('трагедия', 'трагедия'),
+        ('драма', 'драма')
     )
 
     author = models.ForeignKey(Author, on_delete=models.CASCADE, verbose_name='автор книги')
     title = models.CharField(max_length=50, verbose_name='название книги')
-    text = models.TextField(max_length=1000, verbose_name='текст')
-    genre = models.CharField(max_length=50, choices=CHOICE_GENRE, verbose_name='жанр')
+    text = models.TextField(max_length=1000, blank=True, verbose_name='текст')
+    genre = models.CharField(max_length=50, choices=CHOICE_GENRE, default='драма', verbose_name='жанр')
 
     def __str__(self):
         return f'{self.title} ... {self.author.name[0]}. {self.author.patronymic[0]}. {self.author.surname}'
 
     class Meta:
-        verbose_name = "Книга"
         verbose_name_plural = 'Книги'
+        verbose_name = "Книга"
+
+
+# -----------------------------------------------------------------------------
 
 
 class Place(models.Model):
@@ -67,11 +73,11 @@ class Place(models.Model):
     address = models.CharField(max_length=80, verbose_name='адрес ресторана')
 
     def __str__(self):
-        return f'ресторан {self.name}'
+        return f'ресторан {self.name}, по адресу {self.address}'
 
     class Meta:
-        verbose_name = "Адрес ресторана"
         verbose_name_plural = 'Адреса ресторанов'
+        verbose_name = "Адрес ресторана"
 
 
 class Restaurant(models.Model):
@@ -85,8 +91,8 @@ class Restaurant(models.Model):
         return f'{self.place.name}'
 
     class Meta:
-        verbose_name = "Ретсоран"
         verbose_name_plural = 'Рестораны'
+        verbose_name = "Ретсоран"
 
 
 class Waiter(models.Model):
@@ -94,11 +100,14 @@ class Waiter(models.Model):
     name = models.CharField(max_length=100, verbose_name='имя официанта')
 
     def __str__(self):
-        return f'{self.name} работает в  {self.restaurant}'
+        return f'{self.name}, {self.restaurant.place}'
 
     class Meta:
-        verbose_name = "Официант"
         verbose_name_plural = 'Официанты'
+        verbose_name = "Официант"
+
+
+# -----------------------------------------------------------------------------
 
 
 class Publication(models.Model):
@@ -108,9 +117,9 @@ class Publication(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = "Газета"
         verbose_name_plural = 'Газеты'
-        ordering = ('title', )
+        verbose_name = "Газета"
+        ordering = ['title']
 
 
 class Article(models.Model):
@@ -121,9 +130,9 @@ class Article(models.Model):
         return self.headline
 
     class Meta:
-        verbose_name = "Статья"
         verbose_name_plural = 'Статьи'
-        ordering = ('headline', )
+        verbose_name = "Статья"
+        ordering = ['headline']
 
 
 
