@@ -12,13 +12,13 @@ class TestModels(models.Model):
     binary_field = models.BinaryField(verbose_name='binary')
     boolean_field = models.BooleanField(verbose_name='boolean')
     char_field = models.CharField(max_length=5, verbose_name='char')
-    text_field = models.TextField(max_length=20, verbose_name='text')
+    text_field = models.TextField(max_length=20, blank=True, verbose_name='text')
     data_field = models.DateField(auto_now=False, verbose_name='data')
     data_time_field = models.DateTimeField(auto_now_add=False, verbose_name='data time')
     decimal_field = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='decimal')
     email_field = models.EmailField(verbose_name='email')
-    file_field = models.FileField(upload_to='files', verbose_name='file')
-    image_field = models.ImageField(upload_to='images', verbose_name='image')
+    file_field = models.FileField(upload_to='files', blank=True, verbose_name='file')
+    image_field = models.ImageField(upload_to='images', blank=True, verbose_name='image')
 
     def __str__(self):
         return f'{self.text_field} {self.email_field}'
