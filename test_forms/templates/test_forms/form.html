@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+
+{% if result_ok %}
+<script>
+    alert({{ result_ok }}!!!!!);
+</script>
+{% endif %}
+<h1>Добавить автора</h1>
+
+<form action="add-author/" method="post">{% csrf_token %}
+    {{ form_for_author.as_p }}
+    <input type="submit" value="Отправить">
+</form>
+<hr>
+
+<h1>Добавить статью</h1>
+<form action="add-article/" method="post">{% csrf_token %}
+    {{ form_for_article.as_p }}
+    <input type="submit" value="Отправить">
+</form>
+<hr>
+
+<h1>Контактная информация</h1>
+
+<!--{% if errors %}-->
+<!--{{ errors }}-->
+<!--{% endif %}-->
+
+<form action="/test_forms/" method="post">{% csrf_token %}
+    {{ form_contact.as_p }}
+    <input type="submit" value="Отправить">
+</form>
+<hr>
+
+</body>
+</html>
