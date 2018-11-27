@@ -1,0 +1,56 @@
+version: '3.7'
+
+services:
+
+  postgres1:
+    image: postgres:11.1
+    restart: always
+    environment:
+      - TZ=Asia/Yekaterinburg
+      - POSTGRES_DB=name_db
+      - POSTGRES_USER=name_user
+      - POSTGRES_PASSWORD=password_user
+      - PGDATA=/var/lib/postgresql/data/
+    volumes:
+      - /var/lib/postgresql/data/:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    networks:
+      - MySites_network
+
+  web:
+    build: 
+      context: .
+      dockerfile: docker/web/Dockerfile
+    restart: always
+    environment:
+      - TZ=Asia/Yekaterinburg
+    depends_on:
+      - postgres1
+    command: gunicorn -c gunicorn.conf MySites.wsgi
+    volumes:
+      - .:/MySites
+    ports:
+      - "8000:8000"
+    networks:
+      - MySites_network
+
+  nginx:
+    build: ./docker/nginx
+    restart: always
+    environment:
+      - TZ=Asia/Yekaterinburg
+    depends_on:
+      - web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./static:/var/www/static
+      - ./media:/var/www/media
+    networks:
+      - MySites_network
+
+networks:
+  MySites_network:
+    driver: bridge
