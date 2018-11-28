@@ -13,8 +13,8 @@ class Author(models.Model):
 
     name = models.CharField(max_length=200, verbose_name="Имя автора")
     surname = models.CharField(max_length=200, verbose_name='Фамилия автора')
-    city = models.CharField(choices=CHOICES_FOR_CITY, max_length=200, blank=True, verbose_name="Город",
-                            help_text='Выберите город из списка ')
+    city = models.CharField(choices=CHOICES_FOR_CITY, default='екатеринбург', max_length=200,
+                            blank=True, verbose_name="Город", help_text='Выберите город из списка ')
 
     def __str__(self):
         return f'{self.surname} {self.name}'

@@ -35,7 +35,7 @@ def file_input(request):
 
 
 # def form(request):
-#     form_for_author = forms.AuthorOneForm
+#     form_for_author = forms.AuthorForm
 #     form_for_article = forms.ArticleForm
 #     form_contact = forms.ContactForm
 #     context = {
@@ -46,9 +46,26 @@ def file_input(request):
 #     return render(request, 'test_forms/form.html', context)
 
 
+def add_author(request):
+    author_form = forms.AuthorForm(request.POST)
+    result = f'Автор успешно добавлен {request.path}'
+    if request.method == 'POST' and author_form.is_valid():
+        data = author_form.cleaned_data
+        author_form.save()
+        print(data)
+        return HttpResponse(result)
+
+
+def add_article(request):
+    article_form = forms.ArticleForm(request.POST)
+    if request.method == 'POST' and article_form.is_valid():
+        article_form.save()
+        return HttpResponse('Статья добавления!')
+
+
 class ContactFormView(generic.TemplateView):
 
-    form_for_author = forms.AuthorOneForm
+    form_for_author = forms.AuthorForm
     form_for_article = forms.ArticleForm
     form_contact = forms.ContactForm
 
@@ -74,23 +91,28 @@ class ContactFormView(generic.TemplateView):
         return render(request, 'test_forms/form.html', context)
 
 
-def author_add(request):
-    author_form = forms.AuthorOneForm(request.POST)
-    result = f'Автор успешно добавлен {request.path}'
-    if request.method == 'POST' and author_form.is_valid():
-        data = author_form.cleaned_data
-        author_form.save()
-        print(data)
-        return HttpResponse(result)
+class UrlView(generic.TemplateView):
+    form_submit_url = forms.UrlForm
 
+    def get(self, request):
+        context = {
+            'form_url': self.form_submit_url
+        }
+        return render(request, 'test_forms/url_form.html', context)
 
-def add_article(request):
-    article_form = forms.ArticleForm(request.POST)
-    if request.method == 'POST' and article_form.is_valid():
-        article_form.save()
-        return HttpResponse('Статья добавления!')
+    def post(self, request):
+        form = forms.UrlForm(request.POST)
 
-
+        if form.is_valid():
+            data = form.cleaned_data
+            print(data)
+        else:
+            print('invalid')
+            context = {
+                'form_url': form
+            }
+            return render(request, 'test_forms/url_form.html', context)
+        return HttpResponse(form.cleaned_data.items())
 
 
 

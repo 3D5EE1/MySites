@@ -17,13 +17,14 @@ from django.urls import path
 from test_forms import views
 
 urlpatterns = [
-    # path('', views.form, name='form'),
-    path('', views.ContactFormView.as_view(), name='form'),
     path('test_forms', views.test_forms, name='test_forms'),
     path('search', views.search),
     path('file-input', views.file_input),
-    path('add-author/', views.author_add),
+    # path('', views.form, name='form'),
+    path('', views.ContactFormView.as_view(), name='form'),
+    path('add-author/', views.add_author),
     path('add-article/', views.add_article),
+    path('url-form', views.UrlView.as_view()),
 ]
 
 

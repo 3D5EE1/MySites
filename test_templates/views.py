@@ -29,8 +29,8 @@ def template(request):
     context = {
         'test': 'TEXT',
         "list1": list1,
-        "name": "Alex",
-        "surname": "Jeson",
+        "name": "Evgeny",
+        "surname": "Gurin",
         "coords": {
             "x": '5',
             "y": "y coords",
