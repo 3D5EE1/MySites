@@ -6,7 +6,7 @@ ADD nginx.sh /
 ADD nginx1.conf /etc/nginx/nginx.conf
 ADD nginx2.conf /
 
-RUN echo "30 8 * * 1    root    /usr/bin/letsencrypt renew >> /var/log/letsencrypt-renew.log" >> /etc/crontab
+RUN echo "0 0 * * 1    root    /usr/bin/letsencrypt renew >> /var/log/letsencrypt-renew.log" >> /etc/crontab
 
 RUN mkdir -p /var/www/rypy
 RUN mkdir -p /var/www/media
