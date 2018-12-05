@@ -40,11 +40,11 @@
 
         <div class="row contctform">
           <div class="col-md-8 col-md-offset-2">
-            <h3>Оставьте нам свой отзыв</h3>
-            <div id="sendmessage">Ваше сообщение отправлено. Спасибо!</div>
+            <h3>Задать вопрос</h3>
+            <div id="sendmessage"></div>
             <div id="errormessage"></div>
           </div>
-          <form action="" method="post" role="form" class="contactForm">
+          <form action="message/" method="post" role="form" class="contactForm">{% csrf_token %}
             <div class="col-md-4 col-md-offset-2">
               <div class="form">
                 <div class="form-group">
@@ -106,3 +106,4 @@
 
     <script src="{% static 'comingSoon/js/contactform.js' %}"></script>
 {% endblock %}
+

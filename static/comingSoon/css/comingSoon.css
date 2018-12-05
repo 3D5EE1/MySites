@@ -5,12 +5,13 @@ body, html {
 }
 
 body {
-	background: #394864;
     font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
     font-weight: 300;
     font-size: 16px;
     color: #555;
     line-height: 1.6em;
+    background: url(../img/main-bg.jpg);
+    background-size: cover;
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
@@ -128,8 +129,6 @@ form.signup input.form-control:focus {
 #wrapper {
 	text-align: center;
 	padding: 5% 0 0 0;
-	background: url(../img/main-bg.jpg);
-    background-size: cover;
 }
 
 
@@ -149,6 +148,7 @@ h2.subtitle {
 
 /* social */
 .social {
+    margin: 60px 0 0;
     padding: 30px 0 0 0;
 }
 
@@ -168,7 +168,7 @@ h2.subtitle {
 	font-size: 48px;
 	color: #fff;
 	line-height: 1.1em;
-	margin: 40px 0 10px;
+	margin: 40px 0 50px;
 }
 
 .contctform {

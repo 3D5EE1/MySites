@@ -17,6 +17,7 @@ from django.urls import path
 from comingSoon import views
 
 urlpatterns = [
-    path('', views.comingSoon, name='comingSoon'),
+    path('', views.coming_soon, name='comingSoon'),
+    path('message/', views.message, name='message'),
 ]
 
