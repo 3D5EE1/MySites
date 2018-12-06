@@ -7,7 +7,7 @@ from coming_soon import forms
 
 
 def coming_soon(request):
-    return render(request, 'coming_soon/coming_soon.html')
+    return render(request, 'coming_soon/coming-soon.html')
 
 
 def message(request):

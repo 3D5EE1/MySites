@@ -7,13 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% block meta %}{% endblock %}
     {% block icon %}{% endblock %}
+    {% block base_css %}
+        <link rel="stylesheet" href="{% static 'templates/css/base_apps.css' %}">
+    {% endblock base_css %}
     {% block css %}{% endblock %}
     <title>
         {% block title %}{% endblock %}
     </title>
   </head>
   <body>
-    {% block navbar %}{% endblock %}
+    {% block header %}
+        <nav class="Navbar-desktop">
+            <div class="Navbar-logo">1</div>
+            <div class="Navbar-items">
+                <a href="#" class="Navbar-menu-my-sites">МОИ САЙТЫ</a>
+                <a href="#" class="Navbar-news">НОВОСТИ</a>
+                <a href="#" class="Navbar-faq">FAQ</a>
+                <a href="#" class="Navbar-look">СМОТРЕТЬ</a>
+                <a href="#" class="Navbar-forum">ФОРУМ</a>
+                <a href="#" class="Navbar-help">ПОМОЩЬ</a>
+            </div>
+            <div class="Navbar-profileItems">
+                <a href="#" class="Navbar-search">1</a>
+                <a href="#" class="Navbar-language">1</a>
+                <a href="#" class="Navbar-login">ВХОД</a>
+            </div>
+        </nav>
+    {% endblock %}
+
+    {% block navbar %}
+    {% endblock %}
 
     {% block content %}{% endblock %}
 

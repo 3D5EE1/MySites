@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
+  font-weight: 600;
+  font-size: 15px;
+  color: #b8b8b8; }
+
+a {
+  text-decoration: none; }
+
+.Navbar-desktop {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #2a2a2a; }
+  .Navbar-desktop a, .Navbar-desktop a:visited, .Navbar-desktop a:active {
+    color: #b8b8b8;
+    margin: 10px 10px; }
+  .Navbar-desktop .Navbar-logo {
+    display: inline-block; }
+  .Navbar-desktop .Navbar-items {
+    display: inline-block; }
+    .Navbar-desktop .Navbar-items .Navbar-menu-my-sites {
+      color: #e0e1e1;
+      display: inline-block;
+      text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31); }
+  .Navbar-desktop .Navbar-profileItems {
+    display: inline-block;
+    margin: 10px 10px;
+    float: right; }
+
+/*# sourceMappingURL=base_apps.css.map */
