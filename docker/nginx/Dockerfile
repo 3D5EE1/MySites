@@ -15,7 +15,8 @@ RUN mkdir -p /var/www/static
 
 RUN chown -R nginx:nginx /var/www/media
 RUN chown -R nginx:nginx /var/www/static
-RUN chmod 777 nginx.sh
+RUN chmod 777 nginx1.sh
+RUN chmod 777 nginx2.sh
 
 ENTRYPOINT ["sh", "/nginx1.sh"]
 
