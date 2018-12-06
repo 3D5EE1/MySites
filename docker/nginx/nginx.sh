@@ -12,6 +12,10 @@ echo 'перенос конфига для порта 443...'
 
 mv /nginx2.conf /etc/nginx/nginx.conf
 
-echo 'запуск rsyslog и cron, применение настроек nginx...'
+echo 'запуск rsyslog и cron...'
 
-service rsyslog start && service cron start && nginx -s reload && tail -f /var/log/syslog
+service rsyslog start && service cron start && tail -f /var/log/syslog
+
+echo 'применение изменений в настройках nginx...'
+
+nginx -s reload
