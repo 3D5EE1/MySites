@@ -2,7 +2,8 @@ FROM nginx:latest
 
 RUN apt update && apt install -y cron rsyslog letsencrypt
 
-ADD nginx.sh /
+ADD nginx1.sh /
+ADD nginx2.sh /
 ADD nginx1.conf /etc/nginx/nginx.conf
 ADD nginx2.conf /
 
@@ -16,4 +17,6 @@ RUN chown -R nginx:nginx /var/www/media
 RUN chown -R nginx:nginx /var/www/static
 RUN chmod 777 nginx.sh
 
-ENTRYPOINT ["sh", "/nginx.sh"]
+ENTRYPOINT ["sh", "/nginx1.sh"]
+
+ENTRYPOINT ["sh", "/nginx2.sh"]

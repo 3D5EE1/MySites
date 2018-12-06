@@ -18,6 +18,6 @@ from coming_soon import views
 
 urlpatterns = [
     path('', views.coming_soon, name='coming-soon'),
-    path('message', views.message),
+    path('message/', views.message),
 ]
 
