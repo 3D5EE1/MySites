@@ -17,7 +17,7 @@ from django.urls import path
 from test_forms import views
 
 urlpatterns = [
-    path('test_forms', views.test_forms, name='test_forms'),
+    path('test-forms', views.test_forms, name='test-forms'),
     path('search', views.search),
     path('file-input', views.file_input),
     # path('', views.form, name='form'),

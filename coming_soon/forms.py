@@ -1,9 +1,9 @@
 from django.forms import ModelForm
-from .models import ComingSoon
+from .models import Message
 
 
-class ComingSoonForm(ModelForm):
+class MessageForm(ModelForm):
 
     class Meta:
-        model = ComingSoon
+        model = Message
         fields = ['name', 'email', 'subject', 'message']

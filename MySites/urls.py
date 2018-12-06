@@ -18,11 +18,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('my-sites-admin/', admin.site.urls),
-    path('', include('aboutMe.urls')),
+    path('', include('about_me.urls')),
     path('account/', include('account.urls')),
     path('art3d', include('art3d.urls')),
     path('cinema', include('cinema.urls')),
-    path('comingSoon/', include('comingSoon.urls')),
+    path('coming-soon/', include('coming_soon.urls')),
     path('company', include('company.urls')),
     path('detective', include('detective.urls')),
     path('games', include('games.urls')),
@@ -31,8 +31,8 @@ urlpatterns = [
     path('shop', include('shop.urls')),
     path('stickers', include('stickers.urls')),
     path('tattoo', include('tattoo.urls')),
-    path('test_forms/', include('test_forms.urls')),
-    path('test_models', include('test_models.urls')),
-    path('test_templates/', include('test_templates.urls')),
+    path('test-forms/', include('test_forms.urls')),
+    path('test-models', include('test_models.urls')),
+    path('test-templates/', include('test_templates.urls')),
 ]
 

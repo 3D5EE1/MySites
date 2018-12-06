@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AboutmeConfig(AppConfig):
-    name = 'aboutMe'
+class AboutMeConfig(AppConfig):
+    name = 'about_me'
     verbose_name = 'Обо мне'

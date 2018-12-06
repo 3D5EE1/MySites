@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ComingsoonConfig(AppConfig):
-    name = 'comingSoon'
+class ComingSoonConfig(AppConfig):
+    name = 'coming_soon'
     verbose_name = 'скоро будет'

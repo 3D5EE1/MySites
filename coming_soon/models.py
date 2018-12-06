@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class ComingSoon(models.Model):
+class Message(models.Model):
     name = models.CharField(max_length=50, verbose_name='имя')
     email = models.EmailField(verbose_name='емейл')
     subject = models.CharField(max_length=100, verbose_name='тема')

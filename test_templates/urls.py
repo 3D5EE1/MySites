@@ -18,7 +18,6 @@ from . import views
 
 urlpatterns = [
     path('', views.test),
-    path('_main', views.main),
     path('page<int:num>', views.test),
     path('test-request', views.test_request),
     path('form-handler', views.form),
