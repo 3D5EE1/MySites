@@ -19,6 +19,8 @@ from django.urls import path, include
 urlpatterns = [
     path('my-sites-admin/', admin.site.urls),
     path('', include('about_me.urls')),
+    # первый способ path('accounts/', include('django.contrib.auth.urls')),
+    # первый способ path('accounts/profile/', include('account.urls')),
     path('account/', include('account.urls')),
     path('art3d', include('art3d.urls')),
     path('cinema', include('cinema.urls')),

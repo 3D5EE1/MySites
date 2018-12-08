@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Учетная запись rypy.ru</title>
+</head>
+<body>
+    <h2>регистрация</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ account_form.country_list }}
+        {{ user_form.first_name }}
+        {{ user_form.last_name }}
+        {{ account_form.birthday }}
+        {{ account_form.month_of_birth}}
+        {{ account_form.year_of_birth }}
+        {{ user_form.email }}
+        {{ user_form.password }}
+        {{ account_form.privacy_policy }}
+        <button type="submit">Создать учетную запись</button>
+    </form>
+
+
+    <div>
+      <form action="" method="post">{% csrf_token %}
+        <div class="form-group">
+          <input type="text" name="country_list"  placeholder="Ваше имя">
+          <div class="validation"></div>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Ваш емейл">
+          <div class="validation"></div>
+        </div>
+
+      </form>
+    </div>
+
+
+
+</body>
+</html>
+
+  <form action="" method="POST">
+
+        <input type="text" name="country_list" maxlength="100" required id="id_country_list">
+        <input type="text" name="first_name" maxlength="30" id="id_first_name">
+        <input type="text" name="last_name" maxlength="150" id="id_last_name">
+        <input type="number" name="birthday" required id="id_birthday">
+        <select name="month_of_birth" required id="id_month_of_birth">
+  <option value="" selected>---------</option>
+
+  <option value="январь">январь</option>
+
+  <option value="февраль">февраль</option>
+
+  <option value="март">март</option>
+
+  <option value="апрель">апрель</option>
+
+  <option value="май">май</option>
+
+  <option value="июнь">июнь</option>
+
+  <option value="июль">июль</option>
+
+  <option value="август">август</option>
+
+  <option value="сентябрь">сентябрь</option>
+
+  <option value="октябрь">октябрь</option>
+
+  <option value="ноябрь">ноябрь</option>
+
+  <option value="декабрь">декабрь</option>
+
+</select>
+        <input type="number" name="year_of_birth" required id="id_year_of_birth">
+        <input type="email" name="email" maxlength="254" id="id_email">
+        <input type="text" name="password" maxlength="128" required id="id_password">
+        <input type="checkbox" name="privacy_policy" id="id_privacy_policy">
+        <button type="submit">Создать учетную запись</button>
+    </form>

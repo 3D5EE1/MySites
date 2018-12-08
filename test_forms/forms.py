@@ -1,5 +1,5 @@
 from django.core.validators import URLValidator
-from django.forms import ModelForm
+from django.forms import ModelForm, Form
 from django import forms
 from .models import Author, Article
 
@@ -18,7 +18,7 @@ class ArticleForm(ModelForm):
         fields = ['author', 'title', 'text']
 
 
-class ContactForm(forms.Form):
+class ContactForm(Form):
     boolean_field = forms.NullBooleanField()
     float_field = forms.FloatField()
     name_sender = forms.CharField(max_length=100, label='Введите ваше имя')
@@ -46,7 +46,7 @@ class ContactForm(forms.Form):
 #     return value
 
 
-class UrlForm(forms.Form):
+class UrlForm(Form):
     title = forms.CharField(label='Название сайта')
     url = forms.CharField(label='Адрес сайта',)  # validators=[validate_url])
 
