@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from test_forms import forms
 from django.views import generic
+from django.views import View
 
 # Create your views here.
 
@@ -63,7 +64,7 @@ def add_article(request):
         return HttpResponse('Статья добавления!')
 
 
-class ContactFormView(generic.TemplateView):
+class ContactFormView(View):
 
     form_for_author = forms.AuthorForm
     form_for_article = forms.ArticleForm
