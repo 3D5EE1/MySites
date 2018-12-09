@@ -5,7 +5,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 
 
-class Account(models.Model):
+class UserExtended(models.Model):
 
     CHOICE_MONTH = (
         ('январь', 'январь'),
@@ -22,7 +22,7 @@ class Account(models.Model):
         ('декабрь', 'декабрь'),
     )
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='account',
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='UserExtended',
                                 verbose_name='пользователь')
     avatar = models.ImageField(upload_to='images', blank=True, height_field=120, width_field=120,
                                verbose_name='аватара', help_text='максимальный размер аватара 120х120')

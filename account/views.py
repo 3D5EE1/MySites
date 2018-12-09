@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import UserForm, AccountForm
+from .forms import UserForm, UserExtendedForm
 # Create your views here.
 
 
@@ -10,12 +10,6 @@ def login(request):
 def creation(request):
     context = {
         'user_form': UserForm(),
-        'account_form': AccountForm()
+        'user_extended_form': UserExtendedForm()
     }
     return render(request, "account/creation.html", context)
-
-
-def profile(request):
-    return render(request, "account/profile.html", {})
-
-
