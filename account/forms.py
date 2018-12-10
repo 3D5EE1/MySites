@@ -14,4 +14,5 @@ class UserExtendedForm(forms.ModelForm):
 
     class Meta:
         model = UserExtended
-        fields = ('avatar', 'country_list', 'birthday', 'month_of_birth', 'year_of_birth', 'privacy_policy',)
+        fields = ('avatar', 'country_list', 'birthday', 'month_of_birth', 'year_of_birth', 'news_and_info',
+                  'privacy_policy',)

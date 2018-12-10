@@ -21,5 +21,5 @@ urlpatterns = [
     # первый способ path('', views.profile, name="login"),
     # второй способ path('login/', auth_views.LoginView.as_view(template_name='account/login.html'), name='login'),
     path('login/', views.login, name='login'),
-    path('creation/', views.creation, name='creation'),
+    path('creation/', views.CreationView.as_view(), name='creation'),
 ]

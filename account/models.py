@@ -31,6 +31,7 @@ class UserExtended(models.Model):
                                    verbose_name='день рождения')
     month_of_birth = models.CharField(max_length=20, choices=CHOICE_MONTH, verbose_name='месяц рождения')
     year_of_birth = models.IntegerField(verbose_name='год рождения')
+    news_and_info = models.BooleanField(verbose_name='новости и информация')
     privacy_policy = models.BooleanField(verbose_name='политика конфиденциальности')
 
     def __str__(self):
