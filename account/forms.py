@@ -4,13 +4,16 @@ from .models import UserExtended
 
 
 class UserForm(forms.ModelForm):
+    email = forms.CharField(max_length=100, required=True)
+    password = forms.CharField(widget=forms.PasswordInput)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update({'placeholder': '*Отображаемое имя'})
-        self.fields['password'].widget.attrs.update({'placeholder': '*Пароль'})
+        # self.fields['password'].widget.attrs.update({'placeholder': '*Пароль'})
         self.fields['first_name'].widget.attrs.update({'placeholder': '*Имя'}, required=True)
         self.fields['last_name'].widget.attrs.update({'placeholder': '*Фамилия'}, required=True)
-        self.fields['email'].widget.attrs.update({'placeholder': '*Адрес электронной почты'}, required=True)
+        # self.fields['email'].widget.attrs.update({'placeholder': '*Адрес электронной почты'}, required=True)
 
     class Meta:
         model = User
