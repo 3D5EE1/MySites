@@ -35,7 +35,7 @@ class UserExtended(models.Model):
     privacy_policy = models.BooleanField(verbose_name='политика конфиденциальности')
 
     def __str__(self):
-        return f'{self.user.username}    {self.user.email}'
+        return f'{self.user.email}'
 
     class Meta:
         verbose_name_plural = 'дополнительные поля пользователей'

@@ -4,6 +4,13 @@ from .models import UserExtended
 
 
 class UserForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update({'placeholder': '*Отображаемое имя'})
+        self.fields['password'].widget.attrs.update({'placeholder': '*Пароль'})
+        self.fields['first_name'].widget.attrs.update({'placeholder': '*Имя'}, required=True)
+        self.fields['last_name'].widget.attrs.update({'placeholder': '*Фамилия'}, required=True)
+        self.fields['email'].widget.attrs.update({'placeholder': '*Адрес электронной почты'}, required=True)
 
     class Meta:
         model = User
@@ -11,6 +18,15 @@ class UserForm(forms.ModelForm):
 
 
 class UserExtendedForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['avatar'].widget.attrs.update({'placeholder': 'Аватар'})
+        self.fields['country_list'].widget.attrs.update({'placeholder': '*Страна'})
+        self.fields['birthday'].widget.attrs.update({'placeholder': '*День рождения'})
+        self.fields['month_of_birth'].widget.attrs.update({'placeholder': '*Месяц'})
+        self.fields['year_of_birth'].widget.attrs.update({'placeholder': '*Год'})
+        self.fields['news_and_info'].widget.attrs.update({'placeholder': 'информация'})
+        self.fields['privacy_policy'].widget.attrs.update({'placeholder': 'политика'}, required=True)
 
     class Meta:
         model = UserExtended

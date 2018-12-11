@@ -5,9 +5,9 @@ from .models import UserExtended
 
 @admin.register(UserExtended)
 class UserExtendedAdmin(admin.ModelAdmin):
-    list_display = ('__str__', )
+    list_display = ('__str__', 'user', 'country_list', 'news_and_info', 'privacy_policy')
     list_filter = ('user__email', 'user__username')
-    search_fields = ('__str__', 'user__first_name', 'user__last_name')
+    search_fields = ('user__email', 'user__username', 'country_list')
 
     class Meta:
         model = UserExtended

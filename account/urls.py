@@ -18,8 +18,11 @@ from django.contrib.auth import views as auth_views
 from account import views
 
 urlpatterns = [
-    # первый способ path('', views.profile, name="login"),
-    # второй способ path('login/', auth_views.LoginView.as_view(template_name='account/login.html'), name='login'),
-    path('login/', views.login, name='login'),
-    path('creation/', views.CreationView.as_view(), name='creation'),
+    # path('', views.profile, name="login"),  # первый способ
+    # path('login/', auth_views.LoginView.as_view(template_name='account/login.html'), name='login'),  # второй способ
+    path('', views.home, name='home'),
+    path('login/', auth_views.LoginView.as_view(template_name='account/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='/account/'), name='logout'),
+    path('auth-app/', views.auth_app, name='auth-app'),
+    # path('creation/', views.CreationView.as_view(), name='creation'),
 ]
