@@ -32,12 +32,10 @@ def auth_app_sign_up(request):
             new_user_extended.user = new_user
             new_user_extended.save()
 
-            user = authenticate(
+            login(request, authenticate(
                 username=user_form.cleaned_data['username'],
                 password=user_form.cleaned_data['password'],
-            )
-
-            login(request, user)
+            ))
 
             return redirect(auth_app_home)
 
