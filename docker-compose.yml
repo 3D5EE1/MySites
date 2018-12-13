@@ -45,7 +45,6 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    command: echo 'применение изменений в настройках nginx...' && nginx -s reload
     volumes:
       - ./static:/var/www/static
       - ./media:/var/www/media
