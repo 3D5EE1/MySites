@@ -14,16 +14,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
+from account import views
 from django.contrib.auth import views as auth_views
-from test_account import views
 
 urlpatterns = [
+    path('login/', views.Login.as_view(), name='login'),
+    path('home/', views.home, name='home'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='menu'), name='logout'),
     # path('', views.profile, name="login"),  # первый способ
-    # path('login/', auth_views.LoginView.as_view(template_name='test_account/login.html'), name='login'),  # второй способ
-    path('', views.home, name='home'),
-    path('auth-app/login/', auth_views.LoginView.as_view(template_name='account/login.html'), name='login'),
-    path('auth-app/logout/', auth_views.LogoutView.as_view(next_page='/test_account/'), name='logout'),
-    path('auth-app/', views.auth_app_home, name='auth-app-home'),
-    path('auth-app/sign-up', views.auth_app_sign_up, name='auth-app-sign-up'),
+    # path('login/', auth_views.LoginView.as_view(template_name='test_account/login1.html'), name='login'),  # второй способ
+    # path('', views.home, name='home'),
+    # path('auth-app/login/', auth_views.LoginView.as_view(template_name='test_account/login1.html'), name='login'),
+    # path('auth-app/logout/', auth_views.LogoutView.as_view(next_page='/test_account/'), name='logout'),
+    # path('auth-app/', views.auth_app_home, name='auth-app-home'),
+    # path('auth-app/sign-up', views.auth_app_sign_up, name='auth-app-sign-up'),
     # path('creation/', views.CreationView.as_view(), name='creation'),
 ]
+
+
+

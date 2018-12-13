@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login2</title>
+</head>
+<body>
+    <h2>login2</h2>
+    <form action="" method="POST">{% csrf_token %}
+        <div class="auth">
+            <label for="">
+                <input type="email" name='email' placeholder="email" required>
+            </label>
+        </div>
+        {{ login_error }}
+        <div class="auth">
+            <label for="">
+                <input type="password" name='password' placeholder="Пароль" required>
+            </label>
+        </div>
+        <button type="submit">Вход</button>
+    </form>
+</body>
+</html>
