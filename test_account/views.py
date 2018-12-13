@@ -11,7 +11,7 @@ def home(request):
     return redirect(auth_app_home)
 
 
-@login_required(login_url='/account/auth-app/login')
+@login_required(login_url='/test_account/auth-app/login')
 def auth_app_home(request):
     return render(request, 'account/home.html')
 
@@ -45,7 +45,7 @@ def auth_app_sign_up(request):
 
 
 # def login(request):
-#     return render(request, 'account/login.html', {})
+#     return render(request, 'test_account/login.html', {})
 #
 #
 # class CreationView(View):
@@ -55,7 +55,7 @@ def auth_app_sign_up(request):
 #     }
 #
 #     def get(self, request):
-#         return render(request, "account/creation.html", self.context)
+#         return render(request, "test_account/creation.html", self.context)
 #
 #     def post(self, request):
 #
@@ -70,4 +70,4 @@ def auth_app_sign_up(request):
 #             user_form.save()
 #             return redirect('home')
 #         else:
-#             return render(request, "account/creation.html", self.context)
+#             return render(request, "test_account/creation.html", self.context)
