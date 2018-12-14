@@ -30,7 +30,7 @@ class MyUserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(unique=True, null=True)
+    email = models.EmailField(unique=True, null=True, verbose_name='Адрес электронной почты')
     is_staff = models.BooleanField(_('staff status'), default=False,)
     is_active = models.BooleanField(_('active'), default=True, )
 
