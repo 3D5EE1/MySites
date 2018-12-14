@@ -7,12 +7,14 @@
 <body>
     <h2>login2</h2>
     <form action="" method="POST">{% csrf_token %}
+        <div>
+            {{ login_error }}
+        </div>
         <div class="auth">
             <label for="">
-                <input type="email" name='email' placeholder="email" required>
+                <input type="email" name='email' placeholder="Адрес электронной почты" required>
             </label>
         </div>
-        {{ login_error }}
         <div class="auth">
             <label for="">
                 <input type="password" name='password' placeholder="Пароль" required>

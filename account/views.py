@@ -1,59 +1,44 @@
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, render_to_response
-from django.contrib.auth import authenticate, login
 from django.views import View
-
-# Create your views here.
 from django.template.context_processors import csrf
-
-
-@login_required(login_url='/account/login')
-def profile(request):
-    return redirect('')
+# Create your views here.
 
 
 def home(request):
     return render(request, 'account/home.html')
 
 
-class Login(View):
+def login_redirect(request, site_redirect='menu'):
     context = {}
+    context.update(csrf(request))
 
-    def get(self, request):
-        return render(request, 'account/login.html', self.context)
-
-    def post(self, reguest):
-        self.context.update(csrf(reguest))
-        if reguest.POST:
-            email = reguest.POST.get('email')
-            password = reguest.POST.get('password')
-            user = auth.authenticate(email=email, password=password)
-            if user is not None:
-                auth.login(reguest, user)
-                return redirect(home)
-            else:
-                self.context['login_error'] = 'Пользователь не найден'
-                return render_to_response('account/login.html', self.context)
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        user = auth.authenticate(email=email, password=password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect(site_redirect)
         else:
-            return render_to_response('account/login.html', self.context)
+            context['login_error'] = 'Пожалуйста, введите корректные адрес электронной почты и пароль учётной записи.' \
+                                     ' Оба поля могут быть чувствительны к регистру.'
+            return render_to_response('account/login.html', context)
+    else:
+        return render_to_response('account/login.html', context)
 
 
+# @login_required(login_url='/account/login')
+# def profile(request):
+#     return redirect('')
+#
+#
 
 
-
-
-
-
-
-
-# from django.shortcuts import render, redirect
-# from django.views import View
 # from .forms import UserForm, UserExtendedForm
 # from django.contrib.auth.decorators import login_required
 # from django.contrib.auth.models import User
-# from django.contrib.auth import authenticate, login
-# # Create your views here.
 #
 #
 # def home(request):
@@ -89,8 +74,6 @@ class Login(View):
 #             return redirect(auth_app_home)
 #
 #     return render(request, 'test_account/../../account/templates/account/sign_up.html', context)
-
-
 
 
 # def login(request):

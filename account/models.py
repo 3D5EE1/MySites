@@ -1,5 +1,5 @@
-from django.contrib.auth.models import BaseUserManager
 from django.db import models
+from django.contrib.auth.models import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.utils.translation import ugettext_lazy as _
@@ -30,7 +30,8 @@ class MyUserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(unique=True, null=True, verbose_name='Адрес электронной почты')
+    email = models.EmailField(unique=True, null=True, verbose_name='адрес электронной почты')
+    username = models.CharField(max_length=100, unique=True, null=True, verbose_name='пользователь')
     is_staff = models.BooleanField(_('staff status'), default=False,)
     is_active = models.BooleanField(_('active'), default=True, )
 
@@ -72,10 +73,12 @@ class UserExtended(models.Model):
     # month_of_birth = models.CharField(max_length=20, choices=CHOICE_MONTH, verbose_name='месяц рождения')
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='UserExtended',
-                                verbose_name='пользователь')
+                                verbose_name='электронная почта')
     avatar = models.ImageField(upload_to='images', blank=True, height_field=120, width_field=120,
                                verbose_name='аватара', help_text='максимальный размер аватара 120х120')
     country_list = models.CharField(max_length=100, verbose_name='страна пользователя')
+    first_name = models.CharField(max_length=100, verbose_name='имя пользователя')
+    last_name = models.CharField(max_length=100, verbose_name='фамилия пользователя')
     birthday = models.IntegerField(verbose_name='день рождения')
     month_of_birth = models.CharField(max_length=20, verbose_name='месяц рождения')
     year_of_birth = models.IntegerField(verbose_name='год рождения')
