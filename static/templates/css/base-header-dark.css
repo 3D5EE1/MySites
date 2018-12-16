@@ -14,24 +14,43 @@ a {
   text-decoration: none; }
 
 .Navbar-desktop {
-  position: relative;
   max-width: 1600px;
   margin: 0 auto;
   background-color: #2a2a2a; }
   .Navbar-desktop a, .Navbar-desktop a:visited, .Navbar-desktop a:active {
-    color: #b8b8b8;
-    margin: 10px 10px; }
+    color: #b8b8b8; }
+  .Navbar-desktop a:hover {
+    color: #ffda1e; }
   .Navbar-desktop .Navbar-logo {
-    display: inline-block; }
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    color: #0abaf5; }
   .Navbar-desktop .Navbar-items {
     display: inline-block; }
     .Navbar-desktop .Navbar-items .Navbar-menu-my-sites {
+      position: relative;
       color: #e0e1e1;
-      display: inline-block;
       text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31); }
+      .Navbar-desktop .Navbar-items .Navbar-menu-my-sites .hiden {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        visibility: hidden;
+        top: 120px;
+        background-color: #ff1a1f; }
+      .Navbar-desktop .Navbar-items .Navbar-menu-my-sites .Navbar-menu-my-sites:hover > .hiden {
+        visibility: visible; }
+    .Navbar-desktop .Navbar-items a > div {
+      display: inline-block;
+      padding: 10px; }
   .Navbar-desktop .Navbar-profileItems {
     display: inline-block;
-    margin: 10px 10px;
+    margin: 10px;
     float: right; }
+  .Navbar-desktop .Navbar-profileItems {
+    display: inline-block; }
+    .Navbar-desktop .Navbar-profileItems a > div {
+      display: inline-block; }
 
 /*# sourceMappingURL=base-header-dark.css.map */

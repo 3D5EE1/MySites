@@ -19,19 +19,49 @@
   <body>
     {% block header %}
         <nav class="Navbar-desktop">
-            <div class="Navbar-logo">1</div>
+            <div class="Navbar-logo">rypy.ru</div>
             <div class="Navbar-items">
-                <a href="#" class="Navbar-menu-my-sites">МОИ САЙТЫ</a>
-                <a href="#" class="Navbar-news">НОВОСТИ</a>
-                <a href="#" class="Navbar-faq">FAQ</a>
-                <a href="#" class="Navbar-look">СМОТРЕТЬ</a>
-                <a href="#" class="Navbar-forum">ФОРУМ</a>
-                <a href="#" class="Navbar-help">ПОМОЩЬ</a>
+                <a href="#">
+                    <div class="Navbar-menu-my-sites">МОИ САЙТЫ
+                        <div class="hiden">12345</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="Navbar-news">НОВОСТИ</div>
+                </a>
+                <a href="#">
+                    <div class="Navbar-faq">FAQ</div>
+                </a>
+                <a href="#">
+                    <div class="Navbar-look">СМОТРЕТЬ</div>
+                </a>
+                <a href="#">
+                    <div class="Navbar-forum">ФОРУМ</div>
+                </a>
+                <a href="#">
+                    <div class="Navbar-help">ПОМОЩЬ</div>
+                </a>
             </div>
             <div class="Navbar-profileItems">
-                <a href="#" class="Navbar-search">1</a>
-                <a href="#" class="Navbar-language">1</a>
-                <a href="#" class="Navbar-login">ВХОД</a>
+                <a href="#" class="Navbar-search">
+                    1234
+                </a>
+                <a href="#" class="Navbar-language">
+                    1234
+                </a>
+            {% if user.is_authenticated %}
+                {% block logout %}
+                    <a href="#">
+                        <div class="Navbar-login">ВЫХОД</div>
+                    </a>
+                {% endblock logout %}
+            {% else %}
+                {% block login %}
+                    <a href="#">
+                        <div class="Navbar-login">ВХОД</div>
+                    </a>
+                {% endblock login %}
+            {% endif %}
             </div>
         </nav>
     {% endblock header %}

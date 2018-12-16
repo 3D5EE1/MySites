@@ -18,35 +18,67 @@ a {
 }
 
 .Navbar-desktop {
-  position: relative;
   max-width: 1600px;
   margin: 0 auto;
   background-color: #2a2a2a;
 
   a, a:visited, a:active {
     color: #b8b8b8;
-    margin: 10px 10px;
+  }
+
+  a:hover {
+    color: #ffda1e;
   }
 
   .Navbar-logo {
+    font-size: 20px;
     display: inline-block;
+    margin: 0 10px 0 10px;
+    color: #0abaf5;
   }
 
   .Navbar-items {
     display: inline-block;
 
     .Navbar-menu-my-sites {
+      position: relative;
       color: #e0e1e1;
-      display: inline-block;
       text-shadow: 0 0 15px rgb(214, 214, 214), 0 0 30px rgba(255, 255, 255, 0.31);
+
+      .hiden {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        visibility: hidden;
+        top: 120px;
+        background-color: #ff1a1f;
+      }
+
+      .Navbar-menu-my-sites:hover > .hiden {
+        visibility: visible;
+      }
+    }
+
+    a > div {
+      display: inline-block;
+      padding: 10px;
     }
   }
 
   .Navbar-profileItems {
     display: inline-block;
-    margin: 10px 10px;
+    margin: 10px;
     float: right;
   }
 
+  .Navbar-profileItems {
+    display: inline-block;
+
+    a > div {
+      display: inline-block;
+    }
+  }
 }
+
+
 
