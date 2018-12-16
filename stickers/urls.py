@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.urls import path
 from stickers import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.stickers, name='stickers'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='stickers'), name='stickers_logout'),
 ]
 

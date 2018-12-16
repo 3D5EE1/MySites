@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.urls import path
 from tattoo import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.tattoo, name='tattoo'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='tattoo'), name='tattoo_logout'),
 ]
 

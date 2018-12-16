@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from account import views as account_views
 
 urlpatterns = [
     path('my-sites-admin/', admin.site.urls, name='my-sites-admin'),
@@ -22,6 +23,7 @@ urlpatterns = [
     # первый способ path('accounts/', include('django.contrib.auth.urls')),
     # первый способ path('accounts/profile/', include('account.urls')),
     path('account/', include('account.urls')),
+    path('login/<str:site_redirect>', account_views.login_redirect, name='login'),
     path('art3d', include('art3d.urls')),
     path('cinema', include('cinema.urls')),
     path('coming-soon/', include('coming_soon.urls')),
@@ -34,7 +36,7 @@ urlpatterns = [
     path('stickers', include('stickers.urls')),
     path('tattoo', include('tattoo.urls')),
     path('test-forms/', include('test_forms.urls')),
-    path('test-1models.py', include('test_models.urls')),
+    path('test-models.py', include('test_models.urls')),
     path('test-templates/', include('test_templates.urls')),
 ]
 

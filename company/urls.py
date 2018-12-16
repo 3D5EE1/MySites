@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.urls import path
 from company import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.company, name='company'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='company'), name='company_logout'),
 ]
+
 
