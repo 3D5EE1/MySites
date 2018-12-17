@@ -19,7 +19,9 @@
   <body>
     {% block header %}
         <nav class="Navbar-desktop">
-            <div class="Navbar-logo">rypy.ru</div>
+            <a href="{% url 'about_me' %}">
+                <div class="Navbar-logo">rypy.ru</div>
+            </a>
             <div class="Navbar-items">
                 <a href="#">
                     <div class="Navbar-menu-my-sites">МОИ САЙТЫ
@@ -52,7 +54,7 @@
             {% if user.is_authenticated %}
                 {% block logout %}
                     <a href="#">
-                        <div class="Navbar-login">ВЫХОД</div>
+                        <div class="Navbar-logout">ВЫХОД</div>
                     </a>
                 {% endblock logout %}
             {% else %}

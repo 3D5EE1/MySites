@@ -18,6 +18,7 @@ from account import views
 
 urlpatterns = [
     path('home/', views.home, name='home'),
+    path('creation/', views.CreationView.as_view(), name='creation')
     # path('', views.profile, name="login"),  # первый способ
     # path('login/', auth_views.LoginView.as_view(template_name='test_account/login1.html'), name='login'),  # второй способ
     # path('', views.home, name='home'),
