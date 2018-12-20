@@ -54,19 +54,6 @@ services:
     networks:
       - MySites_network
 
-  postfix:
-    image: catatnight/postfix
-    container_name: mysites_postfix
-    restart: always
-    environment:
-      - TZ=Asia/Yekaterinburg
-      - maildomain=rypy.ru
-      - smtp_user=rypy@rypy.ru:pass3d5ee1rypy
-    ports:
-      - "25:25"
-    networks:
-      - MySites_network
-
 networks:
   MySites_network:
     driver: bridge
