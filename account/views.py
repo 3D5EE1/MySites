@@ -15,7 +15,7 @@ from django.contrib.auth.decorators import login_required
 from django.template.context_processors import csrf
 
 
-def signup(request):
+def creation(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
@@ -38,7 +38,7 @@ def signup(request):
     else:
         form = SignupForm()
 
-    return render(request, 'account/signup.html', {'form': form})
+    return render(request, 'account/acc_creation.html', {'form': form})
 
 
 def activate(request, uidb64, token):
@@ -75,9 +75,9 @@ def login_redirect(request, site_redirect='menu'):
         else:
             context['login_error'] = 'Пожалуйста, введите корректные адрес электронной почты и пароль учётной записи.' \
                                      ' Оба поля могут быть чувствительны к регистру.'
-            return render_to_response('account/login.html', context)
+            return render_to_response('account/acc_login.html', context)
     else:
-        return render_to_response('account/login.html', context)
+        return render_to_response('account/acc_login.html', context)
 
 
 
@@ -110,9 +110,9 @@ def login_redirect(request, site_redirect='menu'):
 #         else:
 #             context['login_error'] = 'Пожалуйста, введите корректные адрес электронной почты и пароль учётной записи.' \
 #                                      ' Оба поля могут быть чувствительны к регистру.'
-#             return render_to_response('account/login.html', context)
+#             return render_to_response('account/acc_login.html', context)
 #     else:
-#         return render_to_response('account/login.html', context)
+#         return render_to_response('account/acc_login.html', context)
 
 
 # @login_required(login_url='/account/login')

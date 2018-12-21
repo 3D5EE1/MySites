@@ -1,3 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}{% endblock %}
+{% block icon %}
+    <link rel="icon" href="{% static 'templates/img/creation.ico' %}" type="ico">
+{% endblock %}
+
+{% block base_css %}{% endblock base_css %}
+{% block css %}{% endblock %}
+
+{% block title %}
+    Учетная запись rypy.ru
+{% endblock %}
+
+{% block header %}{% endblock header %}
+
+{% block navbar %}{% endblock %}
+
 {% block content %}
     <h2>регистрация</h2>
     <form action="" method="POST">
@@ -336,7 +355,9 @@
     </form>
 {% endblock %}
 
+{% block footer %}{% endblock footer %}
 
+{% block js %}{% endblock %}
 
 
 
