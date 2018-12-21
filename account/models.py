@@ -44,7 +44,7 @@ class MyUserManager(BaseUserManager):
 
 class MyUser(AbstractBaseUser, PermissionsMixin):
 
-    email = models.EmailField(_('email address'), unique=True, blank=True,)
+    email = models.EmailField(_('email address'), unique=True)
 
     username_validator = UnicodeUsernameValidator()
 
@@ -55,6 +55,15 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
 
     first_name = models.CharField(_('first name'), max_length=30, blank=True)
     last_name = models.CharField(_('last name'), max_length=150, blank=True)
+
+    avatar = models.ImageField(upload_to='images', null=True, blank=True, height_field=120, width_field=120,
+                               verbose_name='аватара', help_text='максимальный размер аватара 120х120')
+    country_list = models.CharField(max_length=100, null=True, blank=True, verbose_name='страна пользователя')
+    birthday = models.IntegerField(null=True, blank=True, verbose_name='день рождения')
+    month_of_birth = models.CharField(max_length=20, null=True, blank=True, verbose_name='месяц рождения')
+    year_of_birth = models.IntegerField(null=True, blank=True, verbose_name='год рождения')
+    news_and_info = models.BooleanField(default=False, blank=True, verbose_name='новости и информация')
+    privacy_policy = models.BooleanField(default=False, blank=True, verbose_name='политика конфиденциальности')
 
     is_staff = models.BooleanField(_('staff status'), default=False,
                                    help_text=_('Designates whether the user can log into this admin site.'), )

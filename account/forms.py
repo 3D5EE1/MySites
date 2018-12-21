@@ -9,8 +9,8 @@ class SignupForm(UserCreationForm):
 
     class Meta:
         model = MyUser
-        fields = ('username', 'email', 'password1', 'password2')
-
+        fields = ('country_list', 'first_name', 'last_name', 'birthday', 'month_of_birth', 'year_of_birth', 'username',
+                  'email', 'password1', 'password2', 'news_and_info', 'privacy_policy')
 
 
 # from django.contrib.auth.models import User
