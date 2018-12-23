@@ -1,3 +1,10 @@
+### Изменен принцип входа в учетную запись 
+#### теперь для входя необходимо указать адрес электронной почты и пароль
+
+![login](https://github.com/3d5ee1/MySites/raw/develop/static/readme/img/login.JPG "login")
+
+***
+
 ## Project MySites in docker
 
 `примеры того как выглядит проект`
