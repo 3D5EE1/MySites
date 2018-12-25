@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import login, authenticate
-from .forms import SignupForm
+from .forms import MyUserForm
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -17,13 +17,13 @@ from django.template.context_processors import csrf
 
 def creation(request):
     if request.method == 'POST':
-        form = SignupForm(request.POST)
+        form = MyUserForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.is_active = False
             user.save()
             current_site = get_current_site(request)
-            message = render_to_string('account/acc_active_email.html', {
+            message = render_to_string('account/acc-active-email.html', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
@@ -34,11 +34,9 @@ def creation(request):
             email = EmailMessage(mail_subject, message, to=[to_email])
             email.send()
             return HttpResponse('Please confirm your email address to complete the registration')
-
     else:
-        form = SignupForm()
-
-    return render(request, 'account/acc_creation.html', {'form': form})
+        form = MyUserForm()
+    return render(request, 'account/acc-creation.html', {'form': form})
 
 
 def activate(request, uidb64, token):
@@ -75,9 +73,9 @@ def login_redirect(request, site_redirect='menu'):
         else:
             context['login_error'] = 'Пожалуйста, введите корректные адрес электронной почты и пароль учётной записи.' \
                                      ' Оба поля могут быть чувствительны к регистру.'
-            return render_to_response('account/acc_login.html', context)
+            return render_to_response('account/acc-login.html', context)
     else:
-        return render_to_response('account/acc_login.html', context)
+        return render_to_response('account/acc-login.html', context)
 
 
 
@@ -110,9 +108,9 @@ def login_redirect(request, site_redirect='menu'):
 #         else:
 #             context['login_error'] = 'Пожалуйста, введите корректные адрес электронной почты и пароль учётной записи.' \
 #                                      ' Оба поля могут быть чувствительны к регистру.'
-#             return render_to_response('account/acc_login.html', context)
+#             return render_to_response('account/acc-login.html', context)
 #     else:
-#         return render_to_response('account/acc_login.html', context)
+#         return render_to_response('account/acc-login.html', context)
 
 
 # @login_required(login_url='/account/login')

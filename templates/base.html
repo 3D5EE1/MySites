@@ -114,6 +114,11 @@
         </ul>
     </li>
 </ul>
+    {% if user.is_authenticated %}
+        <p style="color:blue">ВЫ АВТОРИЗОВАНЫ</p>
+    {% else %}
+        <p style="color:red">ВЫ НЕ АВТОРИЗОВАНЫ</p>
+    {% endif %}
 
 
     {% endblock footer %}
