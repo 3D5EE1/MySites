@@ -1,10 +1,10 @@
-### Добавлены дополнительные поля информации о пользователе
+## Добавлены дополнительные поля информации о пользователе
 
 ![login](https://github.com/3d5ee1/MySites/raw/develop/static/readme/img/user_info.JPG "login")
 
 ***
 
-### Изменен принцип входа в учетную запись 
+## Изменен принцип входа в учетную запись 
 #### теперь для входя необходимо указать адрес электронной почты и пароль
 
 ![login](https://github.com/3d5ee1/MySites/raw/develop/static/readme/img/login.JPG "login")
