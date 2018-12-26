@@ -1,3 +1,9 @@
+## Изменен шаблон добавления пользователя в админке
+
+![login](https://github.com/3d5ee1/MySites/raw/develop/static/readme/img/creation.JPG "login")
+
+***
+
 ## Добавлены дополнительные поля информации о пользователе
 
 ![login](https://github.com/3d5ee1/MySites/raw/develop/static/readme/img/user_info.JPG "login")
