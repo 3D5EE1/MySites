@@ -1,3 +1,9 @@
+## Добавлено поле адреса электронной почты
+
+![login](https://github.com/3d5ee1/MySites/raw/develop/static/readme/img/authentication.JPG "login")
+
+***
+
 ## Изменен шаблон добавления пользователя в админке
 
 ![login](https://github.com/3d5ee1/MySites/raw/develop/static/readme/img/creation.JPG "login")
