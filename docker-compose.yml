@@ -29,7 +29,6 @@ services:
       - TZ=Asia/Yekaterinburg
     depends_on:
       - postgres1
-    command: gunicorn -c gunicorn.conf MySites.wsgi
     volumes:
       - .:/MySites
     ports:
@@ -45,12 +44,12 @@ services:
       - TZ=Asia/Yekaterinburg
     depends_on:
       - web
-    ports:
-      - "80:80"
-      - "443:443"
     volumes:
       - ./static:/var/www/static
       - ./media:/var/www/media
+    ports:
+      - "80:80"
+      - "443:443"
     networks:
       - MySites_network
 
