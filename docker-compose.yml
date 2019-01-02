@@ -29,6 +29,7 @@ services:
       - TZ=Asia/Yekaterinburg
     depends_on:
       - postgres1
+    command: gunicorn -c gunicorn.conf MySites.wsgi
     volumes:
       - .:/MySites
     ports:
