@@ -11,3 +11,5 @@ ADD requirements.txt $MY_DIR
 
 WORKDIR $MY_DIR
 RUN pip install -r requirements.txt
+
+CMD gunicorn -c gunicorn.conf $MY_DIR.wsgi
