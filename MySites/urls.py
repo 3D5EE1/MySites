@@ -23,7 +23,7 @@ urlpatterns = [
     # первый способ path('accounts/', include('django.contrib.auth.urls')),
     # первый способ path('accounts/profile/', include('account.urls')),
     path('account/', include('account.urls')),
-    path('profile/', include('account.urls')),
+    path('profile', include('account.urls')),
     path('login/<str:site_redirect>', account_views.login_redirect, name='login'),
     path('art3d', include('art3d.urls')),
     path('cinema', include('cinema.urls')),

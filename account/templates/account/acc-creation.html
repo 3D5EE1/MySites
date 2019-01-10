@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block meta %}{% endblock %}
+{% block meta %}
+    <meta name="description" content="страница регистрации разработчик Евгений Гурин.">
+    <meta name="keywords" content="Evgeny Gurin, registration, rypy.ru, Python, Django, JS">
+{% endblock %}
+
 {% block icon %}
     <link rel="icon" href="{% static 'account/img/creation.ico' %}" type="ico">
 {% endblock %}
 
 {% block base_css %}{% endblock base_css %}
+
 {% block css %}
     <link rel="stylesheet" href="{% static 'account/css/acc-creation.css' %}">
 {% endblock %}
@@ -34,7 +39,7 @@
                 {% endfor %}
             </div>
         {% endfor %}
-        <div class="auth">
+        <div class="row1">
             <label for="">
                 <select class="country_list" name="country_list" required>
                     <option value="">Страна</option>
@@ -283,65 +288,67 @@
                 </select>
             </label>
         </div>
-        <div class="name">
-            <div class="first_name">
+        <div class="row2">
+            <div class="name">
                 <label for="">
                     <input type="text" name="first_name" placeholder="Имя" required>
                 </label>
             </div>
-            <div class=last_name">
+            <div class="name">
                 <label for="">
                     <input type="text" name="last_name" placeholder="Фамилия" required>
                 </label>
             </div>
         </div>
-        <div class="auth">
+        <div class="row3">
+            <div class="date">
+                <label for="">
+                    <input type="text" name="birthday" placeholder="День рождения" required>
+                </label>
+            </div>
+            <div class="date">
+                <label for="">
+                    <select name="month_of_birth"  required>
+                        <option value="" selected="selected" disabled>Месяц</option>
+                        <option value="январь">января</option>
+                        <option value="февраль">февраля</option>
+                        <option value="март">марта</option>
+                        <option value="апрель">апреля</option>
+                        <option value="май">мая</option>
+                        <option value="июнь">июня</option>
+                        <option value="июль">июля</option>
+                        <option value="август">августа</option>
+                        <option value="сентябрь">сентября</option>
+                        <option value="октябрь">октября</option>
+                        <option value="ноябрь">ноября</option>
+                        <option value="декабрь">декабря</option>
+                    </select>
+                </label>
+            </div>
+            <div class="date">
+                <label for="">
+                    <input type="text" name="year_of_birth" placeholder="Год" required>
+                </label>
+            </div>
+        </div>
+        <div class="row4">
             <label for="">
-                <input type="text" name="birthday" placeholder="День рождения" required>
+                <input type="text" name="username" placeholder="Oтображаемое имя" required>
             </label>
         </div>
-        <div class="auth">
-            <label for="">
-                <select name="month_of_birth"  required>
-                    <option value="" selected="selected" disabled>Месяц</option>
-                    <option value="январь">января</option>
-                    <option value="февраль">февраля</option>
-                    <option value="март">марта</option>
-                    <option value="апрель">апреля</option>
-                    <option value="май">мая</option>
-                    <option value="июнь">июня</option>
-                    <option value="июль">июля</option>
-                    <option value="август">августа</option>
-                    <option value="сентябрь">сентября</option>
-                    <option value="октябрь">октября</option>
-                    <option value="ноябрь">ноября</option>
-                    <option value="декабрь">декабря</option>
-                </select>
-            </label>
-        </div>
-        <div class="auth">
-            <label for="">
-                <input type="text" name="year_of_birth" placeholder="Год" required>
-            </label>
-        </div>
-        <div class="auth">
-            <label for="">
-                <input type="text" name="username" placeholder="отображаемое имя" required>
-            </label>
-        </div>
-        <div class="auth">
+        <div class="row5">
             <label for="">
                 <input type="email" name="email" placeholder="E-mail" required>
             </label>
         </div>
-        <div class="auth">
+        <div class="row6">
             <label for="">
                 <input type="password" name="password1" placeholder="Пароль" required>
             </label>
         </div>
-        <div class="auth">
+        <div class="row7">
             <label for="">
-                <input type="password" name="password2" placeholder="Пароль" required>
+                <input type="password" name="password2" placeholder="Пароль повторно" required>
             </label>
         </div>
         <div class="auth">
@@ -361,7 +368,9 @@
                 </span>
             </label>
         </div>
-        <button type="submit">Создать учетную запись</button>
+        <div class="row9">
+            <button type="submit">Создать учетную запись</button>
+        </div>
         </form>
     </div>
 {% endblock %}

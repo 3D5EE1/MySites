@@ -49,14 +49,14 @@ def activate(request, uidb64, token):
         user.is_active = True
         user.save()
         login(request, user)
-        # return redirect('home')
+        # return redirect('profile')
         return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
     else:
         return HttpResponse('Activation link is invalid!')
 
 
-def home(request):
-    return render(request, 'account/home.html')
+def profile(request):
+    return render(request, 'account/acc-profile.html')
 
 
 def login_redirect(request, site_redirect='menu'):
