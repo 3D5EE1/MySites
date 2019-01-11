@@ -10,14 +10,20 @@
 {% block css %}{% endblock %}
 
 {% block title %}
-    Учетная запись rypy.ru
+    профиль пользователя {{ user.username }}
 {% endblock %}
 
 {% block header %}{% endblock header %}
 
 {% block navbar %}{% endblock %}
 
-{% block content %}{% endblock %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <p style="color:blue">ВЫ АВТОРИЗОВАНЫ</p>
+    {% else %}
+        <p style="color:red">ВЫ НЕ АВТОРИЗОВАНЫ</p>
+    {% endif %}
+{% endblock %}
 
 {% block footer %}{% endblock footer %}
 

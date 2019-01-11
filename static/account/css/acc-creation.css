@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
 
-
 * {
   box-sizing: border-box;
 }
@@ -18,14 +17,25 @@ body {
 }
 
 select {
-    text-indent: 5px;
+    padding-left: 10px;
     border-radius: 2px;
     border: 1px solid rgb(124, 124, 124);
+    -webkit-appearance: none;
     background-color: rgba(28, 28, 28, 0.85);
+    background-image: url("../img/sprite-22-select.png");
+    background-position: right -2%;
+    background-repeat: no-repeat;
     height: 4vh;
     width: 100%;
     color: rgb(124, 124, 124);
+    font-weight: 700;
 }
+
+select > option {
+    background: rgba(39, 46, 59, 1);
+    color: #d5d5d5;
+}
+
 
 input {
     text-indent: 10px;
@@ -35,11 +45,18 @@ input {
     height: 4vh;
     width: 100%;
     color: rgb(124, 124, 124);
+    font-weight: 700;
 }
+
 
 select:hover, input:hover {
     border: 1px solid rgb(202, 202, 202);
 }
+
+select:focus, input:focus {
+    border: 1px solid rgb(71, 154, 255);
+}
+
 
 button {
     height: 4vh;
@@ -48,6 +65,7 @@ button {
     background-color: #0e86ca;
     width: 100%;
     color: #fff;
+    font-weight: 700;
 }
 
 button:hover {
@@ -55,7 +73,21 @@ button:hover {
     cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+    color: #0abaf5;
+    font-size: 3.7rem;
+    letter-spacing: .4rem;
+    padding-top: 3%;
+    margin: 0;
+}
+
+h5 {
+    margin: 5px 0 0 4px;
+    letter-spacing: .7rem;
+    text-transform: uppercase;
+}
+
+h2, h3, h4, h6 {
     color: #fff;
     margin: 0;
     padding: 30px 0;
@@ -76,8 +108,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 4vh;
     top: 10%;
-    background: rgba(65, 84, 240, 0.44);
-    margin: 1vh 0 ;
+    margin: 1vh 0;
 }
 
 .row2 {
