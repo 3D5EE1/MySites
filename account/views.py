@@ -29,7 +29,7 @@ def creation(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
                 'token': account_activation_token.make_token(user),
             })
-            mail_subject = 'Activate your blog account.'
+            mail_subject = 'Подтверждение E-mail Вашей учетной записи rypy.ru'
             to_email = form.cleaned_data.get('email')
             email = EmailMessage(mail_subject, message, to=[to_email])
             email.send()
