@@ -1,3 +1,4 @@
+{% autoescape off %}
 Здравствуйте, {{ user.username }}!
 
 Чтобы подтвердить действительность своего электронного адреса учетной записи rypy.ru, перейдите по этой ссылке.
@@ -10,6 +11,7 @@ https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
 
 С уважением,
 Служба разработки и поддержки rypy.ru
+{% endautoescape %}
 
 {#{% autoescape off %}#}
 {##}
