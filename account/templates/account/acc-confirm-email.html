@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}{% endblock %}
+{% block icon %}
+    <link rel="icon" href="{% static 'account/img/creation.ico' %}" type="ico">
+{% endblock %}
+
+{% block base_css %}{% endblock base_css %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'account/css/acc-confirm-email.css' %}">
+{% endblock %}
+
+{% block title %}
+    Учетная запись rypy.ru
+{% endblock %}
+
+{% block header %}{% endblock header %}
+
+{% block navbar %}{% endblock %}
+
+{% block content %}
+    <h1>rypy.ru</h1>
+    <h5>entertainment</h5>
+    <h2>Регистрация</h2>
+    <div class="row1"></div>
+    <div class="row2">Создание учетной записи завершено</div>
+    <div class="row3">Название записи (e-mail)
+    {{ email }}</div>
+    <div class="row4">Этот адрес нужно будет вводить при авторизации на rypy.ru
+    Вы можете в любой момент изменить </div>
+    <div class="row5"></div>
+{% endblock %}
+
+{% block footer %}{% endblock footer %}
+
+{% block js %}{% endblock %}

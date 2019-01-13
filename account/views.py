@@ -33,7 +33,8 @@ def creation(request):
             to_email = form.cleaned_data.get('email')
             email = EmailMessage(mail_subject, message, to=[to_email])
             email.send()
-            return HttpResponse('Please confirm your email address to complete the registration')
+            return render(request, 'account/acc-confirm-email.html', {'email': to_email})
+            # return HttpResponse('Please confirm your email address to complete the registration')
     else:
         form = MyUserForm()
     return render(request, 'account/acc-creation.html', {'form': form})

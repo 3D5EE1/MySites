@@ -20,12 +20,9 @@ from account import views
 
 urlpatterns = [
     path('creation/', views.creation, name='creation'),
-    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.activate),
+    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.activate,
+        name='activate'),
 ]
-
-
-
-
 
 
 # from django.urls import path
@@ -35,7 +32,8 @@ urlpatterns = [
 #     path('home/', views.home, name='home'),
 #     path('creation/', views.CreationView.as_view(), name='creation')
 #     # path('', views.profile, name="login"),  # первый способ
-#     # path('login/', auth_views.LoginView.as_view(template_name='test_account/login1.html'), name='login'),  # второй способ
+#     # path('login/', auth_views.LoginView.as_view(template_name='test_account/login1.html'), name='login'),
+# второй способ
 #     # path('', views.home, name='home'),
 #     # path('auth-app/login/', auth_views.LoginView.as_view(template_name='test_account/login1.html'), name='login'),
 #     # path('auth-app/logout/', auth_views.LogoutView.as_view(next_page='/test_account/'), name='logout'),

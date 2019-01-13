@@ -1,7 +1,26 @@
-{% autoescape off %}
-    <div style="width: 300px; height: 200px; background: #0abaf5"></div>
-Hi {{ user.username }},
-Please click on the link to confirm your registration,
+Здравствуйте, {{ user.username }}!
 
-http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
-{% endautoescape %}
+Чтобы подтвердить действительность своего электронного адреса учетной записи rypy.ru, перейдите по этой ссылке.
+https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+Подтвердить действительность адреса необходимо, чтобы пользоваться всеми возможностями rypy.ru в полном объеме.
+Например, вы сможете участвовать в дискуссиях на ресурсах rypy.ru, играть в игры размещенные на портале или пользоваться
+другими сервисами предоставляемыми порталом rypy.ru.
+К тому же проверка адреса — лишний способ защитить вашу запись от взлома.
+
+С уважением,
+Служба разработки и поддержки rypy.ru
+
+{#{% autoescape off %}#}
+{##}
+{#Hi {{ user.username }},#}
+{#Please click on the link to confirm your registration,#}
+{##}
+{#https://{{ domain }}{% url 'activate' uidb64=uid token=token %}#}
+{#{% endautoescape %}#}
+
+
+
+
+
+
