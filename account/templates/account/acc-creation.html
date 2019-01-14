@@ -308,7 +308,7 @@
         <div class="row3">
             <div class="date">
                 <label for="">
-                    <input type="text" name="birthday" placeholder="День рождения" required>
+                    <input type="text" name="birthday" placeholder="День рождения" maxlength="2" required>
                 </label>
             </div>
             <div class="date">
@@ -332,7 +332,7 @@
             </div>
             <div class="date">
                 <label for="">
-                    <input type="text" name="year_of_birth" placeholder="Год" required>
+                    <input type="text" name="year_of_birth" placeholder="Год" maxlength="4" required>
                 </label>
             </div>
         </div>
@@ -356,24 +356,38 @@
                 <input type="password" name="password2" placeholder="Пароль повторно" required>
             </label>
         </div>
-        <div class="auth">
-            <label for="">
-                <input type="checkbox" name="news_and_info">
-                <span class="checkbox">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, ratione.
-                </span>
-            </label>
-        </div>
-        <div class="auth">
-            <label for="">
-                <input type="checkbox" name="privacy_policy" required>
-                <span class="checkbox">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque corporis dignissimos
-                    in iure magni quidem sit?
-                </span>
-            </label>
+        <div class="row8">
+            <div class="checkbox">
+                <label for="">
+                    <input type="checkbox" name="news_and_info">
+                </label>
+            </div>
+            <div class="info">
+                Получать по E-mail новости и специальные предложения от наших партнеров.
+                <div class="info2">
+                    <em>
+                        Актуальные новости, информация о мероприятиях и скидках на товары и услуги наших партнеров.
+                    </em>
+                </div>
+            </div>
         </div>
         <div class="row9">
+            <div class="checkbox">
+                <label for="">
+                    <input type="checkbox" name="privacy_policy" required>
+                </label>
+            </div>
+            <div class="info">
+                Я принимаю условия <a href="">политики конфиденциальности</a>
+                <div class="info2">
+                    <em>
+                        Подробнее о том, как мы собираем пользовательские данные и как вы можете от этого отказаться,
+                        — в нашей Политике конфиденциальности.
+                    </em>
+                </div>
+            </div>
+        </div>
+        <div class="row10">
             <button type="submit">Создать учетную запись</button>
         </div>
         </form>
