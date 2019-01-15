@@ -40,6 +40,11 @@ def creation(request):
     return render(request, 'account/acc-creation.html', {'form': form})
 
 
+def confirm(request):  # for confirm
+    to_email = 'rypylook@outlook.com'  # for confirm
+    return render(request, 'account/acc-confirm-email.html', {'email': to_email})  # for confirm
+
+
 def activate(request, uidb64, token):
     try:
         uid = force_text(urlsafe_base64_decode(uidb64))

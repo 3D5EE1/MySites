@@ -270,6 +270,18 @@ div.footer-link:after {
 }
 
 @media (max-width: 700px) {
+    body {
+        background-size: auto 200%;
+    }
+    select {
+        background-position: right 3%;
+    }
+    .row11{
+        padding: 0;
+    }
+    select:focus, input:focus {
+        border: 1px solid blue;
+    }
     .content {
         min-width: 76%;
     }
@@ -285,8 +297,13 @@ div.footer-link:after {
     }
 }
 
-
 @media (max-width: 500px) {
+    body {
+        background-size: auto;
+    }
+    select:focus, input:focus {
+        border: 1px solid blue;
+    }
     .content {
         min-width: 96%;
     }
@@ -296,6 +313,12 @@ div.footer-link:after {
 }
 
 @media (max-width: 320px) {
+    body {
+        background-size: auto;
+    }
+    select:focus, input:focus {
+        border: 1px solid rgb(71, 154, 255);
+    }
     .content {
         min-width: 96%;
     }
