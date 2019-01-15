@@ -16,29 +16,6 @@ body {
     color: #fff;
 }
 
-select {
-    padding-left: 10px;
-    border-radius: 2px;
-    border: 1px solid rgb(124, 124, 124);
-    -webkit-appearance: none;
-    background-color: rgba(28, 28, 28, 0.85);
-    background-image: url("../img/sprite-22-select.png");
-    background-position: right top;
-    background-repeat: no-repeat;
-    height: 3.5vh;
-    width: 100%;
-    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
-    color: rgb(124, 124, 124);
-    font-weight: 700;
-}
-
-select > option {
-    background: rgba(39, 46, 59, 1);
-    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
-    color: #d5d5d5;
-}
-
-
 input {
     text-indent: 10px;
     border-radius: 2px;
@@ -52,14 +29,13 @@ input {
 }
 
 
-select:hover, input:hover {
+input:hover {
     border: 1px solid rgb(202, 202, 202);
 }
 
-select:focus, input:focus {
+input:focus {
     border: 1px solid rgb(71, 154, 255);
 }
-
 
 button {
     height: 3.5vh;
@@ -70,6 +46,7 @@ button {
     font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
     color: #fff;
     font-weight: 700;
+    margin-bottom: 1.5vh;
 }
 
 button:hover {
@@ -77,11 +54,21 @@ button:hover {
     cursor: pointer;
 }
 
+#link-acc-creation {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#link-acc-creation:hover {
+    color: #4290ff;
+}
+
 h1 {
     color: #0abaf5;
     font-size: 3.7rem;
     letter-spacing: .4rem;
-    padding-top: 3%;
+    padding-top: 5%;
     margin: 0;
 }
 
@@ -98,7 +85,7 @@ h2, h3, h4, h6 {
 }
 
 .content {
-    width: 33%;
+    width: 26%;
     height: 100vh;
     margin: 0 auto;
 }
@@ -107,95 +94,52 @@ h2, h3, h4, h6 {
     position: absolute;
 }
 
-.row1, .row4, .row5, .row6, .row7, .row10, .row11 {
+.row5, .row6 {
     position: relative;
     width: 100%;
     height: 3.5vh;
-    margin: .6vh 0;
+    margin: 1.2vh 0;
 }
 
-#link-login {
-    text-decoration: none;
+.line {
+    font-size: 13px;
+    color: #dcdae1;
+    text-transform: uppercase;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 0 12px;
 }
 
-.row11 {
-    padding: 1%;
-    border-radius: 2px;
-    border: 1px solid #00aeff;
-    background-color: rgba(28, 28, 28, 0.85);
-    color: #00aeff;
-    font-weight: 700;
+.line span:before {
+    left: 100%;
+    margin-left: 20px;
+    width: 500px;
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 50%;
 }
 
-.row11:hover {
-    color: #91e4ff;
-    border-color: #0e86ca;
-}
-
-.row2 {
+.line span {
     position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 100%;
-    height: 3.5vh;
-    margin: .6vh 0 ;
+    display: inline-block;
 }
 
-.name {
-    width: 49.7%;
+.line span:after{
+    right: 100%;
+    margin-right: 20px;
+    width: 500px;
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 50%;
 }
 
-
-.row3 {
-    position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 100%;
-    height: 3.5vh;
-    margin: .6vh 0 ;
-}
-
-.date {
-    width: 32.93333333333333%;
-}
-
-.row8, .row9 {
-    position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: .8vh 0;
-}
-
-
-input[type=checkbox] {
-    width: 20px;
-}
-
-.info {
-    color: #f6fafd;
-    text-align: start;
-    width: 94%;
-    padding-top: 1%;
-}
-
-.info2 {
-    color: #adb1b4;
-    text-align: start;
-    width: 100%;
-}
-
-.policy-link {
-    text-decoration: none;
-    color: #3cc7ff;
-}
-
-.policy-link:hover {
-    color: #f8fdff;
-}
 
 .footer {
     position: absolute;
@@ -233,9 +177,6 @@ div.footer-link:after {
     margin: 7px;
 }
 
-.footer-phone {
-    display: none;
-}
 
 @media (max-width: 1600px) {
     select {
@@ -276,13 +217,6 @@ div.footer-link:after {
     .info{
         width: 92%;
     }
-    .footer-phone {
-        display: block;
-        margin-top: 10vh;
-    }
-    .footer {
-        display: none;
-    }
 }
 
 
@@ -303,31 +237,3 @@ div.footer-link:after {
         width: 88%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

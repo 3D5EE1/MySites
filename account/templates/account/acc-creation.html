@@ -296,7 +296,7 @@
         <div class="row2">
             <div class="name">
                 <label for="">
-                    <input type="text" name="first_name" placeholder="Имя" required>
+                    <input type="text" name="first_name" placeholder="Имя" autofocus required>
                 </label>
             </div>
             <div class="name">
@@ -343,7 +343,7 @@
         </div>
         <div class="row5">
             <label for="">
-                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="email" name="email" placeholder="Адрес электронной почты" required>
             </label>
         </div>
         <div class="row6">
@@ -378,7 +378,7 @@
                 </label>
             </div>
             <div class="info">
-                Я принимаю условия <a href="">политики конфиденциальности</a>
+                Я принимаю условия <a class="policy-link"  href="#">политики конфиденциальности</a>
                 <div class="info2">
                     <em>
                         Подробнее о том, как мы собираем пользовательские данные и как вы можете от этого отказаться,
@@ -390,7 +390,46 @@
         <div class="row10">
             <button type="submit">Создать учетную запись</button>
         </div>
+        <a id="link-login"  href="{% url 'login' site_redirect='profile' %}">
+            <div class="row11">
+                    У вас уже есть учетная запись?
+            </div>
+        </a>
         </form>
+        <div class="footer-phone">
+        <div class="row12">
+            <div class="footer-link"><a class="footer-link"  href="#">Вакансии</a></div>
+            <div class="footer-link"><a class="footer-link"  href="#">О компании</a></div>
+            <div class="footer-link"><a class="footer-link"  href="#">Поддержка</a></div>
+            <div class="footer-link"><a class="footer-link"  href="#">Открыть запрос</a></div>
+            <div class="footer-link"><a class="footer-link"  href="#">Пресс-релизы</a></div>
+            <div class="footer-link-end"><a class="footer-link"  href="#">api</a></div>
+        </div>
+        <div class="row13">
+            ©rypy.ru entertainment, 2019. Все права защищены.
+        </div>
+        <div class="row14">
+            <div class="footer-link"><a class="footer-link"  href="#">Политика конфиденциальности</a></div>
+            <div class="footer-link-end"><a class="footer-link"  href="#">Соглашения</a></div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="row12">
+            <div class="footer-link"><a class="footer-link"  href="#">Вакансии</a></div>
+            <div class="footer-link"><a class="footer-link"  href="#">О компании</a></div>
+            <div class="footer-link"><a class="footer-link"  href="#">Поддержка</a></div>
+            <div class="footer-link"><a class="footer-link"  href="#">Открыть запрос</a></div>
+            <div class="footer-link"><a class="footer-link"  href="#">Пресс-релизы</a></div>
+            <div class="footer-link-end"><a class="footer-link"  href="#">api</a></div>
+        </div>
+        <div class="row13">
+            ©rypy.ru entertainment, 2019. Все права защищены.
+        </div>
+        <div class="row14">
+            <div class="footer-link"><a class="footer-link"  href="#">Политика конфиденциальности</a></div>
+            <div class="footer-link-end"><a class="footer-link"  href="#">Соглашения</a></div>
+        </div>
     </div>
 {% endblock %}
 
