@@ -8,7 +8,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
 from .tokens import account_activation_token
 from .models import MyUser
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMessage, EmailMultiAlternatives
 
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
@@ -23,26 +23,30 @@ def creation(request):
             user.is_active = False
             user.save()
             current_site = get_current_site(request)
-            message = render_to_string('account/acc-active-email.html', {
+            subject = 'Подтверждение E-mail Вашей учетной записи rypy.ru'
+            text_message = render_to_string('account/acc-active-email.txt', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
                 'token': account_activation_token.make_token(user),
             })
-            mail_subject = 'Подтверждение E-mail Вашей учетной записи rypy.ru'
+            html_message = render_to_string('account/acc-active-email.html', {
+                'user': user,
+                'domain': current_site.domain,
+                'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
+                'token': account_activation_token.make_token(user),
+            })
             to_email = form.cleaned_data.get('email')
-            email = EmailMessage(mail_subject, message, to=[to_email])
+            # email = EmailMessage(subject, message, to=[to_email])
+            # email.send()
+            email = EmailMultiAlternatives(subject, text_message, to=[to_email])
+            email.attach_alternative(html_message, "text/html")
             email.send()
             return render(request, 'account/acc-confirm-email.html', {'email': to_email})
             # return HttpResponse('Please confirm your email address to complete the registration')
     else:
         form = MyUserForm()
     return render(request, 'account/acc-creation.html', {'form': form})
-
-
-def confirm(request):  # for confirm
-    to_email = 'rypylook@outlook.com'  # for confirm
-    return render(request, 'account/acc-confirm-email.html', {'email': to_email})  # for confirm
 
 
 def activate(request, uidb64, token):
