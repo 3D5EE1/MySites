@@ -238,6 +238,9 @@ div.footer-link:after {
 }
 
 @media (max-width: 1600px) {
+    body {
+        background-size: auto;
+    }
     select {
         background-position: right top;
     }
@@ -247,31 +250,57 @@ div.footer-link:after {
     .info{
         width: 92%;
     }
+    .footer-phone {
+        display: block;
+        margin-top: 10vh;
+    }
+    .footer {
+        display: none;
+    }
 
 }
 
 @media (max-width: 1400px) {
+    body {
+        background-size: auto;
+    }
     .content {
         min-width: 40%;
     }
     .info{
         width: 92%;
     }
-    .fot
+        .footer-phone {
+        display: block;
+        margin-top: 10vh;
+    }
+    .footer {
+        display: none;
+    }
 }
 
 @media (max-width: 900px) {
+    body {
+        background-size: auto;
+    }
     .content {
         min-width: 66%;
     }
     .info{
         width: 92%;
     }
+    .footer-phone {
+        display: block;
+        margin-top: 10vh;
+    }
+    .footer {
+        display: none;
+    }
 }
 
 @media (max-width: 700px) {
     body {
-        background-size: auto 200%;
+        background-size: auto;
     }
     select {
         background-position: right 3%;
