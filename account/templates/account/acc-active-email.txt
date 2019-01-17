@@ -1,87 +1,95 @@
-{% autoescape off %}
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <style>
-        h1 {
-            color: #0abaf5;
-            font-size: 3.7rem;
-            letter-spacing: .4rem;
-            margin: 0;
-            font-family: 'Comic Sans MS', 'Open Sans',Frutiger,'Frutiger Linotype',Univers,'Helvetica Neue', sans-serif;
-        }
 
-        h5 {
-            margin: 6px 0 35px 4px;
-            letter-spacing: .65rem;
-            text-transform: uppercase;
-            font-family: 'Comic Sans MS', 'Open Sans',Frutiger,'Frutiger Linotype',Univers,'Helvetica Neue', sans-serif;
-            color: #f9f9f9;
-        }
-    </style>
-  </head>
-  <body bgcolor="#002650" style="background-color:#002650">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td align="center" >
-          <table border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td align="center">
-                <h1>
-                  rypy.ru
-                </h1>
-                <h5>entertainment</h5>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-    <hr width="95%" color="rgba(187,187,187,0.8)" align="center" size=".1px" noshade/>
-    <br>
-    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%; min-width:100%; border-spacing:0;
-    border-collapse:collapse; word-wrap:break-word; word-break:break-word">
-      <tbody>
-        <tr>
-          <td class="x_body-text-padding-0px-5p-30px-font-12px-left" style="font-family:'Open Sans',Frutiger,
-          'Frutiger Linotype',Univers,'Helvetica Neue',Helvetica,Arial,'Gill Sans','Gill Sans MT','Myriad Pro',Myriad,
-          'DejaVu Sans Condensed','Liberation Sans','Nimbus Sans L','Malgun Gothic','Microsoft YaHei',AppleSDGothicNeo,
-          AppleGothic,Dotum,'Microsoft JhengHei','Hiragino Kaku Gothic Pro','Hiragino Kaku Gothic ProN W3',Osaka,
-          メイリオ,Meiryo,'ＭＳ Ｐゴシック',Calibri,Geneva,Display,Tahoma,Verdana,sans-serif; font-size:14px;
-          font-weight:300; line-height:24px; text-align:left; padding:0 40px 40px; color:#bbbbbb">
-             <p style="">Здравствуйте, {{ user.username }}!</p>
-             <p style="">Чтобы подтвердить действительность своего электронного адреса учетной записи rypy.ru,
-                 перейдите по этой ссылке.<br>
-             <a href="https://{{ domain }}{% url 'activate' uidb64=uid token=token %}" target="_blank"
-                rel="noopener noreferrer" data-auth="NotApplicable"
-                style="font-family:'Open Sans',Frutiger,'Frutiger Linotype',Univers,'Helvetica Neue',Helvetica,Arial,
-                'Gill Sans','Gill Sans MT','Myriad Pro',Myriad,'DejaVu Sans Condensed','Liberation Sans',
-                'Nimbus Sans L','Malgun Gothic','Microsoft YaHei',AppleSDGothicNeo,AppleGothic,Dotum,
-                'Microsoft JhengHei','Hiragino Kaku Gothic Pro','Hiragino Kaku Gothic ProN W3',Osaka,メイリオ,Meiryo,
-                'ＭＳ Ｐゴシック',Calibri,Geneva,Display,Tahoma,Verdana,sans-serif; color:#01B2F1!important;
-                text-decoration:underline!important; display:inline-block">
-                 https://{{ domain }}{% url 'activate' uidb64=uid token=token %}</a>
-             </p>
-             <p style="">Подтвердить действительность адреса необходимо, чтобы пользоваться всеми возможностями rypy.ru
-                 в полном объеме. Например, вы сможете участвовать в дискуссиях на ресурсах rypy.ru, играть в игры
-                 размещенные на портале или пользоваться другими сервисами предоставляемыми порталом rypy.ru.
-             </p>
-             <p style="">К тому же проверка адреса — лишний способ защитить вашу запись от взлома.
-             </p>
-             <p style="">С уважением,<br>
-               Служба разработки и поддержки rypy.ru </p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <center style="width:100%;table-layout:fixed">
+        <div bgcolor="#232728" style="max-width:600px;background-color:#002650">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="center" style="background-color:#002650">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td align="center" style="font-family:'Comic Sans MS',Frutiger,sans-serif; color: #0abaf5;font-size: 1.6rem;letter-spacing: .2rem;">
+                                    <h1 style="margin:30px 0 0 0">rypy.ru</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="font-family:'Open Sans',Frutiger,sans-serif; color: #f9f9f9;font-size: 1.2rem;letter-spacing: .45rem;" ; text-transform: uppercase;>
+                                    <h5 style="margin: 4px 0 35px 4px">entertainment</h5>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <hr width="500px" color="rgba(187,187,187,0.8)" align="center" size=".1px" noshade />
+            <br>
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%; min-width:100%; border-spacing:0;
+                border-collapse:collapse; word-wrap:break-word; word-break:break-word">
+                <tbody>
+                    <tr>
+                        <td class="x_body-text-padding-0px-5p-30px-font-12px-left" style="font-family:'Open Sans',Frutiger,
+                          'Frutiger Linotype',Univers,'Helvetica Neue',Helvetica,Arial,'Gill Sans','Gill Sans MT','Myriad Pro',Myriad,
+                          'DejaVu Sans Condensed','Liberation Sans','Nimbus Sans L','Malgun Gothic','Microsoft YaHei',AppleSDGothicNeo,
+                          AppleGothic,Dotum,'Microsoft JhengHei','Hiragino Kaku Gothic Pro','Hiragino Kaku Gothic ProN W3',Osaka,
+                          メイリオ,Meiryo,'ＭＳ Ｐゴシック',Calibri,Geneva,Display,Tahoma,Verdana,sans-serif; font-size:14px;
+                          font-weight:300; line-height:24px; text-align:left; padding:0 40px 40px; color:#bbbbbb;
+                          background-color:#002650">
+                            <p style="">Здравствуйте, {{ user.username }}!</p>
+                            <p style="">
+                                Чтобы подтвердить действительность своего электронного адреса учетной записи rypy.ru,
+                                перейдите по этой ссылке.<br>
+                                <a href="https://{{ domain }}{% url 'activate' uidb64=uid token=token %}" target="_blank"
+                                   rel="noopener noreferrer" data-auth="NotApplicable"
+                                   style="font-family:'Open Sans',Frutiger,'Frutiger Linotype',Univers,'Helvetica Neue',Helvetica,Arial,
+                                    'Gill Sans','Gill Sans MT','Myriad Pro',Myriad,'DejaVu Sans Condensed','Liberation Sans',
+                                    'Nimbus Sans L','Malgun Gothic','Microsoft YaHei',AppleSDGothicNeo,AppleGothic,Dotum,
+                                    'Microsoft JhengHei','Hiragino Kaku Gothic Pro','Hiragino Kaku Gothic ProN W3',Osaka,メイリオ,Meiryo,
+                                    'ＭＳ Ｐゴシック',Calibri,Geneva,Display,Tahoma,Verdana,sans-serif; color:#01B2F1!important;
+                                    text-decoration:underline!important; display:inline-block">
+                                    https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+                                </a>
+                            </p>
+                            <p style="">
+                                Подтвердить действительность адреса необходимо, чтобы пользоваться всеми возможностями rypy.ru
+                                в полном объеме. Например, вы сможете участвовать в дискуссиях на ресурсах rypy.ru, играть в игры
+                                размещенные на портале или пользоваться другими сервисами предоставляемыми порталом rypy.ru.
+                            </p>
+                            <p style="">
+                                К тому же проверка адреса — лишний способ защитить вашу запись от взлома.
+                            </p>
+                            <p style="">
+                                С уважением,<br>
+                                Служба разработки и поддержки rypy.ru
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr width="500px" color="rgba(187,187,187,0.8)" align="center" size=".1px" noshade />
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="center" style="background-color:#002650">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td align="center" style="font-family:'Comic Sans MS',Frutiger,sans-serif; color: #0abaf5;font-size: 1.6rem;letter-spacing: .2rem;">
+                                    <h1 style="margin:30px 0 0 0">rypy.ru</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="font-family:'Open Sans',Frutiger,sans-serif; color: #f9f9f9;font-size: 1.2rem;letter-spacing: .45rem;" ; text-transform: uppercase;>
+                                    <h5 style="margin: 4px 0 35px 4px">entertainment</h5>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+</body>
 </html>
-{% endautoescape %}
-
-
-
-
-
-
