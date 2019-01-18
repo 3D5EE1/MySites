@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block icon %}
+    <link rel="icon" href="{% static 'menu/img/menu.ico' %}" type="icon">
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'menu/css/menu2.css' %}">
+{% endblock %}
+
+{% block title %}
+    start menu
+{% endblock %}
+
+
+{% block header %}{% endblock %}
+
+{% block content %}
+    <div class="content-info">
+        <div class="info">
+            <p data-img="img1">сайт о трехмерном моделировании</p>
+            <p data-img="img2">сайт кинотеатра</p>
+            <p data-img="img3">сай-визитка компании (верстка по PSD)</p>
+            <p data-img="img4">сайт улик с места преступления (детективное агенство)    </p>
+            <p data-img="img5">сайт видео игр</p>
+            <p data-img="img6">сайт планетария</p>
+            <p data-img="img7">сайт магазина по продажам игровых фигурок от компании blizzard (с)</p>
+            <p data-img="img8">технологичейский сайт по размещению стикеров на стекле</p>
+            <p data-img="img9">сайт тату салона</p>
+            <p data-img="img10">сайт находиться в разработке, номер сайта: 1</p>
+            <p data-img="img11">сайт находиться в разработке, номер сайта: 2</p>
+            <p data-img="img12">сайт находиться в разработке, номер сайта: 3</p>
+            <p data-img="img13">сайт находиться в разработке, номер сайта: 4</p>
+            <p data-img="img14">сайт находиться в разработке, номер сайта: 5</p>
+            <p data-img="img15">сайт находиться в разработке, номер сайта: 6</p>
+            <p data-img="img16">сайт находиться в разработке, номер сайта: 7</p>
+            <p data-img="img17">сайт находиться в разработке, номер сайта: 8</p>
+            <p data-img="img18">сайт находиться в разработке, номер сайта: 9</p>
+
+        </div>
+    </div>
+    <div class="content">
+      <div class="block" id="img1"><a data-img="img1" href="{% url 'art3d' %}"></a></div>
+      <div class="block" id="img2"><a data-img="img2" href="{% url 'cinema' %}"></a></div>
+      <div class="block" id="img3"><a data-img="img3" href="{% url 'company' %}"></a></div>
+      <div class="block" id="img4"><a data-img="img4" href="{% url 'detective' %}"></a></div>
+      <div class="block" id="img5"><a data-img="img5" href="{% url 'games' %}"></a></div>
+      <div class="block" id="img6"><a data-img="img6" href="{% url 'planets' %}"></a></div>
+      <div class="block" id="img7"><a data-img="img7" href="{% url 'shop' %}"></a></div>
+      <div class="block" id="img8"><a data-img="img8" href="{% url 'stickers' %}"></a></div>
+      <div class="block" id="img9"><a data-img="img9" href="{% url 'tattoo' %}"></a></div>
+      <div class="block" id="img10"><a data-img="img10" href="{% url 'coming-soon' %}"></a></div>
+      <div class="block" id="img11"><a data-img="img11" href="{% url 'coming-soon' %}"></a></div>
+      <div class="block" id="img12"><a data-img="img12" href="{% url 'coming-soon' %}"></a></div>
+      <div class="block" id="img13"><a data-img="img13" href="{% url 'coming-soon' %}"></a></div>
+      <div class="block" id="img14"><a data-img="img14" href="{% url 'coming-soon' %}"></a></div>
+      <div class="block" id="img15"><a data-img="img15" href="{% url 'coming-soon' %}"></a></div>
+      <div class="block" id="img16"><a data-img="img16" href="{% url 'coming-soon' %}"></a></div>
+      <div class="block" id="img17"><a data-img="img17" href="{% url 'coming-soon' %}"></a></div>
+      <div class="block" id="img18"><a data-img="img18" href="{% url 'coming-soon' %}"></a></div>
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block js %}
+    <script src="{% static 'menu/js/menu.js' %}"></script>
+{% endblock %}
+
+

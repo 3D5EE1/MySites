@@ -1,3 +1,4 @@
+{% autoescape off %}
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -18,7 +19,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="center" style="font-family:'Open Sans',Frutiger,sans-serif; color: #f9f9f9;font-size: 1.2rem;letter-spacing: .45rem;" ; text-transform: uppercase;>
+                                <td align="center" style="font-family:'Open Sans',Frutiger,sans-serif; color: #f9f9f9;font-size: .8rem;letter-spacing: .55rem;text-transform: uppercase;">
                                     <h5 style="margin: 4px 0 35px 4px">entertainment</h5>
                                 </td>
                             </tr>
@@ -81,7 +82,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="center" style="font-family:'Open Sans',Frutiger,sans-serif; color: #f9f9f9;font-size: 1.2rem;letter-spacing: .45rem;" ; text-transform: uppercase;>
+                                <td align="center" style="font-family:'Open Sans',Frutiger,sans-serif; color: #f9f9f9;font-size: .8rem;letter-spacing: .55rem; text-transform: uppercase;">
                                     <h5 style="margin: 4px 0 35px 4px">entertainment</h5>
                                 </td>
                             </tr>
@@ -93,3 +94,4 @@
     </center>
 </body>
 </html>
+{% endautoescape %}
