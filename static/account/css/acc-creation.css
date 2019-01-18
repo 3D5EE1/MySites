@@ -19,12 +19,11 @@ body {
 
 .content {
     width: 500px;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
 }
 
 .content:after{
-    content: '';
     position: absolute;
 }
 
@@ -131,6 +130,10 @@ select:focus, input:focus {
     font-weight: 600;
 }
 
+:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+
 button {
     height: 30px;
     margin: 14px 0 7px ;
@@ -155,11 +158,11 @@ button:hover {
 }
 
 .name {
-    width: 247px;
+    width: 49.3%;
 }
 
 .date {
-    width: 162px;
+    width: 32.3%;
     margin-bottom: 7px;
 }
 
@@ -175,7 +178,7 @@ input[type=checkbox] {
     color: #f6fafd;
     text-align: start;
     font-size: 14px;
-    width: 470px;
+    width: 94%;
     padding: 5px;
 }
 
@@ -198,9 +201,9 @@ input[type=checkbox] {
 
 .footer {
     position: relative;
-    width: 200%;
-    left: -50%;
-    margin-top: 140px;
+    width: 100%;
+    margin-top: 130px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -228,31 +231,15 @@ div.footer-link:after {
 }
 
 
-.end {
-    position: absolute;
-    height: 30px;
-    width: 100%;
-    bottom: 8%;
-}
-
-
-@media (max-width: 1600px) {
-}
-
-@media (max-width: 1400px) {
-}
-
-@media (max-width: 900px) {
-}
-
-@media (max-width: 700px) {
-}
 
 @media (max-width: 500px) {
+    .content {
+        max-width: 96%;
+    }
 
-}
-
-@media (max-width: 320px) {
+    .info {
+        width: 90%;
+    }
 }
 
 
