@@ -4,23 +4,39 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+body {
     font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
     font-weight: 500;
     font-size: 15px;
-    background: url("../img/drops_light_circles_blue.jpg");
-    background-size: cover;
+    background: #000 url("../img/tree.jpg")  center top -250px no-repeat;
     text-align: center;
     color: #fff;
 }
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 250px;
+}
+
 
 input {
     text-indent: 10px;
     border-radius: 2px;
     border: 1px solid rgb(124, 124, 124);
-    background-color: rgba(28, 28, 28, 0.85);
+    background-color: rgba(28, 28, 28, 0.81);
     height: 30px;
     width: 100%;
     font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
@@ -36,6 +52,11 @@ input:hover {
 input:focus {
     border: 1px solid rgb(71, 154, 255);
     color: #fff;
+    font-weight: 600;
+}
+
+input:not(:focus) {
+    color: rgb(184, 184, 184);
     font-weight: 600;
 }
 
@@ -93,16 +114,6 @@ h5 {
     text-transform: uppercase;
 }
 
-.content {
-    width: 500px;
-    height: 100vh;
-    margin: 0 auto;
-}
-
-.content:after{
-    position: absolute;
-}
-
 .row5, .row6 {
     position: relative;
     width: 100%;
@@ -152,8 +163,7 @@ h5 {
 .footer {
     position: absolute;
     width: 100%;
-    bottom: 3%;
-    margin: .6vh 0;
+    bottom: 30px;
     text-align: center;
 }
 
@@ -186,8 +196,23 @@ div.footer-link:after {
 }
 
 
+@media (max-width: 1025px) {
+    body {
+        background: #000 url("../img/tree.jpg") center top -300px no-repeat;
+    }
+}
+
 @media (max-width: 500px) {
     .content {
         max-width: 96%;
+        padding-bottom: 350px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .content {
+        max-width: 96%;
+        padding-bottom: 350px;
     }
 }

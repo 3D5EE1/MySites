@@ -4,16 +4,31 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+body {
     font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
     font-weight: 500;
     font-size: 15px;
-    background: url("../img/drops_light_circles_blue.jpg");
-    background-size: cover;
+    background: #000 url("../img/tree.jpg")  center top -250px no-repeat;
     text-align: center;
     color: #fff;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 200px;
 }
 
 h1 {
@@ -30,15 +45,6 @@ h5 {
     text-transform: uppercase;
 }
 
-.content {
-    width: 26%;
-    height: 100vh;
-    margin: 0 auto;
-}
-
-.content:after{
-    position: absolute;
-}
 
 .row1 {
     position: relative;
@@ -51,11 +57,9 @@ h5 {
 }
 
 .circle {
-    background-image: url("../img/sprite-128-green.png");
     width: 120px;
     height: 120px;
-    background-position: -1164px -1672px;
-    background-repeat: no-repeat;
+    background: url("../img/sprite-128-green.png") no-repeat -1164px -1672px;
 }
 
 .row2 {
@@ -92,8 +96,7 @@ h5 {
 .footer {
     position: absolute;
     width: 100%;
-    bottom: 3%;
-    margin: .6vh 0;
+    bottom: 30px;
     text-align: center;
 }
 
@@ -125,63 +128,37 @@ div.footer-link:after {
     margin: 7px;
 }
 
-
-@media (max-width: 1600px) {
-    select {
-        background-position: right top;
-    }
-    .content {
-        min-width: 33%;
-    }
-    .info{
-        width: 92%;
-    }
-
-}
-
-@media (max-width: 1400px) {
-    .content {
-        min-width: 40%;
-    }
-    .info{
-        width: 92%;
-    }
-    .fot
-}
-
-@media (max-width: 900px) {
-    .content {
-        min-width: 66%;
-    }
-    .info{
-        width: 92%;
+@media (max-width: 1025px) {
+    body {
+        background: #000 url("../img/tree.jpg") center top -300px no-repeat;
     }
 }
-
-@media (max-width: 700px) {
-    .content {
-        min-width: 76%;
-    }
-    .info{
-        width: 92%;
-    }
-}
-
 
 @media (max-width: 500px) {
     .content {
-        min-width: 96%;
+        max-width: 96%;
+        padding-bottom: 350px;
     }
-    .info{
-        width: 90%;
+
+}
+
+@media (max-width: 375px) {
+    .content {
+        max-width: 96%;
+        padding-bottom: 350px;
+    }
+}
+
+@media (max-width: 360px) {
+    .content {
+        max-width: 96%;
+        padding-bottom: 350px;
     }
 }
 
 @media (max-width: 320px) {
     .content {
-        min-width: 96%;
-    }
-    .info{
-        width: 88%;
+        max-width: 96%;
+        padding-bottom: 350px;
     }
 }
