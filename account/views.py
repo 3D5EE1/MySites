@@ -13,9 +13,16 @@ from django.core.mail import EmailMessage, EmailMultiAlternatives
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.template.context_processors import csrf
+import datetime
 
 
 def creation(request):
+    form = MyUserForm()
+    context = {
+        'form': form,
+        'now_date1': str(datetime.date.today().year - 18)[2:3],
+        'now_date2': str(datetime.date.today().year - 18)[3:4],
+    }
     if request.method == 'POST':
         form = MyUserForm(request.POST)
         if form.is_valid():
@@ -45,8 +52,7 @@ def creation(request):
             return render(request, 'account/acc-confirm-email.html', {'email': to_email})
             # return HttpResponse('Please confirm your email address to complete the registration')
     else:
-        form = MyUserForm()
-    return render(request, 'account/acc-creation.html', {'form': form})
+        return render(request, 'account/acc-creation.html', context)
 
 
 def activate(request, uidb64, token):

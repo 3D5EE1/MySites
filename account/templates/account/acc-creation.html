@@ -308,7 +308,8 @@
         <div class="row3">
             <div class="date">
                 <label for="">
-                    <input type="text" name="birthday" placeholder="День рождения" maxlength="2" required>
+                    <input type="text" pattern="(^[1-9]$)|(^[1-2][0-9]|3[0-1]$)" maxlength="2"
+                           placeholder="День рождения" required>
                 </label>
             </div>
             <div class="date">
@@ -332,7 +333,8 @@
             </div>
             <div class="date">
                 <label for="">
-                    <input type="text" name="year_of_birth" placeholder="Год" maxlength="4" required>
+                    <input type="text" pattern="(^19[0-9]{2}$)|(^20[0-{{ now_date1 }}][0-{{ now_date2 }}]$)"
+                           name="year_of_birth" placeholder="Год" maxlength="4" required>
                 </label>
             </div>
         </div>

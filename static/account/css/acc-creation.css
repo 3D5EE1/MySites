@@ -120,6 +120,10 @@ input {
     font-weight: 700;
 }
 
+input:not(:focus), select:not(:focus) {
+    color: rgb(184, 184, 184);
+    font-weight: 600;
+}
 
 select:hover, input:hover {
     border: 1px solid rgb(202, 202, 202);
@@ -129,6 +133,13 @@ select:focus, input:focus {
     border: 1px solid rgb(71, 154, 255);
     color: #fff;
     font-weight: 600;
+}
+
+/*for input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 :focus {
