@@ -2,16 +2,25 @@
 {% load static %}
 
 {% block meta %}{% endblock %}
+
 {% block icon %}
     <link rel="icon" href="{% static 'account/img/account.ico' %}" type="ico">
 {% endblock %}
 
+{% block base_css %}
+    <link rel="stylesheet" href="{% static 'templates/css/base-header-dark.css' %}">
+    <link rel="stylesheet" href="{% static 'templates/css/base-footer-dark.css' %}">
+{% endblock base_css %}
 
-{% block css %}{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'account/css/acc-profile.css' %}">
+{% endblock %}
 
 {% block title %}
     профиль пользователя {{ user.username }}
 {% endblock %}
+
+{#{% block header %}{% endblock header %}#}
 
 {% block navbar %}{% endblock %}
 
@@ -23,6 +32,6 @@
     {% endif %}
 {% endblock %}
 
-{% block footer %}{% endblock footer %}
+{#{% block footer %}{% endblock footer %}#}
 
 {% block js %}{% endblock %}

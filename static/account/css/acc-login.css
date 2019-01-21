@@ -91,13 +91,13 @@ button:hover {
 }
 
 #link-acc-creation {
-    color: #fff;
+    color: #00aeff;
     font-weight: 600;
     text-decoration: none;
 }
 
 #link-acc-creation:hover {
-    color: #4290ff;
+    color: #fff;
 }
 
 h1 {

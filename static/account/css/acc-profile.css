@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #000 url("../img/3d_surface_dark.jpg")  center no-repeat;
+    background-size: cover;
+}
+
+.Navbar-desktop {
+    background-color: hsla(0, 0%, 100%, 0.08);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
+}
