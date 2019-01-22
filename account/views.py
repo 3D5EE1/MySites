@@ -17,12 +17,8 @@ import datetime
 
 
 def creation(request):
-    form = MyUserForm()
-    context = {
-        'form': form,
-        'now_date1': str(datetime.date.today().year - 18)[2:3],
-        'now_date2': str(datetime.date.today().year - 18)[3:4],
-    }
+    # now_date1 = str(datetime.date.today().year - 18)[2:3],
+    # now_date2 = str(datetime.date.today().year - 18)[3:4],
     if request.method == 'POST':
         form = MyUserForm(request.POST)
         if form.is_valid():
@@ -51,8 +47,28 @@ def creation(request):
             email.send()
             return render(request, 'account/acc-confirm-email.html', {'email': to_email})
             # return HttpResponse('Please confirm your email address to complete the registration')
+        else:
+            context = {
+                'form': form,
+                'first_name': request.POST['first_name'],
+                'last_name': request.POST['last_name'],
+                'birthday': request.POST['birthday'],
+                'month_of_birth': request.POST['month_of_birth'],
+                'year_of_birth': request.POST['year_of_birth'],
+                'username': request.POST['username'],
+                'email': request.POST['email'],
+                'privacy_policy': request.POST.getlist('privacy_policy'),
+                'news_and_info': request.POST.getlist('news_and_info'),
+            }
+            return render(request, 'account/acc-creation.html', context)
     else:
-        return render(request, 'account/acc-creation.html', context)
+        form = MyUserForm()
+    context = {
+        'form': form,
+        'now_date1': str(datetime.date.today().year - 18)[2:3],
+        'now_date2': str(datetime.date.today().year - 18)[3:4],
+    }
+    return render(request, 'account/acc-creation.html', context)
 
 
 def activate(request, uidb64, token):
