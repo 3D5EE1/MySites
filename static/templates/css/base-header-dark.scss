@@ -17,7 +17,7 @@ a {
   text-decoration: none;
 }
 
-.Navbar-desktop {
+.header-desktop {
   max-width: 1600px;
   margin: 0 auto;
   background-color: #2a2a2a;
@@ -30,17 +30,17 @@ a {
     color: #ffda1e;
   }
 
-  .Navbar-logo {
+  .header-logo {
     font-size: 20px;
     display: inline-block;
     margin: 0 10px 0 10px;
     color: #0abaf5;
   }
 
-  .Navbar-items {
+  .header-items {
     display: inline-block;
 
-    .Navbar-menu-my-sites {
+    .header-menu-my-sites {
       position: relative;
       color: #e0e1e1;
       text-shadow: 0 0 15px rgb(214, 214, 214), 0 0 30px rgba(255, 255, 255, 0.31);
@@ -54,7 +54,7 @@ a {
         background-color: #ff1a1f;
       }
 
-      .Navbar-menu-my-sites:hover > .hiden {
+      .header-menu-my-sites:hover > .hiden {
         visibility: visible;
       }
     }
@@ -65,13 +65,13 @@ a {
     }
   }
 
-  .Navbar-profileItems {
+  .header-profileItems {
     display: inline-block;
     margin: 10px;
     float: right;
   }
 
-  .Navbar-profileItems {
+  .header-profileItems {
     display: inline-block;
 
     a > div {

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'acc-base.html' %}
 {% load static %}
 
 {% block meta %}
@@ -10,9 +10,6 @@
     <link rel="icon" href="{% static 'account/img/creation.ico' %}" type="ico">
 {% endblock %}
 
-{% block base_css %}
-{% endblock base_css %}
-
 {% block css %}
     <link rel="stylesheet" href="{% static 'account/css/acc-creation.css' %}">
 {% endblock %}
@@ -21,17 +18,13 @@
     Учетная запись rypy.ru
 {% endblock %}
 
-{% block header %}
-{% endblock header %}
+{% block header %}{% endblock header %}
 
-{% block navbar %}
-{% endblock %}
+{% block navbar %}{% endblock navbar %}
 
-{% block content %}
-    <div class="wrapper">
-        {% block acc-content %}
-        <div class="content">
-            <form action="" method="POST">
+{% block acc-content %}
+    <div class="content">
+        <form action="" method="POST">
             {% csrf_token %}
             <h1>rypy.ru</h1>
             <h5>entertainment</h5>
@@ -318,20 +311,20 @@
                 <div class="date">
                     <label for="">
                         <select name="month_of_birth" required>
-                            <option value="" selected="selected" disabled>Месяц</option>
-                            <option value="январь">января</option>
-                            <option value="февраль">февраля</option>
-                            <option value="март">марта</option>
-                            <option value="апрель">апреля</option>
-                            <option value="май">мая</option>
-                            <option value="июнь">июня</option>
-                            <option value="июль">июля</option>
-                            <option value="август">августа</option>
-                            <option value="сентябрь">сентября</option>
-                            <option value="октябрь">октября</option>
-                            <option value="ноябрь">ноября</option>
-                            <option value="декабрь">декабря</option>
-                            <option value="{{ month_of_birth }}">{{ month_of_birth }}</option>
+                            <option label="{{ month_of_birth }}" value="{{ month_of_birth }}" selected="selected"
+                                    {{ month_off }}>Месяц</option>
+                            <option value="январь">январь</option>
+                            <option value="февраль">февраль</option>
+                            <option value="март">март</option>
+                            <option value="апрель">апрель</option>
+                            <option value="май">май</option>
+                            <option value="июнь">июнь</option>
+                            <option value="июль">июль</option>
+                            <option value="август">август</option>
+                            <option value="сентябрь">сентябрь</option>
+                            <option value="октябрь">октябрь</option>
+                            <option value="ноябрь">ноябрь</option>
+                            <option value="декабрь">декабрь</option>
                         </select>
                     </label>
                 </div>
@@ -367,7 +360,7 @@
             <div class="row8">
                 <div class="checkbox">
                     <label for="">
-                        <input type="checkbox" name="news_and_info" value="{{ news_and_info }}">
+                        <input type="checkbox" name="news_and_info">
                     </label>
                 </div>
                 <div class="info">
@@ -382,11 +375,12 @@
             <div class="row9">
                 <div class="checkbox">
                     <label for="">
-                        <input type="checkbox" name="privacy_policy" value="{{ privacy_policy }}"  required>
+                        <input type="checkbox" name="privacy_policy" required>
                     </label>
                 </div>
                 <div class="info">
-                    Я принимаю условия <b><a class="policy-link"  href="#">политики конфиденциальности</a></b>
+                    Я принимаю условия <b><a class="policy-link"  href="{% url 'privacy_policy' %}">
+                    политики конфиденциальности</a></b>
                     <div class="info2">
                         <em>
                             Подробнее о том, как мы собираем пользовательские данные и как вы можете от этого отказаться,
@@ -403,30 +397,9 @@
                         У вас уже есть учетная запись?
                 </div>
             </a>
-            </form>
-        </div>
-        {% endblock acc-content %}
-        {% block acc-footer %}
-        <div class="footer">
-            <div class="row12">
-                <div class="footer-link"><a class="footer-link"  href="#">Вакансии</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">О компании</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">Поддержка</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">Открыть запрос</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">Пресс-релизы</a></div>
-                <div class="footer-link-end"><a class="footer-link"  href="#">api</a></div>
-            </div>
-            <div class="row13">
-                ©rypy.ru entertainment, 2019. Все права защищены.
-            </div>
-            <div class="row14">
-                <div class="footer-link"><a class="footer-link"  href="#">Политика конфиденциальности</a></div>
-                <div class="footer-link-end"><a class="footer-link"  href="#">Соглашения</a></div>
-            </div>
-        </div>
-        {% endblock acc-footer %}
+        </form>
     </div>
-{% endblock %}
+{% endblock acc-content %}
 
 {% block footer %}{% endblock footer %}
 

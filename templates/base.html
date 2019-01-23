@@ -6,66 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    {% block meta %}{% endblock %}
+    {% block meta %}{% endblock meta %}
 
-    {% block icon %}{% endblock %}
+    {% block icon %}{% endblock icon %}
 
     {% block base_css %}
         <link rel="stylesheet" href="{% static 'templates/css/base-header-dark.css' %}">
         <link rel="stylesheet" href="{% static 'templates/css/base-footer-dark.css' %}">
     {% endblock base_css %}
 
-    {% block css %}{% endblock %}
+    {% block css %}{% endblock css %}
 
-    <title>
-        {% block title %}{% endblock %}
-    </title>
+    <title>{% block title %}{% endblock title %}</title>
   </head>
   <body>
     {% block header %}
-        <nav class="Navbar-desktop">
+        <nav class="header-desktop">
             <a href="{% url 'about_me' %}">
                 <div class="Navbar-logo">rypy.ru</div>
             </a>
-            <div class="Navbar-items">
+            <div class="header-items">
                 <a href="#">
-                    <div class="Navbar-menu-my-sites">МОИ САЙТЫ
+                    <div class="header-menu-my-sites">МОИ САЙТЫ
                         <div class="hiden">12345</div>
                     </div>
                 </a>
                 <a href="#">
-                    <div class="Navbar-news">НОВОСТИ</div>
+                    <div class="header-news">НОВОСТИ</div>
                 </a>
                 <a href="#">
-                    <div class="Navbar-faq">FAQ</div>
+                    <div class="header-faq">FAQ</div>
                 </a>
                 <a href="#">
-                    <div class="Navbar-look">СМОТРЕТЬ</div>
+                    <div class="header-look">СМОТРЕТЬ</div>
                 </a>
                 <a href="#">
-                    <div class="Navbar-forum">ФОРУМ</div>
+                    <div class="header-forum">ФОРУМ</div>
                 </a>
                 <a href="#">
-                    <div class="Navbar-help">ПОМОЩЬ</div>
+                    <div class="header-help">ПОМОЩЬ</div>
                 </a>
             </div>
-            <div class="Navbar-profileItems">
-                <a href="#" class="Navbar-search">
+            <div class="header-profileItems">
+                <a href="#" class="header-search">
                     1234
                 </a>
-                <a href="#" class="Navbar-language">
+                <a href="#" class="header-language">
                     1234
                 </a>
             {% if user.is_authenticated %}
                 {% block logout %}
                     <a href="#">
-                        <div class="Navbar-logout">ВЫХОД</div>
+                        <div class="header-logout">ВЫХОД</div>
                     </a>
                 {% endblock logout %}
             {% else %}
                 {% block login %}
                     <a href="#">
-                        <div class="Navbar-login">ВХОД</div>
+                        <div class="header-login">ВХОД</div>
                     </a>
                 {% endblock login %}
             {% endif %}
@@ -73,8 +71,7 @@
         </nav>
     {% endblock header %}
 
-    {% block navbar %}
-    {% endblock %}
+    {% block navbar %}{% endblock navbar %}
 
     {% block content %}
     {% endblock %}
@@ -126,6 +123,9 @@
 
     {% endblock footer %}
 
-    {% block js %}{% endblock %}
+    {% block js %}{% endblock js %}
   </body>
 </html>
+
+
+

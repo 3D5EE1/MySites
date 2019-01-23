@@ -17,8 +17,8 @@ import datetime
 
 
 def creation(request):
-    # now_date1 = str(datetime.date.today().year - 18)[2:3],
-    # now_date2 = str(datetime.date.today().year - 18)[3:4],
+    now_date1 = str(datetime.date.today().year - 18)[2:3]
+    now_date2 = str(datetime.date.today().year - 18)[3:4]
     if request.method == 'POST':
         form = MyUserForm(request.POST)
         if form.is_valid():
@@ -26,7 +26,7 @@ def creation(request):
             user.is_active = False
             user.save()
             current_site = get_current_site(request)
-            subject = 'Подтверждение E-mail Вашей учетной записи rypy.ru'
+            subject = 'Подтверждение E-mail Вашей учетной записи rypy.ru entertainment'
             text_message = render_to_string('account/acc-active-email.txt', {
                 'user': user,
                 'domain': current_site.domain,
@@ -53,20 +53,22 @@ def creation(request):
                 'first_name': request.POST['first_name'],
                 'last_name': request.POST['last_name'],
                 'birthday': request.POST['birthday'],
+                'month_off': '',
                 'month_of_birth': request.POST['month_of_birth'],
+                'now_date1': now_date1,
+                'now_date2': now_date2,
                 'year_of_birth': request.POST['year_of_birth'],
                 'username': request.POST['username'],
                 'email': request.POST['email'],
-                'privacy_policy': request.POST.getlist('privacy_policy'),
-                'news_and_info': request.POST.getlist('news_and_info'),
             }
             return render(request, 'account/acc-creation.html', context)
     else:
         form = MyUserForm()
     context = {
         'form': form,
-        'now_date1': str(datetime.date.today().year - 18)[2:3],
-        'now_date2': str(datetime.date.today().year - 18)[3:4],
+        'now_date1': now_date1,
+        'now_date2': now_date2,
+        'month_off': 'disabled'
     }
     return render(request, 'account/acc-creation.html', context)
 
@@ -89,6 +91,10 @@ def activate(request, uidb64, token):
 
 def profile(request):
     return render(request, 'account/acc-profile.html')
+
+
+def privacy_policy(request):
+    return render(request, 'account/acc-privacy-policy.html')
 
 
 def login_redirect(request, site_redirect='menu'):

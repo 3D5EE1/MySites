@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
+    font-weight: 500;
+    font-size: 15px;
+    background: #002650  center top no-repeat;
+    text-align: center;
+    color: #fff;
+}
+

@@ -1,12 +1,15 @@
-{% extends 'account/acc-creation.html' %}
+{% extends 'acc-base.html' %}
 {% load static %}
 
-{% block meta %}{% endblock %}
+{% block meta %}
+    <meta name="description" content="страница авторизация разработчик Евгений Гурин.">
+    <meta name="keywords" content="Evgeny Gurin, registration, rypy.ru, Python, Django, JS">
+{% endblock %}
+
 {% block icon %}
     <link rel="icon" href="{% static 'account/img/login.ico' %}" type="ico">
 {% endblock %}
 
-{% block base_css %}{% endblock base_css %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'account/css/acc-login.css' %}">
 {% endblock %}
@@ -19,51 +22,32 @@
 
 {% block navbar %}{% endblock %}
 
-{% block content %}
-    <div class="wrapper">
-        <div class="content">
-            <h1>rypy.ru</h1>
-            <h5>entertainment</h5>
-            <form action="" method="POST">{% csrf_token %}
-                <div>
-                    {{ login_error }}
-                </div>
-                <div class="row5">
-                    <label for="">
-                        <input type="email" name='email' placeholder="Адрес электронной почты" autofocus required>
-                    </label>
-                </div>
-                <div class="row6">
-                    <label for="">
-                        <input type="password" name='password' placeholder="Пароль" required>
-                    </label>
-                </div>
-                <button type="submit">Вход</button>
-                <div class="line">
-                    <span>Или</span>
-                </div>
-                <a id="link-acc-creation" href="{% url 'creation' %}">Создайте учетную запись!</a>
-            </form>
-        </div>
-        <div class="footer">
-            <div class="row12">
-                <div class="footer-link"><a class="footer-link"  href="#">Вакансии</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">О компании</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">Поддержка</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">Открыть запрос</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">Пресс-релизы</a></div>
-                <div class="footer-link-end"><a class="footer-link"  href="#">api</a></div>
+{% block acc-content %}
+    <div class="content">
+        <h1>rypy.ru</h1>
+        <h5>entertainment</h5>
+        <form action="" method="POST">{% csrf_token %}
+            <div>
+                {{ login_error }}
             </div>
-            <div class="row13">
-                ©rypy.ru entertainment, 2019. Все права защищены.
+            <div class="row5">
+                <label for="">
+                    <input type="email" name='email' placeholder="Адрес электронной почты" autofocus required>
+                </label>
             </div>
-            <div class="row14">
-                <div class="footer-link"><a class="footer-link"  href="#">Политика конфиденциальности</a></div>
-                <div class="footer-link-end"><a class="footer-link"  href="#">Соглашения</a></div>
+            <div class="row6">
+                <label for="">
+                    <input type="password" name='password' placeholder="Пароль" required>
+                </label>
             </div>
-        </div>
+            <button type="submit">Вход</button>
+            <div class="line">
+                <span>Или</span>
+            </div>
+            <a id="link-acc-creation" href="{% url 'creation' %}">Создайте учетную запись!</a>
+        </form>
     </div>
-{% endblock %}
+{% endblock acc-content %}
 
 {% block footer %}{% endblock footer %}
 
