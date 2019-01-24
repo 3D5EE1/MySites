@@ -17,10 +17,14 @@ a {
   text-decoration: none;
 }
 
-.header-desktop {
-  max-width: 1600px;
-  margin: 0 auto;
+.header{
+  width: 100%;
   background-color: #2a2a2a;
+}
+
+.header-desktop {
+  max-width: 1920px;
+  margin: 0 auto;
 
   a, a:visited, a:active {
     color: #b8b8b8;
@@ -69,16 +73,20 @@ a {
     display: inline-block;
     margin: 10px;
     float: right;
-  }
 
-  .header-profileItems {
-    display: inline-block;
+    .header-profileItems-menu {
+      display: inline-block;
+    }
 
     a > div {
       display: inline-block;
+      margin-left: 20px;
     }
   }
 }
 
-
-
+@media (max-width: 1920px) {
+  .header-desktop {
+    max-width: 1600px;
+  }
+}

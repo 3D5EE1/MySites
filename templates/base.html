@@ -21,107 +21,75 @@
   </head>
   <body>
     {% block header %}
-        <nav class="header-desktop">
-            <a href="{% url 'about_me' %}">
-                <div class="Navbar-logo">rypy.ru</div>
-            </a>
-            <div class="header-items">
-                <a href="#">
-                    <div class="header-menu-my-sites">МОИ САЙТЫ
-                        <div class="hiden">12345</div>
-                    </div>
+        <div class="header">
+            <nav class="header-desktop">
+                <a href="{% url 'about_me' %}">
+                    <div class="header-logo">rypy.ru</div>
                 </a>
-                <a href="#">
-                    <div class="header-news">НОВОСТИ</div>
-                </a>
-                <a href="#">
-                    <div class="header-faq">FAQ</div>
-                </a>
-                <a href="#">
-                    <div class="header-look">СМОТРЕТЬ</div>
-                </a>
-                <a href="#">
-                    <div class="header-forum">ФОРУМ</div>
-                </a>
-                <a href="#">
-                    <div class="header-help">ПОМОЩЬ</div>
-                </a>
-            </div>
-            <div class="header-profileItems">
-                <a href="#" class="header-search">
-                    1234
-                </a>
-                <a href="#" class="header-language">
-                    1234
-                </a>
-            {% if user.is_authenticated %}
-                {% block logout %}
+                <div class="header-items">
                     <a href="#">
-                        <div class="header-logout">ВЫХОД</div>
+                        <div class="header-menu-my-sites">МОИ САЙТЫ
+                            <div class="hiden">12345</div>
+                        </div>
                     </a>
-                {% endblock logout %}
-            {% else %}
-                {% block login %}
                     <a href="#">
-                        <div class="header-login">ВХОД</div>
+                        <div class="header-news">НОВОСТИ</div>
                     </a>
-                {% endblock login %}
-            {% endif %}
-            </div>
-        </nav>
+                    <a href="#">
+                        <div class="header-faq">FAQ</div>
+                    </a>
+                    <a href="#">
+                        <div class="header-look">СМОТРЕТЬ</div>
+                    </a>
+                    <a href="#">
+                        <div class="header-forum">ФОРУМ</div>
+                    </a>
+                    <a href="#">
+                        <div class="header-help">ПОМОЩЬ</div>
+                    </a>
+                </div>
+                <div class="header-profileItems">
+                    <ul class="header-profileItems-menu">
+                        <li><a href=#>1234</a>
+                            <ul class="submenu">
+                                <li><a href=#>Sudmenu 1</a></li>
+                                <li><a href=#>Sudmenu 2</a></li>
+                                <li><a href=#>Sudmenu 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="header-profileItems-menu">
+                        <li>1234
+                            <ul class="submenu">
+                                <li><a href=#>Sudmenu 1</a></li>
+                                <li><a href=#>Sudmenu 2</a></li>
+                                <li><a href=#>Sudmenu 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    {% if user.is_authenticated %}
+                        {% block logout %}
+                            <a href="#">
+                                <div class="header-logout">ВЫХОД</div>
+                            </a>
+                        {% endblock logout %}
+                    {% else %}
+                        {% block login %}
+                            <a href="#">
+                                <div class="header-login">ВХОД</div>
+                            </a>
+                        {% endblock login %}
+                    {% endif %}
+                </div>
+            </nav>
+        </div>
     {% endblock header %}
 
     {% block navbar %}{% endblock navbar %}
 
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock content %}
 
-    {% block footer %}
-
-    <ul class="menu">
-    <li><a href=#>Menu 1</a>
-        <ul class="submenu">
-            <li><a href=#>Sudmenu 1</a></li>
-            <li><a href=#>Sudmenu 1</a></li>
-            <li><a href=#>Sudmenu 1</a></li>
-        </ul>
-    </li>
-    <li><a href=#>Menu 2</a>
-        <ul class="submenu">
-            <li><a href=#>Sudmenu 2</a></li>
-            <li><a href=#>Sudmenu 2</a></li>
-            <li><a href=#>Sudmenu 2</a></li>
-        </ul>
-    </li>
-    <li><a href=#>Menu 3</a>
-        <ul class="submenu">
-            <li><a href=#>Sudmenu 3</a></li>
-            <li><a href=#>Sudmenu 3</a></li>
-            <li><a href=#>Sudmenu 3</a></li>
-        </ul>
-    </li>
-    <li><a href=#>Menu 4</a>
-        <ul class="submenu">
-            <li><a href=#>Sudmenu 4</a></li>
-            <li><a href=#>Sudmenu 4</a></li>
-            <li><a href=#>Sudmenu 4</a></li>
-        </ul>
-    </li>
-    <li><a href=#>Menu 5</a>
-        <ul class="submenu">
-            <li><a href=#>Sudmenu 5</a></li>
-            <li><a href=#>Sudmenu 5</a></li>
-            <li><a href=#>Sudmenu 5</a></li>
-        </ul>
-    </li>
-</ul>
-    {% if user.is_authenticated %}
-        <p style="color:blue">ВЫ АВТОРИЗОВАНЫ</p>
-    {% else %}
-        <p style="color:red">ВЫ НЕ АВТОРИЗОВАНЫ</p>
-    {% endif %}
-
-    {% endblock footer %}
+    {% block footer %}{% endblock footer %}
 
     {% block js %}{% endblock js %}
   </body>
