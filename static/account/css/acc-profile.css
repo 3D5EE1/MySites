@@ -13,7 +13,7 @@ body {
     background-size: cover;
 }
 
-.Navbar-desktop {
+.header {
     background-color: hsla(0, 0%, 100%, 0.08);
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
 }

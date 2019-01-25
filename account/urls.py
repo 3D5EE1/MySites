@@ -20,7 +20,6 @@ from account import views
 
 urlpatterns = [
     path('creation/', views.creation, name='creation'),
-    path('privacy-policy', views.privacy_policy, name='privacy_policy'),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.activate,
         name='activate'),
 ]

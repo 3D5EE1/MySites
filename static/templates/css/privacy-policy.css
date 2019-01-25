@@ -11,11 +11,17 @@ html, body {
 }
 
 body {
-    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
-    font-weight: 500;
-    font-size: 15px;
     background: #002650  center top no-repeat;
-    text-align: center;
-    color: #fff;
+    background-size: cover;
 }
 
+.header {
+    background-color: hsla(0, 0%, 100%, 0.08);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 250px;
+}

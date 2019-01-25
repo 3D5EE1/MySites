@@ -94,7 +94,7 @@ def profile(request):
 
 
 def privacy_policy(request):
-    return render(request, 'account/acc-privacy-policy.html')
+    return render(request, 'privacy-policy.html')
 
 
 def login_redirect(request, site_redirect='menu'):
