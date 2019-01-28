@@ -97,6 +97,10 @@ def privacy_policy(request):
     return render(request, 'privacy-policy.html')
 
 
+def legal(request):
+    return render(request, 'legal.html')
+
+
 def login_redirect(request, site_redirect='menu'):
     context = {}
     context.update(csrf(request))

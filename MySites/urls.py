@@ -25,6 +25,7 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('profile', account_views.profile, name='profile'),
     path('privacy-policy', account_views.privacy_policy, name='privacy_policy'),
+    path('legal', account_views.legal, name='legal'),
     path('login/<str:site_redirect>', account_views.login_redirect, name='login'),
     path('art3d', include('art3d.urls')),
     path('cinema', include('cinema.urls')),
