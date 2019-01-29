@@ -17,7 +17,7 @@
 {% endblock base_css %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'templates/css/privacy-policy.css' %}">
+    <link rel="stylesheet" href="{% static 'templates/css/legal.css' %}">
 {% endblock %}
 
 {% block title %}
@@ -28,7 +28,37 @@
 
 {% block acc-content %}
     <div class="content">
-        123
+        <div class="legal-theme">Соглашения</div>
+        <h1>rypy.ru</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное Соглашение rypy.ru с Конечным Пользователем</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
+        <h1>art3d</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное Соглашение art3d</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
+        <h1>cinema</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное Соглашение cinema</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
+        <h1>company</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное Соглашение company</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
+        <h1>detective</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное Соглашение detective</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
+        <h1>games</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное Соглашение games</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
+        <h1>planets</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное planets</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
+        <h1>shop</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное Соглашение shop</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
+        <h1>stickers</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное Соглашение stickers</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
+        <h1>tattoo</h1>
+        <a href="{% url "license_agreement" %}">Лицензионное Соглашение tattoo</a>
+        <a class="legal-link-end" href="{% url "privacy_policy" %}">Политика конфиденциальности</a>
     </div>
 {% endblock acc-content %}
 

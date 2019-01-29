@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    background: #003267 url("../img/scroll-policy.jpg") center top -60px no-repeat;
+    background: #003267 url("../../templates/img/scroll-policy.jpg") center top -60px no-repeat;
     background-size: contain;
 }
 
@@ -29,7 +29,7 @@ body {
 .content {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 300px;
+    padding-top: 400px;
     padding-bottom: 250px;
 }
 
@@ -45,46 +45,21 @@ h2 {
     font-size: 26px;
 }
 
-.ul-link {
-    border-top: solid 1px rgba(255, 255, 255, 0.15);
-    padding: 1em;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.15);
-}
-
-.ul-link > li {
-    color: #00aeff;
-    cursor: pointer;
-    font-size: 18px;
-    margin: 7px -8px;
-    letter-spacing: 1px;
-    display: table;
-}
-
-#start-policy {
-    letter-spacing: 6px;
+.license_agreement {
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 5px;
     font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-#end-policy {
-    border-bottom: solid 1px rgba(255, 255, 255, 0.15);
-}
-
-b {
-    color: #f9f9f9;
-}
-
-.ul-in-text {
-    list-style: circle;
-    margin-bottom: 30px;
-}
-
-.ul-in-text li {
-    color: #b8b8b8;
-    margin: 30px 0 0 50px;
-}
-
-#end-text-policy {
+#end-text-license-agreement {
     margin-bottom: 80px;
+}
+
+#end-license-agreement {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.15);
 }
 
 #return {
