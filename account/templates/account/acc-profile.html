@@ -17,18 +17,32 @@
 {% endblock %}
 
 {% block title %}
-    профиль пользователя {{ user.username }}
+    {% if user.is_authenticated %}
+        профиль пользователя {{ user.username }}
+    {% else %}
+        неавторизованный профиль
+    {% endif %}
 {% endblock %}
 
-{#{% block header %}{% endblock header %}#}
+{% block login %}
+    <a href="{% url 'login' site_redirect='profile' %}">
+        <div class="header-login">ВХОД</div>
+    </a>
+{% endblock %}
+
+{% block logout %}
+    <a href="{% url 'profile_logout' %}">
+        <div class="header-logout">ВЫХОД</div>
+    </a>
+{% endblock %}
 
 {% block navbar %}{% endblock %}
 
 {% block content %}
     {% if user.is_authenticated %}
-        <p style="color:blue">ВЫ АВТОРИЗОВАНЫ</p>
+        <p style="color:green">ВЫ АВТОРИЗОВАНЫ</p>
     {% else %}
-        <p style="color:red">ВЫ НЕ АВТОРИЗОВАНЫ</p>
+        <p style="color:red">ВЫ НЕАВТОРИЗОВАНЫ</p>
     {% endif %}
 {% endblock %}
 

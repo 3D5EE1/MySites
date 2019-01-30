@@ -18,6 +18,17 @@
     detective
 {% endblock %}
 
+{% block login %}
+    <a href="{% url 'login' site_redirect='detective' %}">
+        <div class="header-login">ВХОД</div>
+    </a>
+{% endblock %}
+
+{% block logout %}
+    <a href="{% url 'detective_logout' %}">
+        <div class="header-logout">ВЫХОД</div>
+    </a>
+{% endblock %}
 
 {% block navbar %}
 {% endblock %}

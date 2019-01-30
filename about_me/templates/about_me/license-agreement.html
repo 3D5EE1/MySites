@@ -21,14 +21,18 @@
 {% endblock %}
 
 {% block title %}
-    Политики конфиденциальности rypy.ru entertainment
+    Лицензионное Соглашение rypy.ru
 {% endblock %}
 
 {% block navbar %}{% endblock %}
 
 {% block acc-content %}
     <div class="content">
-        <div class="license_agreement">Лицензионное Соглашение rypy.ru с Конечным Пользователем</div>
+        {% if site == "rypy" %}
+            <div class="license_agreement">Лицензионное Соглашение rypy.ru с Конечным Пользователем</div>
+        {% else %}
+            <div class="license_agreement">Лицензионное Соглашение {{ site }}</div>
+        {% endif %}
         <h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquam iusto minus nostrum odit,
             saepe sequi soluta sunt veniam. Amet eius facere facilis fugiat illo illum ipsum quia soluta ullam. Aliquid

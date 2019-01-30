@@ -18,6 +18,6 @@ from about_me import views
 
 urlpatterns = [
     path('', views.about_me, name='about_me'),
-    path('license-agreement', views.license_agreement, name='license_agreement')
+    path('license-agreement/<str:site>', views.license_agreement, name='license_agreement')
 ]
 
