@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.urls import path
 from menu import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.menu, name='menu'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='menu'), name='menu_logout'),
 ]

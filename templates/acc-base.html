@@ -20,12 +20,12 @@
         {% block acc-content %}{% endblock acc-content %}
         <div class="footer">
             <div class="footer-row1">
-                <div class="footer-link"><a class="footer-link"  href="#">Вакансии</a></div>
+                <div class="footer-link"><a class="footer-link"  href="{% url 'careers' %}">Вакансии</a></div>
                 <div class="footer-link"><a class="footer-link"  href="{% url 'about_me' %}">О компании</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">Поддержка</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">Открыть запрос</a></div>
-                <div class="footer-link"><a class="footer-link"  href="#">Пресс-релизы</a></div>
-                <div class="footer-link-end"><a class="footer-link"  href="#">api</a></div>
+                <div class="footer-link"><a class="footer-link"  href="{% url 'support' %}">Поддержка</a></div>
+                <div class="footer-link"><a class="footer-link"  href="{% url 'contact' %}">Открыть запрос</a></div>
+                <div class="footer-link"><a class="footer-link"  href="{% url 'press' %}">Пресс-релизы</a></div>
+                <div class="footer-link-end"><a class="footer-link"  href="{% url 'api' %}">api</a></div>
             </div>
             <div class="footer-row2">
                 ©rypy.ru entertainment, 2019. Все права защищены.
