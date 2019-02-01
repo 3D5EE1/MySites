@@ -16,11 +16,14 @@ Including another URLconf
 from django.urls import path
 from about_me import views
 from account import views as account_views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.about_me, name='about_me'),
     path('profile', account_views.profile, name='profile'),
     path('login/<str:site_redirect>', account_views.login_redirect, name='login'),
+    path('password/', auth_views.PasswordChangeView.as_view(template_name='account/acc-password-change.html'),
+         name='password_change'),
     path('legal', views.legal, name='legal'),
     path('license-agreement/<str:site>', views.license_agreement, name='license_agreement'),
     path('privacy-policy', views.privacy_policy, name='privacy_policy'),

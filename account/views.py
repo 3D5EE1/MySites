@@ -90,7 +90,10 @@ def activate(request, uidb64, token):
 
 
 def profile(request):
-    return render(request, 'account/acc-profile.html')
+    if not request.user.is_authenticated:
+        return redirect('login/profile')
+    else:
+        return render(request, 'account/acc-profile.html')
 
 
 def login_redirect(request, site_redirect='menu'):
