@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: #000 url("../../account/img/tree.jpg")  center top -250px no-repeat;
+}
+
+.header {
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, 0.08);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
+    z-index: 1;
+}
+
+p {
+    text-align: center;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 300px;
+    padding-bottom: 250px;
+}
+
+.content a{
+    color: #75e900;
+}
+
+@media (max-width: 820px) {
+    .content {
+        max-width: 95%;
+    }
+}

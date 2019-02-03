@@ -11,8 +11,7 @@ html, body {
 }
 
 body {
-    background: #003267 url("../img/scroll-policy.jpg") center top -60px no-repeat;
-    background-size: contain;
+    background: #000 url("../../account/img/tree.jpg")  center top -250px no-repeat;
 }
 
 .header {
@@ -92,4 +91,31 @@ b {
     font-size: 18px;
     letter-spacing: 1px;
     margin-left: 20px;
+}
+
+
+@media (max-width: 1240px) {
+    .content {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    #start-policy {
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 500px) {
+    #start-policy {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 410px) {
+    #start-policy {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
 }

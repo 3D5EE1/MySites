@@ -25,6 +25,7 @@ urlpatterns = [
     path('license-agreement/<str:site>', views.license_agreement, name='license_agreement'),
     path('privacy-policy', views.privacy_policy, name='privacy_policy'),
     path('careers', views.careers, name='careers'),
+    path('about', views.about, name='about'),
     path('support', views.support, name='support'),
     path('contact', views.contact, name='contact'),
     path('press', views.press, name='press'),

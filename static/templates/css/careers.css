@@ -32,41 +32,6 @@ body {
     padding-bottom: 250px;
 }
 
-h1 {
-    color: #fff;
-    letter-spacing: 3px;
-    font-weight: 500;
-    margin: 40px 0 7px 0;
-}
-
-h2 {
-    color: #b8b8b8;
-    letter-spacing: 1px;
-    font-size: 26px;
-}
-
-.legal-theme {
-    color: #fff;
-    font-size: 40px;
-    letter-spacing: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.content a{
-    display: block;
-    color: #00aeff;
-    font-size: 18px;
-    padding: 20px;
-    letter-spacing: 1px;
-    border-top: solid 1px rgba(255, 255, 255, 0.15);
-}
-
-.legal-link-end {
-    border-top: solid 1px rgba(255, 255, 255, 0.15);
-    border-bottom: solid 1px rgba(255, 255, 255, 0.15);
-}
 
 @media (max-width: 1240px) {
     .content {
