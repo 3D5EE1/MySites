@@ -41,3 +41,7 @@ def press(request):
 
 def api(request):
     return render(request, 'api.html')
+
+
+def career_administrator(request):
+    return render(request, 'career-administrator.html')

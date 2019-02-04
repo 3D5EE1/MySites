@@ -30,5 +30,6 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('press', views.press, name='press'),
     path('api', views.api, name='api'),
+    path('career-administrator', views.career_administrator, name='career_administrator')
 ]
 
