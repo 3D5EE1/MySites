@@ -23,6 +23,8 @@ body {
 
 p {
     text-align: center;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .wrapper {
@@ -37,6 +39,27 @@ p {
     color: #fff;
     padding-top: 300px;
     padding-bottom: 250px;
+}
+
+h1 {
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+#start-career {
+    margin-top: 200px;
+}
+
+#end-career, #start-career {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+}
+
+#return {
+    color: #00aeff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-left: 20px;
 }
 
 
