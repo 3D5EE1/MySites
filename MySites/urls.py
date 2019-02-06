@@ -25,7 +25,7 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('art3d', include('art3d.urls')),
     path('cinema', include('cinema.urls')),
-    path('coming-soon/', include('coming_soon.urls')),
+    path('message/', include('message.urls')),
     path('company', include('company.urls')),
     path('detective', include('detective.urls')),
     path('games', include('games.urls')),

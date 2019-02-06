@@ -44,6 +44,9 @@
             <div id="errormessage"></div>
           </div>
           <form action="message/" method="post" role="form" class="contactForm">{% csrf_token %}
+            <label>
+                <input type="text" name="application" value="coming_soon" style="display:none"/>
+            </label>
             <div class="col-md-4 col-md-offset-2">
               <div class="form">
                 <div class="form-group">

@@ -5,8 +5,8 @@ from .models import Message
 
 @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
-    list_display = ('__str__', 'subject', 'data_time', 'message')
-    list_filter = ('email', )
+    list_display = ('name', 'email', 'application', 'subject', 'data_time', 'message')
+    list_filter = ('application', 'name', 'email')
     search_fields = [field.name for field in Message._meta.fields]
 
     class Meta:

@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path
 from about_me import views
 from account import views as account_views
+from message import views as message_views
 
 urlpatterns = [
     path('', views.about_me, name='about_me'),
@@ -30,6 +31,8 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('press', views.press, name='press'),
     path('api', views.api, name='api'),
-    path('career-administrator', views.career_administrator, name='career_administrator')
+    path('career-administrator', views.career_administrator, name='career_administrator'),
+    path('coming-soon', views.coming_soon, name='coming_soon'),
+    path('message/', message_views.message),
 ]
 

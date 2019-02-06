@@ -6,4 +6,4 @@ class MessageForm(ModelForm):
 
     class Meta:
         model = Message
-        fields = ['name', 'email', 'subject', 'message']
+        fields = ['application', 'name', 'email', 'subject', 'message']

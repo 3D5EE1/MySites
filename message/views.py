@@ -1,13 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from coming_soon import forms
+from message import forms
 
 
 # Create your views here.
-
-
-def coming_soon(request):
-    return render(request, 'coming_soon/coming-soon.html')
 
 
 def message(request):

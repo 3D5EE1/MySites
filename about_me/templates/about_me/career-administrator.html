@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block icon %}
-    <link rel="icon" href="{% static 'account/img/login.ico' %}" type="ico">
+    <link rel="icon" href="{% static 'account/img/careers.ico' %}" type="ico">
 {% endblock %}
 
 {% block base_css %}
@@ -17,11 +17,11 @@
 {% endblock base_css %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'templates/css/legal.css' %}">
+    <link rel="stylesheet" href="{% static 'about_me/css/career-administrator.css' %}">
 {% endblock %}
 
 {% block title %}
-    Пресса rypy.ru entertainment
+    rypy.ru entertainment
 {% endblock %}
 
 {% block login %}
@@ -40,7 +40,10 @@
 
 {% block acc-content %}
     <div class="content">
-        123
+        <p>На данный момент вакансии на эту должность отсутствуют.</p>
+        <h1 id="start-career"></h1>
+            <a id="return" href="{% url "careers" %}">&#8656; Вернуться в каталог вакансий</a>
+        <h1 id="end-career"></h1>
     </div>
 {% endblock acc-content %}
 
