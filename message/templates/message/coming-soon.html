@@ -7,15 +7,15 @@
 {% endblock %}
 
 {% block icon %}
-    <link rel="icon" href="{% static 'coming_soon/img/coming-soon.ico' %}" type="ico">
+    <link rel="icon" href="{% static 'message/img/coming-soon.ico' %}" type="ico">
 {% endblock %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'coming_soon/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'coming_soon/css/bootstrap-theme.css' %}">
-    <link rel="stylesheet" href="{% static 'coming_soon/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'message/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'message/css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'message/css/font-awesome.css' %}">
 
-    <link rel="stylesheet" href="{% static 'coming_soon/css/coming-soon.css' %}">
+    <link rel="stylesheet" href="{% static 'message/css/coming-soon.css' %}">
 {% endblock %}
 
 {% block title %}
@@ -98,14 +98,14 @@
 
 {% block js %}
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="{% static 'coming_soon/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'coming_soon/js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'message/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'message/js/jquery.countdown.min.js' %}"></script>
     <script type="text/javascript">
     $('#countdown').countdown('2020/01/01', function(event) {
       $(this).html(event.strftime('%w недель %d дней <br /> %H:%M:%S'));
     });
     </script>
 
-    <script src="{% static 'coming_soon/js/contactform.js' %}"></script>
+    <script src="{% static 'message/js/contactform.js' %}"></script>
 {% endblock %}
 
