@@ -44,7 +44,7 @@
                             <p style="">
                                 Чтобы подтвердить действительность своего электронного адреса учетной записи rypy.ru,
                                 перейдите по этой ссылке.<br>
-                                <a href="https://{{ domain }}{% url 'activate' uidb64=uid token=token %}" target="_blank"
+                                <a href="https://{{ domain }}{% url 'activate' uid64=uid token=token %}" target="_blank"
                                    rel="noopener noreferrer" data-auth="NotApplicable"
                                    style="font-family:'Open Sans',Frutiger,'Frutiger Linotype',Univers,'Helvetica Neue',Helvetica,Arial,
                                     'Gill Sans','Gill Sans MT','Myriad Pro',Myriad,'DejaVu Sans Condensed','Liberation Sans',
@@ -52,7 +52,7 @@
                                     'Microsoft JhengHei','Hiragino Kaku Gothic Pro','Hiragino Kaku Gothic ProN W3',Osaka,メイリオ,Meiryo,
                                     'ＭＳ Ｐゴシック',Calibri,Geneva,Display,Tahoma,Verdana,sans-serif; color:#01B2F1!important;
                                     text-decoration:underline!important; display:inline-block">
-                                    https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+                                    https://{{ domain }}{% url 'activate' uid64=uid token=token %}
                                 </a>
                             </p>
                             <p style="">

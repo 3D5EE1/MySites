@@ -73,9 +73,9 @@ def creation(request):
     return render(request, 'account/acc-creation.html', context)
 
 
-def activate(request, uidb64, token):
+def activate(request, uid64, token):
     try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
+        uid = force_text(urlsafe_base64_decode(uid64))
         user = MyUser.objects.get(pk=uid)
     except(TypeError, ValueError, OverflowError, MyUser.DoesNotExist):
         user = None
