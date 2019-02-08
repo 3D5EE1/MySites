@@ -4,24 +4,92 @@
   box-sizing: border-box;
 }
 
-.content-info {
+.img {
     display: block;
     position: absolute;
-    width: 900px;
-    height: 50px;
-    top: 240px;
-    left: 630px;
-    text-align: center;
 }
 
 p {
     display: none;
     color: #17181a;
     font-weight: 700;
-    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, 'Comfortaa', cursive, 'PT Sans',
-    sans-serif, Arial;
+    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, 'Comic Sans MS', sans-serif, Arial;
     font-size: 18px;
     text-shadow: 1px 1px 4px #13baff, 1px 0 4px #13baff, 0 1px 4px #13baff, -1px -1px 4px #13baff;
+}
+
+#img1 {
+    top: 150px;
+    left: 730px;
+}
+
+#img2 {
+    top: 260px;
+    left: 560px;
+}
+#img3 {
+    top: 390px;
+    left: 730px;
+}
+
+#img4 {
+    top: 260px;
+    left: 600px;
+}
+
+#img5 {
+    top: 330px;
+    left: 740px;
+}
+
+#img6 {
+    top: 270px;
+    left: 730px;
+}
+
+#img7 {
+    top: 390px;
+    left: 880px;
+}
+
+#img8 {
+    top: 380px;
+    left: 940px;
+}
+
+#img9 {
+    top: 470px;
+    left: 1100px;
+}
+
+#img10 {
+    top: 390px;
+    left: 790px;
+}
+
+#img11 {
+    top: 470px;
+    left: 900px;
+}
+
+#img12 {
+    top: 390px;
+    left: 850px;
+}
+
+#img13 {
+    top: 370px;
+    left: 1050px;
+}
+
+#img14 {
+    top: 260px;
+    left: 930px;
+}
+
+#img15 {
+    top: 150px;
+    left: 830px;
 }
 
 .content {
@@ -57,14 +125,23 @@ p {
 
 .hexagon:hover {
     box-shadow: 0 0 30px 2px rgba(23, 166, 223, 0.55);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
     transform: scale(1.1);
-    transition: .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
     z-index: 20;
 }
 
 .hexagon:hover > div {
     box-shadow: 0 0 30px 2px rgba(23, 166, 223, 0.55);
-    transition: .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 }
 
 .hexLeft {
@@ -129,7 +206,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 50px;
-    left: 320px;
+    left: 310px;
 }
 
 .hexagon1 .hexLeft:after {
@@ -150,7 +227,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 170px;
-    left: 120px;
+    left: 110px;
 }
 
 .hexagon2 .hexLeft:after {
@@ -171,7 +248,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 290px;
-    left: 320px;
+    left: 310px;
 }
 
 .hexagon3 .hexLeft:after {
@@ -192,7 +269,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 410px;
-    left: 120px;
+    left: 110px;
 }
 
 .hexagon4 .hexLeft:after {
@@ -213,7 +290,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 530px;
-    left: 320px;
+    left: 310px;
 }
 
 .hexagon5 .hexLeft:after {
@@ -234,7 +311,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 410px;
-    left: 520px;
+    left: 510px;
 }
 
 .hexagon6 .hexLeft:after {
@@ -255,7 +332,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 650px;
-    left: 520px;
+    left: 510px;
 }
 
 .hexagon7 .hexLeft:after {
@@ -276,7 +353,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 530px;
-    left: 720px;
+    left: 710px;
 }
 
 .hexagon8 .hexLeft:after {
@@ -297,7 +374,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 650px;
-    left: 920px;
+    left: 910px;
 }
 
 .hexagon9 .hexLeft:after {
@@ -318,7 +395,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 530px;
-    left: 1120px;
+    left: 1110px;
 }
 
 .hexagon10 .hexLeft:after {
@@ -339,7 +416,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 650px;
-    left: 1320px;
+    left: 1310px;
 }
 
 .hexagon11 .hexLeft:after {
@@ -360,7 +437,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 530px;
-    left: 1520px;
+    left: 1510px;
 }
 
 .hexagon12 .hexLeft:after {
@@ -381,7 +458,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 410px;
-    left: 1720px;
+    left: 1710px;
 }
 
 .hexagon13 .hexLeft:after {
@@ -402,7 +479,7 @@ p {
     background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
     background-size: 560px;
     top: 170px;
-    left: 1720px;
+    left: 1710px;
 }
 
 .hexagon14 .hexLeft:after {
@@ -418,6 +495,28 @@ p {
     width: 492px;
     height: 577px;
 }
+
+.hexagon.hexagon15 {
+    background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
+    background-size: 560px;
+    top: 50px;
+    left: 1510px
+}
+
+.hexagon15 .hexLeft:after {
+    top: 252px;
+    left: 535px;
+    width: 398px;
+    height: 600px;
+}
+
+.hexagon15 .hexRight:after {
+    top: 11px;
+    left: 279px;
+    width: 492px;
+    height: 577px;
+}
+
 
 
 @media (min-width: 2560px) {
