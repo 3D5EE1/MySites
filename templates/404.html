@@ -1,11 +1,8 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Страница не найдена &sdot; rypy.ru</title>
-    <link rel="icon" href="{% static 'account/img/creation.ico' %}" type="ico">
-    <link rel="stylesheet" href="">
     <style>
         @import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
 
@@ -20,25 +17,170 @@
         }
 
         body {
-            font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
+            background: #000 url("../static/templates/img/404.jpg") top 0 right 0 no-repeat;
+            font-family: Helvetica, sans-serif;
+         }
+
+        #error404 {
+            position: absolute;
+            bottom: 10vh;
+            left: 10vw;
+            font-weight: 900;
+            font-size: 20rem;
+            color: #000;
+            text-shadow: 5px 5px 0 #fff, -5px -5px 0 #fff, -5px 5px 0 #fff, 5px -5px 0 #fff;
+        }
+
+        #message {
+            position: absolute;
+            font-family: 'Montserrat Alternates', sans-serif;
             font-weight: 500;
-            font-size: 15px;
-            background: #000 url("../static/templates/img/404.jpg") no-repeat;
+            font-size: 1.5rem;
             color: #fff;
+            bottom: 20vh;
+            right: 20vw;
+        }
+
+        .links {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        .link {
+            height: 30px;
+            margin-top: 20px;
+            padding: 0 10px 0 10px;
+            border-radius: 2px;
+            border: 1px solid #00aeff;
+            background-color: rgba(28, 28, 28, 0.85);
+            color: #00aeff;
+            font-weight: 500;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #91e4ff;
+            border-color: #0e86ca;
+        }
+
+        @media (max-width: 2000px) {
+            #error404 {
+                bottom: 10vh;
+                left: 10vw;
+            }
+
+            #message{
+                bottom: 20vh;
+                right: 10vw;
+            }
+        }
+
+        @media (max-width: 1800px) {
+            body {
+                background-size: 60%;
+            }
+            #error404 {
+                bottom: 10vh;
+                left: 10vw;
+                font-size: 16rem;
+            }
+
+            #message{
+                bottom: 20vh;
+                right: 10vw;
+            }
+        }
+
+        @media (max-width: 1600px) {
+            #error404 {
+                bottom: 10vh;
+                left: 10vw;
+            }
+
+            #text {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 425px) {
+            body {
+                background-size: 100%;
+            }
+
+            #error404 {
+                top: 30vh;
+                left: 25vw;
+                font-size: 5rem;
+                font-weight: 900;
+                letter-spacing: 7px;
+                text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, -3px 3px 0 #fff, 3px -3px 0 #fff;
+            }
+
+            #message{
+                text-align: center;
+                bottom: 20vh;
+                right: 2vw;
+            }
+        }
+
+        @media (max-width: 375px) {
+            body {
+                background-size: 100%;
+            }
+
+            #error404 {
+                top: 30vh;
+                left: 25vw;
+                font-size: 5rem;
+                font-weight: 900;
+                letter-spacing: 7px;
+                text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, -3px 3px 0 #fff, 3px -3px 0 #fff;
+            }
+
+            #message{
+                text-align: center;
+                bottom: 20vh;
+                right: 2vw;
+            }
+        }
+
+        @media (max-width: 320px) {
+            body {
+                background-size: 100%;
+                height: 600px;
+            }
+
+            #error404 {
+                top: 27vh;
+                left: 18vw;
+                font-size: 6em;
+                font-weight: 900;
+                letter-spacing: 7px;
+                text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, -3px 3px 0 #fff, 3px -3px 0 #fff;
+            }
+
+            #message{
+                text-align: center;
+                bottom: 20vh;
+                right: 2vw;
+            }
         }
 
 
     </style>
 </head>
 <body>
-    <div id="404">404</div>
-    <div id="links">
-        <a href="" id="home"></a>
-        <a href="" id="menu"></a>
-        <a href="" id="login"></a>
+    <div id="error404">404</div>
+    <div id="message">
+        <div id="text">ну чего смотришь ? нет тут такой страницы.</div>
+        <div class="links">
+            <a class="link" href="" id="home">на главную</a>
+            <a class="link" href="" id="menu">в меню</a>
+            <a class="link" href="" id="login">наши контакты</a>
+        </div>
     </div>
-
-
 
     <script src="../static/templates/js/404.js"></script>
 </body>
