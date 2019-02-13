@@ -1,11 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>404</title>
+    <title>Страница не найдена &sdot; rypy.ru</title>
+    <link rel="icon" href="{% static 'account/img/creation.ico' %}" type="ico">
+    <link rel="stylesheet" href="">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
+
+        * {
+          box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
+            font-weight: 500;
+            font-size: 15px;
+            background: #000 url("../static/templates/img/404.jpg") no-repeat;
+            color: #fff;
+        }
+
+
+    </style>
 </head>
 <body>
-    404
-    hahahahah
+    <div id="404">404</div>
+    <div id="links">
+        <a href="" id="home"></a>
+        <a href="" id="menu"></a>
+        <a href="" id="login"></a>
+    </div>
+
+
+
+    <script src="../static/templates/js/404.js"></script>
 </body>
 </html>
