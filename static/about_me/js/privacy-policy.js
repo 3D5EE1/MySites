@@ -1,17 +1,135 @@
 ;(function() {
+    function $id(id) {
+        return document.getElementById(id)
+    }
+
+    let answer = $id('secret');
+    const upper = $id('upper');
+    const upperTarget = $id('start-policy');
     const questions = Array.from(document.querySelectorAll('.question'));
     const answers = document.querySelectorAll('.answer');
+
+    addEventListener('scroll',function () {
+        let scroll = window.pageYOffset;
+        setTimeout(function(){
+            console.log(upperTarget.getBoundingClientRect().y);
+            console.log(window.pageYOffset);
+            if (window.pageYOffset < scroll
+                && window.pageYOffset - (window.pageYOffset + upperTarget.getBoundingClientRect().y) > 0
+                || (0 > window.pageYOffset - (window.pageYOffset - answer.getBoundingClientRect().y) &&
+                window.pageYOffset - (window.pageYOffset - answer.getBoundingClientRect().y) > -1)) {
+                upper.style.transition = 'color 1s, bottom .5s';
+                upper.style.bottom = '5%';
+                upper.style.animation = 'scrollUp 1s linear';
+            } else if (window.pageYOffset > scroll
+                || window.pageYOffset - (window.pageYOffset + upperTarget.getBoundingClientRect().y) < 0) {
+                upper.style.transition = 'color 1s, bottom 1s';
+                upper.style.bottom = '-5%';
+                upper.style.animation = 'scrollDown 1s linear';
+            }
+        }, 70);
+    });
+
+    upper.onclick = () => {
+        window.scrollBy({
+            top: upperTarget.getBoundingClientRect().y + 71,
+            behavior: 'smooth',
+        });
+        let up = setInterval(function(){
+            if (-71 < window.pageYOffset - (window.pageYOffset - upperTarget.getBoundingClientRect().y) &&
+            window.pageYOffset - (window.pageYOffset - upperTarget.getBoundingClientRect().y) < 0) {
+                window.scrollBy(0, -1);
+            } else if (upperTarget.getBoundingClientRect().y > 0) {
+                clearInterval(up);
+                window.onwheel = function() {return true;};
+            }
+        });
+        window.onwheel = function() {return false;};
+    };
+
     for (let question of questions) {
-        question.onclick = () => {
-            let answer = answers[questions.indexOf(question)];
-            window.scrollTo({
-                top: window.pageYOffset + answer.getBoundingClientRect().y,
+        question.onclick =  () => {
+            answer = answers[questions.indexOf(question)];
+                window.scrollTo({
+                top: window.pageYOffset + answer.getBoundingClientRect().y - 70,
                 behavior: "smooth",
             });
+            let down = setInterval(function () {
+                if (71 > window.pageYOffset - (window.pageYOffset - answer.getBoundingClientRect().y) &&
+                    window.pageYOffset - (window.pageYOffset - answer.getBoundingClientRect().y) > 0) {
+                    window.scrollBy(0, 1);
+                } else if (answer.getBoundingClientRect().y < 0) {
+                    clearInterval(down);
+                    window.onwheel = function() {return true;};
+                }
+            }, 0);
+            window.onwheel = function() {return false;};
         }
     }
 }());
 
+
+
+
+
+
+
+
+
+// (function (){
+//     function $id(id) {
+//         return document.getElementById(id)
+//     }
+//     let upper = $id('upper');
+//     let upperTarget = $id('start-policy');
+//     addEventListener('wheel',function () {
+//         let scroll = window.pageYOffset;
+//         setTimeout(function(){
+//             if (window.pageYOffset < scroll) {
+//                 upper.style.transition = 'color 1s, bottom 1s';
+//                 upper.style.bottom = '5%';
+//                 upper.style.animation = 'scrollUp 1s linear'
+//             } else if (window.pageYOffset > scroll) {
+//                 upper.style.transition = 'color 1s, bottom .6s';
+//                 upper.style.bottom = '-5%';
+//                 upper.style.animation = 'scrollDown 1s linear'
+//             }
+//         }, 70);
+//     });
+//
+//     upper.onclick = () => {
+//         window.scrollBy({
+//             top: upperTarget.getBoundingClientRect().y + 70,
+//             behavior: 'smooth',
+//         });
+//         let up = setInterval(function(){
+//             if (-71 < window.pageYOffset - (window.pageYOffset - upperTarget.getBoundingClientRect().y) &&
+//             window.pageYOffset - (window.pageYOffset - upperTarget.getBoundingClientRect().y) < 0) {
+//                 window.scrollBy(0, -1);
+//             } else if (upperTarget.getBoundingClientRect().y > 0) {
+//                 clearInterval(up);
+//                 window.onwheel = function() {return true;};
+//             }
+//         });
+//         window.onwheel = function() {return false;};
+//     }
+// }());
+
+
+
+// ;(function() {
+//     const questions = Array.from(document.querySelectorAll('.question'));
+//     const answers = document.querySelectorAll('.answer');
+//     for (let question of questions) {
+//         question.onclick = () => {
+//             let answer = answers[questions.indexOf(question)];
+//             window.scrollTo({
+//                 top: window.pageYOffset + answer.getBoundingClientRect().y,
+//                 behavior: "smooth",
+//             });
+//         }
+//     }
+// }());
 
  // const answers = document.querySelectorAll('.answer');
  // answers[0].getBoundingClientRect().y
