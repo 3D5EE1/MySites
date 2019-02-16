@@ -8,14 +8,156 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background: #000;
+
 }
 
-body {
-    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
+#wrapper{
+    position: relative;
+    min-height: 100%;
+}
+
+#pictures {
+    padding-bottom: 40%;
+}
+
+#picture {
+    display: block;
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    margin: 0 auto;
+    background: url("../img/404.jpg") top 0 right 0 no-repeat;
+    background-size: contain;
+}
+
+#messages {
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    bottom: 30px;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 500;
-    font-size: 15px;
-    background: url("../img/404.jpg") no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+    font-size: 1.5rem;
     color: #fff;
+}
+
+#error404 {
+    line-height: 25rem;
+    font-weight: 900;
+    font-size: 20rem;
+    margin-left: 15px;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 20px;
+    color: #000;
+    text-shadow: 5px 5px 0 #fff, -5px -5px 0 #fff, -5px 5px 0 #fff, 5px -5px 0 #fff;
+}
+
+#text {
+    padding: 0 10px;
+}
+
+.links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link {
+    height: 30px;
+    margin: 0 10px 20px 10px;
+    padding: 0 10px 0 10px;
+    border-radius: 2px;
+    border: 1px solid #00aeff;
+    background-color: rgba(28, 28, 28, 0.85);
+    color: #00aeff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #91e4ff;
+    border-color: #0e86ca;
+}
+
+@media (max-width: 1200px) {
+    #error404 {
+        line-height: 20rem;
+        font-size: 15rem;
+    }
+}
+
+@media (max-width: 900px) {
+    #pictures {
+        padding-bottom: 100%;
+    }
+
+    #error404 {
+        line-height: 12rem;
+        font-size: 9rem;
+
+    }
+}
+
+@media (max-width: 640px) {
+    #pictures {
+        padding-bottom: 100%;
+    }
+    #error404 {
+        line-height: 15rem;
+        font-size: 10rem;
+
+    }
+}
+
+ @media (max-width: 570px) {
+    #pictures {
+        padding-bottom: 110%;
+    }
+    #error404 {
+        line-height: 15rem;
+        font-size: 10rem;
+
+    }
+}
+
+@media (max-width: 375px) {
+    #messages {
+        font-size: 1rem;
+
+    }
+    .link {
+        font-size: .9rem;
+        padding: 4px 10px 0 10px;
+    }
+
+    #error404 {
+        line-height: 10rem;
+        font-size: 8rem;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    #messages {
+        font-size: 1rem;
+
+    }
+    .link {
+        font-size: .9rem;
+        padding: 4px 10px 0 10px;
+    }
+
+    #error404 {
+        line-height: 10rem;
+        font-weight: 700;
+        font-size: 8rem;
+        margin-left: 20px;
+    }
 }

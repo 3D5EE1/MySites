@@ -1,187 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Страница не найдена &sdot; rypy.ru</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
+{% extends 'base.html' %}
+{% load static %}
 
-        * {
-          box-sizing: border-box;
-        }
+{% block meta %}{% endblock meta %}
 
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
+{% block icon %}
+    <link rel="icon" href="{% static 'templates/img/Everaldo-Crystal-Clear-App-error.ico' %}" type="ico">
+{% endblock icon %}
 
-        body {
-            background: #000 url("../static/templates/img/404.jpg") top 0 right 0 no-repeat;
-            font-family: Helvetica, sans-serif;
-         }
+{% block base_css %}{% endblock base_css %}
 
-        #error404 {
-            position: absolute;
-            bottom: 10vh;
-            left: 10vw;
-            font-weight: 900;
-            font-size: 20rem;
-            color: #000;
-            text-shadow: 5px 5px 0 #fff, -5px -5px 0 #fff, -5px 5px 0 #fff, 5px -5px 0 #fff;
-        }
+{% block css %}
+    <link rel="stylesheet" href="{% static 'templates/css/404.css' %}">
+{% endblock css %}
 
-        #message {
-            position: absolute;
-            font-family: 'Montserrat Alternates', sans-serif;
-            font-weight: 500;
-            font-size: 1.5rem;
-            color: #fff;
-            bottom: 20vh;
-            right: 20vw;
-        }
+{% block title %}
+    Страница не найдена &sdot; rypy.ru
+{% endblock title %}
 
-        .links {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
-        }
+{% block header %}{% endblock header %}
 
-        .link {
-            height: 30px;
-            margin-top: 20px;
-            padding: 0 10px 0 10px;
-            border-radius: 2px;
-            border: 1px solid #00aeff;
-            background-color: rgba(28, 28, 28, 0.85);
-            color: #00aeff;
-            font-weight: 500;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
+{% block navbar %}{% endblock navbar %}
 
-        .link:hover {
-            color: #91e4ff;
-            border-color: #0e86ca;
-        }
-
-        @media (max-width: 2000px) {
-            #error404 {
-                bottom: 10vh;
-                left: 10vw;
-            }
-
-            #message{
-                bottom: 20vh;
-                right: 10vw;
-            }
-        }
-
-        @media (max-width: 1800px) {
-            body {
-                background-size: 60%;
-            }
-            #error404 {
-                bottom: 10vh;
-                left: 10vw;
-                font-size: 16rem;
-            }
-
-            #message{
-                bottom: 20vh;
-                right: 10vw;
-            }
-        }
-
-        @media (max-width: 1600px) {
-            #error404 {
-                bottom: 10vh;
-                left: 10vw;
-            }
-
-            #text {
-                font-size: 1.2rem;
-            }
-        }
-
-        @media (max-width: 425px) {
-            body {
-                background-size: 100%;
-            }
-
-            #error404 {
-                top: 30vh;
-                left: 25vw;
-                font-size: 5rem;
-                font-weight: 900;
-                letter-spacing: 7px;
-                text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, -3px 3px 0 #fff, 3px -3px 0 #fff;
-            }
-
-            #message{
-                text-align: center;
-                bottom: 20vh;
-                right: 2vw;
-            }
-        }
-
-        @media (max-width: 375px) {
-            body {
-                background-size: 100%;
-            }
-
-            #error404 {
-                top: 30vh;
-                left: 25vw;
-                font-size: 5rem;
-                font-weight: 900;
-                letter-spacing: 7px;
-                text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, -3px 3px 0 #fff, 3px -3px 0 #fff;
-            }
-
-            #message{
-                text-align: center;
-                bottom: 20vh;
-                right: 2vw;
-            }
-        }
-
-        @media (max-width: 320px) {
-            body {
-                background-size: 100%;
-                height: 600px;
-            }
-
-            #error404 {
-                top: 27vh;
-                left: 18vw;
-                font-size: 6em;
-                font-weight: 900;
-                letter-spacing: 7px;
-                text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, -3px 3px 0 #fff, 3px -3px 0 #fff;
-            }
-
-            #message{
-                text-align: center;
-                bottom: 20vh;
-                right: 2vw;
-            }
-        }
-
-
-    </style>
-</head>
-<body>
-    <div id="error404">404</div>
-    <div id="message">
-        <div id="text">ну чего смотришь ? нет тут такой страницы.</div>
-        <div class="links">
-            <a class="link" href="" id="home">на главную</a>
-            <a class="link" href="" id="menu">в меню</a>
-            <a class="link" href="" id="login">наши контакты</a>
+{% block content %}
+    <div id="wrapper">
+        <div id="pictures">
+            <div id="picture"></div>
+        </div>
+        <div id="messages">
+            <div id="error404">404</div>
+            <div id="text"><p>ну чего смотришь ? нет тут такой страницы.</p>
+                <div class="links">
+                    <a class="link" href="{% url 'about_me' %}" id="home">на главную</a>
+                    <a class="link" href="{% url 'menu' %}" id="menu">в меню</a>
+                    <a class="link" href="{% url 'support' %}" id="login">наши контакты</a>
+                </div>
+            </div>
         </div>
     </div>
+{% endblock content %}
 
+{% block footer %}{% endblock footer %}
+
+{% block js %}
     <script src="../static/templates/js/404.js"></script>
-</body>
-</html>
+{% endblock %}

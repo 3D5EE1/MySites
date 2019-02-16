@@ -145,7 +145,7 @@ b {
     border: solid 1px #3d434f;
     z-index: 3;
     box-shadow: 6px 8px 15px rgba(0, 0, 0, 0.25);
-    bottom: -50px;
+    bottom: -5%;
     right: 5%;
     color: #00aeff;
     font-size: 17px;

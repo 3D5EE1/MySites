@@ -1,6 +1,6 @@
 ;(function() {
     function $id(id) {
-        return document.getElementById(id)
+        return document.getElementById(id);
     }
 
     let answer = $id('secret');
@@ -12,8 +12,6 @@
     addEventListener('scroll',function () {
         let scroll = window.pageYOffset;
         setTimeout(function(){
-            console.log(upperTarget.getBoundingClientRect().y);
-            console.log(window.pageYOffset);
             if (window.pageYOffset < scroll
                 && window.pageYOffset - (window.pageYOffset + upperTarget.getBoundingClientRect().y) > 0
                 || (0 > window.pageYOffset - (window.pageYOffset - answer.getBoundingClientRect().y) &&
