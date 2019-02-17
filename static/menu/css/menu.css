@@ -245,8 +245,8 @@ p {
     background-size: 340px;
     top: 290px;
     left: 310px;
-    -webkit-filter: brightness(60%) saturate(50%);
-    filter: brightness(60%) saturate(50%);
+    -webkit-filter: brightness(40%) saturate(50%);
+    filter: brightness(40%) saturate(50%);
 }
 
 .hexagon3 .hexLeft:after {
@@ -310,8 +310,8 @@ p {
 }
 
 .hexagon.hexagon6 {
-    background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
-    background-size: 560px;
+    background: url('https://b1.m24.ru/c/1068826.483xp.jpg') left -170px top -7px no-repeat;
+    background-size: 400px;
     top: 410px;
     left: 510px;
     -webkit-filter: brightness(60%) saturate(50%);
@@ -319,31 +319,31 @@ p {
 }
 
 .hexagon6 .hexLeft:after {
-    top: 252px;
-    left: 535px;
+    top: 76px;
+    left: 466px;
     width: 398px;
     height: 600px;
 }
 
 .hexagon6 .hexRight:after {
-    top: 11px;
-    left: 279px;
-    width: 492px;
-    height: 577px;
+    top: 12px;
+    left: 282px;
+    width: 233px;
+    height: 428px;
 }
 
 .hexagon.hexagon7 {
-    background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
-    background-size: 560px;
+    background: url('https://d1u1mce87gyfbn.cloudfront.net/media/wallpaper/mercy-theatrical-twitter.jpg') left -300px top 0 no-repeat;
+    background-size: 680px;
     top: 650px;
     left: 510px;
-    -webkit-filter: brightness(60%) saturate(50%);
-    filter: brightness(60%) saturate(50%);
+    -webkit-filter: brightness(40%) saturate(50%);
+    filter: brightness(40%) saturate(50%);
 }
 
 .hexagon7 .hexLeft:after {
-    top: 252px;
-    left: 535px;
+    top: -94px;
+    left: 315px;
     width: 398px;
     height: 600px;
 }
@@ -351,22 +351,22 @@ p {
 .hexagon7 .hexRight:after {
     top: 11px;
     left: 279px;
-    width: 492px;
-    height: 577px;
+    width: 382px;
+    height: 398px;
 }
 
 .hexagon.hexagon8 {
-    background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
-    background-size: 560px;
+    background: url('https://ae01.alicdn.com/kf/HTB1Pd0VaRLN8KJjSZPhq6A.spXao/-.jpg_640x640.jpg') left -70px top -27px no-repeat;
+    background-size: 240px;
     top: 530px;
     left: 710px;
-    -webkit-filter: brightness(60%) saturate(50%);
-    filter: brightness(60%) saturate(50%);
+    -webkit-filter: brightness(40%) saturate(70%);
+    filter: brightness(40%) saturate(70%);
 }
 
 .hexagon8 .hexLeft:after {
-    top: 252px;
-    left: 535px;
+    top: 175px;
+    left: 612px;
     width: 398px;
     height: 600px;
 }
@@ -374,22 +374,22 @@ p {
 .hexagon8 .hexRight:after {
     top: 11px;
     left: 279px;
-    width: 492px;
-    height: 577px;
+    width: 172px;
+    height: 357px;
 }
 
 .hexagon.hexagon9 {
-    background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
-    background-size: 560px;
+    background: url('https://artgrummo.com/wp-content/uploads/2017/06/31.jpg') left -70px top -27px no-repeat;
+    background-size: 250px;
     top: 650px;
     left: 910px;
-    -webkit-filter: brightness(60%) saturate(50%);
-    filter: brightness(60%) saturate(50%);
+    -webkit-filter: brightness(40%) saturate(50%);
+    filter: brightness(40%) saturate(50%);
 }
 
 .hexagon9 .hexLeft:after {
-    top: 252px;
-    left: 535px;
+    top: 179px;
+    left: 608px;
     width: 398px;
     height: 600px;
 }
@@ -397,13 +397,13 @@ p {
 .hexagon9 .hexRight:after {
     top: 11px;
     left: 279px;
-    width: 492px;
-    height: 577px;
+    width: 182px;
+    height: 370px;
 }
 
 .hexagon.hexagon10 {
-    background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
-    background-size: 560px;
+    background: url('https://ak1.picdn.net/shutterstock/videos/32724121/thumb/1.jpg') left -140px top -17px no-repeat;
+    background-size: 410px;
     top: 530px;
     left: 1110px;
     -webkit-filter: brightness(60%) saturate(50%);
@@ -411,8 +411,8 @@ p {
 }
 
 .hexagon10 .hexLeft:after {
-    top: 252px;
-    left: 535px;
+    top: 92px;
+    left: 523px;
     width: 398px;
     height: 600px;
 }
@@ -420,13 +420,13 @@ p {
 .hexagon10 .hexRight:after {
     top: 11px;
     left: 279px;
-    width: 492px;
-    height: 577px;
+    width: 271px;
+    height: 366px;
 }
 
 .hexagon.hexagon11 {
-    background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
-    background-size: 560px;
+    background: url('https://ak1.picdn.net/shutterstock/videos/32724121/thumb/1.jpg') left -140px top -17px no-repeat;
+    background-size: 410px;
     top: 650px;
     left: 1310px;
     -webkit-filter: brightness(60%) saturate(50%);
@@ -434,8 +434,8 @@ p {
 }
 
 .hexagon11 .hexLeft:after {
-    top: 252px;
-    left: 535px;
+    top: 92px;
+    left: 523px;
     width: 398px;
     height: 600px;
 }
@@ -443,13 +443,13 @@ p {
 .hexagon11 .hexRight:after {
     top: 11px;
     left: 279px;
-    width: 492px;
-    height: 577px;
+    width: 271px;
+    height: 366px;
 }
 
 .hexagon.hexagon12 {
-    background: url(../../art3d/img/Character_3D_1.jpg) left -70px top -27px no-repeat;
-    background-size: 560px;
+    background: url('https://ak1.picdn.net/shutterstock/videos/32724121/thumb/1.jpg') left -140px top -17px no-repeat;
+    background-size: 410px;
     top: 530px;
     left: 1510px;
     -webkit-filter: brightness(60%) saturate(50%);
@@ -457,8 +457,8 @@ p {
 }
 
 .hexagon12 .hexLeft:after {
-    top: 252px;
-    left: 535px;
+    top: 92px;
+    left: 523px;
     width: 398px;
     height: 600px;
 }
@@ -466,8 +466,8 @@ p {
 .hexagon12 .hexRight:after {
     top: 11px;
     left: 279px;
-    width: 492px;
-    height: 577px;
+    width: 271px;
+    height: 366px;
 }
 
 .hexagon.hexagon13 {
