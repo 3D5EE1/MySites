@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block icon %}
-    <link rel="icon" href="{% static 'account/img/login.ico' %}" type="ico">
+    <link rel="icon" href="{% static 'account/img/Green-balloon.ico' %}" type="ico">
 {% endblock %}
 
 {% block base_css %}
@@ -39,8 +39,41 @@
 {% block navbar %}{% endblock %}
 
 {% block acc-content %}
-    <div class="content">
-        123
+    <div class="wrapper">
+        <div class="content">
+            <div class="logo">
+                logo
+            </div>
+            <div class="text">
+                Отправте нам ваш вопрос и мы обязательно ответим на него
+            </div>
+            <form method="post">{% csrf_token %}
+                <div class="app">
+                    <label>
+                        <input type="text" name="application" value="404" style="display:none"/>
+                    </label>
+                </div>
+                <div class="name">
+                    <label>
+                        <input type="text" name="name"  id="name" placeholder="Ваше имя" >
+                    </label>
+                </div>
+                <div class="email">
+                    <label>
+                        <input type="email" name="email" id="email" placeholder="Ваш емейл" >
+                    </label>
+                </div>
+                <div class="subject">
+                    <label>
+                        <input type="text" name="subject" id="subject" placeholder="Тема сообщения" >
+                    </label>
+                </div>
+                <div class="message">
+                  <textarea name="message" placeholder="Сообщение"></textarea>
+                 </div>
+                <button type="submit">Отправить сообщение</button>
+            </form>
+        </div>
     </div>
 {% endblock acc-content %}
 

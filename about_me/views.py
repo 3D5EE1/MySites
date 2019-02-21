@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from message.forms import MessageForm
 
 # Create your views here.
 
@@ -32,7 +33,12 @@ def support(request):
 
 
 def contact(request):
-    return render(request, 'about_me/contact.html')
+    message_form = MessageForm(request.POST)
+    if request.method == 'POST' and message_form.is_valid():
+        message_form.save()
+        return render(request, 'message/message-confirm.html')
+    else:
+        return render(request, 'about_me/contact.html')
 
 
 def press(request):
@@ -49,3 +55,5 @@ def career_administrator(request):
 
 def coming_soon(request):
     return render(request, 'message/coming-soon.html')
+
+

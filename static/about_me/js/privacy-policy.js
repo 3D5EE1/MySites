@@ -17,12 +17,12 @@
                 || (0 > window.pageYOffset - (window.pageYOffset - answer.getBoundingClientRect().y) &&
                 window.pageYOffset - (window.pageYOffset - answer.getBoundingClientRect().y) > -1)) {
                 upper.style.transition = 'color 1s, bottom .5s';
-                upper.style.bottom = '5%';
+                upper.style.bottom = '50px';
                 upper.style.animation = 'scrollUp 1s linear';
             } else if (window.pageYOffset > scroll
                 || window.pageYOffset - (window.pageYOffset + upperTarget.getBoundingClientRect().y) < 0) {
                 upper.style.transition = 'color 1s, bottom 1s';
-                upper.style.bottom = '-5%';
+                upper.style.bottom = '-50px';
                 upper.style.animation = 'scrollDown 1s linear';
             }
         }, 70);
