@@ -17,7 +17,7 @@
 {% endblock base_css %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'about_me/css/legal.css' %}">
+    <link rel="stylesheet" href="{% static 'about_me/css/contact.css' %}">
 {% endblock %}
 
 {% block title %}
@@ -41,9 +41,6 @@
 {% block acc-content %}
     <div class="wrapper">
         <div class="content">
-            <div class="logo">
-                logo
-            </div>
             <div class="text">
                 Отправте нам ваш вопрос и мы обязательно ответим на него
             </div>
@@ -53,24 +50,28 @@
                         <input type="text" name="application" value="404" style="display:none"/>
                     </label>
                 </div>
-                <div class="name">
-                    <label>
-                        <input type="text" name="name"  id="name" placeholder="Ваше имя" >
-                    </label>
+                <div class="massage">
+                    <div class="contacts">
+                        <div class="name">
+                            <label>
+                                <input type="text" name="name"  id="name" placeholder="Ваше имя" required>
+                            </label>
+                        </div>
+                        <div class="email">
+                            <label>
+                                <input type="email" name="email" id="email" placeholder="Ваш емейл" required>
+                            </label>
+                        </div>
+                        <div class="subject">
+                            <label>
+                                <input type="text" name="subject" id="subject" placeholder="Тема сообщения" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="text-message">
+                      <textarea name="message" placeholder="Сообщение" required></textarea>
+                    </div>
                 </div>
-                <div class="email">
-                    <label>
-                        <input type="email" name="email" id="email" placeholder="Ваш емейл" >
-                    </label>
-                </div>
-                <div class="subject">
-                    <label>
-                        <input type="text" name="subject" id="subject" placeholder="Тема сообщения" >
-                    </label>
-                </div>
-                <div class="message">
-                  <textarea name="message" placeholder="Сообщение"></textarea>
-                 </div>
                 <button type="submit">Отправить сообщение</button>
             </form>
         </div>

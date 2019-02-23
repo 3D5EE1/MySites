@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --blue: #0e86ca;
+    --blue-hover: #00aeff;
+    --blue-light: #0abaf5;
+    --blue-button: #10a1de;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: var(--black) url("../../account/img/tree.jpg")  center top -250px no-repeat;
+}
+
+.header {
+    position: absolute;
+    z-index: 1;
+    background-color: hsla(0, 0%, 100%, 0.08);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+
+.massage {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.contacts {
+    width: 37%;
+    margin: 0;
+}
+
+.text-message{
+    width: 60%;
+    margin:0 10px;
+}
+
+.text {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+input {
+    text-indent: 10px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(124, 124, 124);
+    background-color: rgba(28, 28, 28, 0.85);
+    height: 30px;
+    width: 100%;
+    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
+    color: rgb(124, 124, 124);
+    font-weight: 700;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:not(:focus), textarea:not(:focus) {
+    color: rgb(184, 184, 184);
+    font-weight: 600;
+}
+
+textarea:hover, input:hover {
+    border: 1px solid rgb(202, 202, 202);
+}
+
+textarea:focus, input:focus {
+    border: 1px solid rgb(71, 154, 255);
+    color: #fff;
+    font-weight: 600;
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+
+textarea {
+    padding-left: 10px;
+    padding-top: 5px;
+    line-height: 20px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(124, 124, 124);
+    background-color: rgba(28, 28, 28, 0.85);
+    resize: none;
+    height: 130px;
+    width: 100%;
+    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
+    color: rgb(124, 124, 124);
+    font-weight: 700;
+}
+
+button {
+    height: 30px;
+    padding-bottom: 2px;
+    margin: 14px 0 7px 370px;
+    border-radius: 2px;
+    border: 1px solid #00aeff;
+    background-color: rgba(28, 28, 28, 0.85);
+    width: 30%;
+    font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
+    font-size: 15px;
+    color: #00aeff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #fff;
+    border-color: #0e86ca;
+}
