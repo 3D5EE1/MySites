@@ -44,16 +44,16 @@ body {
     text-align: center;
 }
 
-.massage {
+.message {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 10px;
 }
 
 .contacts {
-    width: 37%;
-    margin: 0;
+    width: 30%;
+    margin:0 10px;
 }
 
 .text-message{
@@ -123,11 +123,11 @@ textarea {
 button {
     height: 30px;
     padding-bottom: 2px;
-    margin: 14px 0 7px 370px;
+    margin: 14px 0 7px;
     border-radius: 2px;
     border: 1px solid #00aeff;
     background-color: rgba(28, 28, 28, 0.85);
-    width: 30%;
+    width: 300px;
     font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
     font-size: 15px;
     color: #00aeff;
@@ -138,4 +138,22 @@ button {
 button:hover {
     color: #fff;
     border-color: #0e86ca;
+}
+
+@media (max-width: 535px) {
+    .content{
+        padding-bottom: 300px;
+    }
+
+    .contacts {
+        width: 100%;
+    }
+
+    .text-message{
+        width: 100%;
+    }
+    button {
+        width: 280px;
+    }
+
 }
