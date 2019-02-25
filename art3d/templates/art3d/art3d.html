@@ -41,8 +41,14 @@
     {% else %}
         not authenticated
     {% endif %}
+    <video autoplay loop muted></video>
+    <div class="video">
+        <iframe src="//coub.com/embed/1lh0ku?muted=true&autostart=false&originalSize=true&startWithHD=true" allowfullscreen frameborder="0" width="1280" height="720" allow="autoplay"></iframe>
+    </div>
+
 {% endblock %}
 
 
 {% block js %}
+    <script async src="//c-cdn.coub.com/embed-runner.js"></script>
 {% endblock %}

@@ -36,7 +36,8 @@ def contact(request):
     message_form = MessageForm(request.POST)
     if request.method == 'POST' and message_form.is_valid():
         message_form.save()
-        return render(request, 'message/message-confirm.html')
+        email = message_form.cleaned_data.get('email')
+        return render(request, 'message/message-confirm.html', {'email': email})
     else:
         return render(request, 'about_me/contact.html')
 
