@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,15 +11,14 @@
     {% block icon %}{% endblock icon %}
 
     {% block base_css %}
-        <link rel="stylesheet" href="{% static 'templates/css/base-header-dark.css' %}">
-        <link rel="stylesheet" href="{% static 'templates/css/base-footer-dark.css' %}">
+        <link rel="stylesheet" href="{% static 'templates/css/base-header-dark1.css' %}">
     {% endblock base_css %}
 
     {% block css %}{% endblock css %}
 
     <title>{% block title %}{% endblock title %}</title>
-  </head>
-  <body>
+</head>
+<body>
     {% block header %}
         <div class="header">
             <nav class="header-desktop">
@@ -91,8 +90,12 @@
 
     {% block footer %}{% endblock footer %}
 
+    {% block js_header %}
+        <script src="{% static "templates/js/base-header.js" %}"></script>
+    {% endblock js_header %}
+
     {% block js %}{% endblock js %}
-  </body>
+</body>
 </html>
 
 

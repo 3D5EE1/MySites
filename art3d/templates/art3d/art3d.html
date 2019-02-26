@@ -41,14 +41,14 @@
     {% else %}
         not authenticated
     {% endif %}
-    <video autoplay loop muted></video>
-    <div class="video">
-        <iframe src="//coub.com/embed/1lh0ku?muted=true&autostart=false&originalSize=true&startWithHD=true" allowfullscreen frameborder="0" width="1280" height="720" allow="autoplay"></iframe>
-    </div>
+
+    <video autoplay loop muted width="100px" height="44px">
+        <source src="{% static "art3d/media/Ascendant_One.mp4" %}" type="video/mp4">
+    </video>
+
 
 {% endblock %}
 
 
 {% block js %}
-    <script async src="//c-cdn.coub.com/embed-runner.js"></script>
 {% endblock %}
