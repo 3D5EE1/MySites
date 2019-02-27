@@ -21,16 +21,14 @@
 <body>
     {% block header %}
         <div class="header">
-            <nav class="header-desktop">
+            <div class="header-desktop">
                 <a href="{% url 'about_me' %}">
                     <div class="header-logo">rypy.ru</div>
                 </a>
                 <div class="header-items">
-                    <a href="#">
-                        <div class="header-menu-my-sites">МОИ САЙТЫ
-                            <div class="hiden">12345</div>
-                        </div>
-                    </a>
+                    <div class="header-menu">МОИ САЙТЫ
+                        <div id="arrow">&#9660</div>
+                    </div>
                     <a href="#">
                         <div class="header-news">НОВОСТИ</div>
                     </a>
@@ -80,7 +78,10 @@
                         {% endblock login %}
                     {% endif %}
                 </div>
-            </nav>
+            </div>
+            <div class="hidden-menu">12345
+                <div class="asd">sdasddqweqweqweqwe</div>
+            </div>
         </div>
     {% endblock header %}
 

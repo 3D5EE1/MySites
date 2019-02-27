@@ -18,6 +18,7 @@ a {
 }
 
 .header {
+    height: 39px;
     width: 100%;
     background-color: #2a2a2a;
 }
@@ -35,34 +36,45 @@ a {
     color: #ffda1e;
 }
 
-.header-desktop .header-logo {
+.header-logo {
     font-size: 20px;
     display: inline-block;
     margin: 0 10px 0 10px;
     color: #0abaf5;
 }
 
-.header-desktop .header-items {
+.header-items, .header-menu, #arrow {
     display: inline-block;
 }
 
-.header-desktop .header-items .header-menu-my-sites {
-    position: relative;
+.header-menu {
+    padding: 10px;
     color: #e0e1e1;
     text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31);
 }
 
-.header-desktop .header-items .header-menu-my-sites .hiden {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    visibility: hidden;
-    top: 120px;
-    background-color: #ff1a1f;
+.header-menu:hover {
+    cursor: pointer;
 }
 
-.header-desktop .header-items .header-menu-my-sites .header-menu-my-sites:hover > .hiden {
-    visibility: visible;
+.header-menu:hover #arrow {
+    color: #e0e1e1;
+    text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31);
+}
+
+#arrow {
+    padding-left: 2px;
+    color: #b8b8b8;
+    text-shadow: none;
+}
+
+.hidden-menu {
+    position: relative;
+    display: none;
+    height: 200px;
+    width: 100%;
+    background-color: #2a2a2a;
+    z-index: 10;
 }
 
 .header-desktop .header-items a > div {
