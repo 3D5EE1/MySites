@@ -14,27 +14,39 @@ window.onload = function() {
     let headerMenu = $s('div.header-menu');
     let hiddenMenu = $s('div.hidden-menu');
     let arrowMenu = $('arrow');
+    let shadow = $s('div.shadow');
 
     // let arrowUp = document.createTextNode("▲");
     // let arrowDown = document.createTextNode("▼");
     // arrowUP.appendChild(arrowUp);
 
-    function hidden () {
+    function hiddenMenuSites () {
         hiddenMenu.style.display = 'none';
-        arrowMenu.innerHTML = "▼"
+        shadow.style.display = 'none';
+        arrowMenu.innerHTML = "˅";
     }
 
-    function visible () {
+    function visibleMenuSites () {
         hiddenMenu.style.display = 'block';
-        arrowMenu.innerHTML = "▲"
+        shadow.style.display = 'block';
+        arrowMenu.innerHTML = "˄";
     }
 
     addEventListener('click', function(e) {
         if (e.target === headerMenu) {
-            if (hiddenMenu.style.display === 'block') hidden();
-            else visible();
+            if (hiddenMenu.style.display === 'block') hiddenMenuSites();
+            else visibleMenuSites();
         } else if (e.target !== hiddenMenu) {
-            hidden();
+            hiddenMenuSites();
         }
-    })
+    });
+
+    addEventListener('scroll', function(){
+        if (window.pageYOffset >= 38) {
+            hiddenMenu.style.position = 'fixed';
+        }
+        if (window.pageYOffset < 38) {
+            hiddenMenu.style.position = 'relative';
+        }
+    });
 };

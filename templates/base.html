@@ -11,7 +11,7 @@
     {% block icon %}{% endblock icon %}
 
     {% block base_css %}
-        <link rel="stylesheet" href="{% static 'templates/css/base-header-dark1.css' %}">
+        <link rel="stylesheet" href="{% static 'templates/css/base-header-dark.css' %}">
     {% endblock base_css %}
 
     {% block css %}{% endblock css %}
@@ -20,6 +20,7 @@
 </head>
 <body>
     {% block header %}
+        <div class="shadow"></div>
         <div class="header">
             <div class="header-desktop">
                 <a href="{% url 'about_me' %}">
@@ -27,7 +28,7 @@
                 </a>
                 <div class="header-items">
                     <div class="header-menu">МОИ САЙТЫ
-                        <div id="arrow">&#9660</div>
+                        <div id="arrow">&#709</div>
                     </div>
                     <a href="#">
                         <div class="header-news">НОВОСТИ</div>
@@ -66,9 +67,9 @@
                     </ul>
                     {% if user.is_authenticated %}
                         {% block logout %}
-                            <a href="#">
+
                                 <div class="header-logout">ВЫХОД</div>
-                            </a>
+
                         {% endblock logout %}
                     {% else %}
                         {% block login %}
@@ -79,8 +80,10 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="hidden-menu">12345
-                <div class="asd">sdasddqweqweqweqwe</div>
+            <div class="hidden-menu">
+                <a href="{% url 'menu' %}">
+                    <div class="header-logo">rypy.ru</div>
+                </a>
             </div>
         </div>
     {% endblock header %}
