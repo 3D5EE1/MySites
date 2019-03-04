@@ -16,7 +16,7 @@ body {
 
 .header {
     position: absolute;
-    background-color: hsla(0, 0%, 100%, 0.08);
+    background: hsla(0, 0%, 100%, 0.08);
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
     z-index: 1;
 }

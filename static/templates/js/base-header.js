@@ -11,10 +11,15 @@ window.onload = function() {
         return document.querySelector(siteSelector);
     }
 
-    let headerMenu = $s('div.header-menu');
-    let hiddenMenu = $s('div.hidden-menu');
+    function $S(siteSelectors) {
+        return document.querySelectorAll(siteSelectors);
+    }
+
+    let headerMenu = $s('.header-menu');
+    let hiddenMenu = $s('.hidden-menu');
     let arrowMenu = $('arrow');
-    let shadow = $s('div.shadow');
+    let shadow = $s('.shadow');
+    let links = $S('.links');
 
     // let arrowUp = document.createTextNode("▲");
     // let arrowDown = document.createTextNode("▼");
@@ -24,12 +29,30 @@ window.onload = function() {
         hiddenMenu.style.display = 'none';
         shadow.style.display = 'none';
         arrowMenu.innerHTML = "˅";
+        for (let i of links) {
+            i.style.color = '#b8b8b8';
+            i.onmouseover = function () {
+                this.style.color = '#ffda1e'
+            };
+            i.onmouseout = function () {
+                this.style.color = '#b8b8b8'
+            }
+        }
     }
 
     function visibleMenuSites () {
         hiddenMenu.style.display = 'block';
         shadow.style.display = 'block';
         arrowMenu.innerHTML = "˄";
+        for (let i of links) {
+            i.style.color = '#676767';
+            i.onmouseover = function () {
+                this.style.color = '#ffda1e'
+            };
+            i.onmouseout = function () {
+                this.style.color = '#676767'
+            }
+        }
     }
 
     addEventListener('click', function(e) {
@@ -42,7 +65,7 @@ window.onload = function() {
     });
 
     addEventListener('scroll', function(){
-        if (window.pageYOffset >= 38) {
+        if (window.pageYOffset > 38) {
             hiddenMenu.style.position = 'fixed';
         }
         if (window.pageYOffset < 38) {
