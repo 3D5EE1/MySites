@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   postgres1:
-    image: postgres:11.1
+    image: postgres:11.2
     container_name: mysites_postgres1
     restart: always
     environment:
@@ -15,7 +15,7 @@ services:
     volumes:
       - ../databases/postgres1/:/var/lib/postgresql/data/
     ports:
-      - "5432:5432"
+      - "8421:5432"
     networks:
       - MySites_network
 

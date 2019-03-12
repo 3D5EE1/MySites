@@ -10,8 +10,6 @@ letsencrypt certonly --webroot -w /var/www/rypy -d rypy.ru -d www.rypy.ru -m ryp
 
 echo 'перенос конфига для порта 443...'
 
-mv /nginx2.conf /etc/nginx/nginx.conf
+mv /nginx_next.conf /etc/nginx/nginx.conf
 
-echo 'применение изменений в настройках nginx, запуск rsyslog и cron...'
-
-service rsyslog start && service cron start && tail -f /var/log/syslog && nginx -s reload
+mv /cron_next.sh /cron.sh
