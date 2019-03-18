@@ -93,7 +93,7 @@ class MyUserAdmin(admin.ModelAdmin):
         if not self.has_change_permission(request):
             if self.has_add_permission(request) and settings.DEBUG:
                 # Raise Http404 in debug mode so that the user gets a helpful
-                # error message.
+                # error app_message.
                 raise Http404(
                     'Your user does not have the "Change user" permission. In '
                     'order to add users, Django requires that your user '

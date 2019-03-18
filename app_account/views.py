@@ -40,7 +40,7 @@ def creation(request):
                 'token': account_activation_token.make_token(user),
             })
             to_email = form.cleaned_data.get('email')
-            # email = EmailMessage(subject, message, to=[to_email])
+            # email = EmailMessage(subject, app_message, to=[to_email])
             # email.send()
             email = EmailMultiAlternatives(subject, text_message, to=[to_email])
             email.attach_alternative(html_message, "text/html")
@@ -96,7 +96,7 @@ def profile(request):
         return render(request, 'app_account/acc-profile.html')
 
 
-def login_redirect(request, site_redirect='menu'):
+def login_redirect(request, site_redirect='app_menu'):
     context = {}
     context.update(csrf(request))
 
@@ -131,7 +131,7 @@ def login_redirect(request, site_redirect='menu'):
 #     return render(request, 'app_account/home.html')
 #
 #
-# def login_redirect(request, site_redirect='menu'):
+# def login_redirect(request, site_redirect='app_menu'):
 #     context = {}
 #     context.update(csrf(request))
 #

@@ -51,7 +51,7 @@ a {
 .header-logo {
     font-size: 20px;
     display: inline-block;
-    margin: 0 10px 0 10px;
+    margin: 0 10px 0 20px;
     color: #0abaf5;
 }
 
@@ -66,7 +66,7 @@ a {
 
 .header-profileItems {
     display: inline-block;
-    margin: 10px;
+    margin-right: 30px;
     float: right;
 }
 
@@ -140,7 +140,8 @@ a {
 .header-login,
 .header-logout {
     position: relative;
-    margin: 0 20px 0 10px;
+    padding: 10px;
+    margin: 0 0 0 10px;
 }
 
 .header-login:hover,
@@ -151,8 +152,8 @@ a {
 
 #arrow-login {
     position: absolute;
-    top: -3px;
-    right: -24px;
+    top: 6px;
+    right: -14px;
     color: #b8b8b8;
     font-size: 24px;
     font-weight: 600;

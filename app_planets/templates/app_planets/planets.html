@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+{% endblock %}
+
+
+{% block icon %}
+    <link rel="icon" href="{% static 'app_planets/img/planets.ico' %}" type="ico">
+{% endblock %}
+
+
+{% block css %}
+{% endblock %}
+
+
+{% block title %}
+    planets
+{% endblock %}
+
+{% block login %}
+    <a href="{% url 'login' site_redirect='planets' %}">
+        <div class="header-login">ВХОД</div>
+    </a>
+{% endblock %}
+
+{% block logout %}
+    <a href="{% url 'planets_logout' %}">
+        <div class="header-logout">ВЫХОД</div>
+    </a>
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+
+{% block content %}
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}
+
+
+{% block js %}
+{% endblock %}

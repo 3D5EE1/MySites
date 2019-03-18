@@ -1,0 +1,52 @@
+{% extends 'acc-base.html' %}
+{% load static %}
+
+{% block meta %}
+    <meta name="description" content="страница авторизация разработчик Евгений Гурин.">
+    <meta name="keywords" content="Evgeny Gurin, registration, rypy.ru, Python, Django, JS">
+{% endblock %}
+
+{% block icon %}
+    <link rel="icon" href="{% static 'app_account/img/careers.ico' %}" type="ico">
+{% endblock %}
+
+{% block base_css %}
+    <link rel="stylesheet" href="{% static 'templates/css/base-header-dark.css' %}">
+    <link rel="stylesheet" href="{% static 'templates/css/acc-base-footer.css' %}">
+    <link rel="stylesheet" href="{% static 'templates/css/base-footer-dark.css' %}">
+{% endblock base_css %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app_about_me/css/career-administrator.css' %}">
+{% endblock %}
+
+{% block title %}
+    rypy.ru entertainment
+{% endblock %}
+
+{% block login %}
+    <a href="{% url 'login' site_redirect='menu' %}">
+        <div class="header-login">ВХОД</div>
+    </a>
+{% endblock %}
+
+{% block logout %}
+    <a href="{% url 'menu_logout' %}">
+        <div class="header-logout">ВЫХОД</div>
+    </a>
+{% endblock %}
+
+{% block navbar %}{% endblock %}
+
+{% block acc-content %}
+    <div class="content">
+        <p>На данный момент вакансии на эту должность отсутствуют.</p>
+        <h1 id="start-career"></h1>
+            <a id="return" href="{% url "careers" %}">&#8656; Вернуться в каталог вакансий</a>
+        <h1 id="end-career"></h1>
+    </div>
+{% endblock acc-content %}
+
+{% block footer %}{% endblock footer %}
+
+{% block js %}{% endblock %}

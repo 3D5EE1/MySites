@@ -1,0 +1,1 @@
+default_app_config = 'app_art3d.apps.Art3DConfig'

@@ -1,0 +1,105 @@
+{% extends 'acc-base.html' %}
+{% load static %}
+
+{% block meta %}
+    <meta name="description" content="страница авторизация разработчик Евгений Гурин.">
+    <meta name="keywords" content="Evgeny Gurin, registration, rypy.ru, Python, Django, JS">
+{% endblock %}
+
+{% block icon %}
+    <link rel="icon" href="{% static 'app_account/img/careers.ico' %}" type="ico">
+{% endblock %}
+
+{% block base_css %}
+    <link rel="stylesheet" href="{% static 'templates/css/base-header-dark.css' %}">
+    <link rel="stylesheet" href="{% static 'templates/css/acc-base-footer.css' %}">
+    <link rel="stylesheet" href="{% static 'templates/css/base-footer-dark.css' %}">
+{% endblock base_css %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app_about_me/css/careers.css' %}">
+{% endblock %}
+
+{% block title %}
+    Работа в rypy.ru entertainment
+{% endblock %}
+
+{% block login %}
+    <a href="{% url 'login' site_redirect='menu' %}">
+        <div class="header-login">ВХОД</div>
+    </a>
+{% endblock %}
+
+{% block logout %}
+    <a href="{% url 'menu_logout' %}">
+        <div class="header-logout">ВЫХОД</div>
+    </a>
+{% endblock %}
+
+{% block navbar %}{% endblock %}
+
+{% block acc-content %}
+    <div class="content">
+        <h1>Работа в rypy.ru entertainment</h1>
+        <a href="{% url "career_administrator" %}">
+            <div class="career-name">Администрация
+                <div class="career-number-hidden">Вакансий:  0</div>
+            </div>
+            <div class="career-number">Вакансий:  0</div>
+            <div class="career-cursor">&#8250;</div>
+        </a>
+        <a href="{% url "career_administrator" %}">
+            <div class="career-name">Дизайн
+                <div class="career-number-hidden">Вакансий:  0</div>
+            </div>
+            <div class="career-number">Вакансий:  0</div>
+            <div class="career-cursor">&#8250;</div>
+        </a>
+        <a href="{% url "career_administrator" %}">
+            <div class="career-name">Инженеры и программисты
+                <div class="career-number-hidden">Вакансий:  0</div>
+            </div>
+            <div class="career-number">Вакансий:  0</div>
+            <div class="career-cursor">&#8250;</div>
+        </a>
+        <a href="{% url "career_administrator" %}">
+            <div class="career-name">Локализация, контроль качества, служба поддержки
+                <div class="career-number-hidden">Вакансий:  0</div>
+            </div>
+            <div class="career-number">Вакансий:  0</div>
+            <div class="career-cursor">&#8250;</div>
+        </a>
+        <a href="{% url "career_administrator" %}">
+            <div class="career-name">Операционные отделы
+                <div class="career-number-hidden">Вакансий:  0</div>
+            </div>
+            <div class="career-number">Вакансий:  0</div>
+            <div class="career-cursor">&#8250;</div>
+        </a>
+        <a href="{% url "career_administrator" %}">
+            <div class="career-name">Продюсеры и менеджеры проектов
+                <div class="career-number-hidden">Вакансий:  0</div>
+            </div>
+            <div class="career-number">Вакансий:  0</div>
+            <div class="career-cursor">&#8250;</div>
+        </a>
+        <a href="{% url "career_administrator" %}">
+            <div class="career-name">Работа с сообществом, маркетинг и коммуникации
+                <div class="career-number-hidden">Вакансий:  0</div>
+            </div>
+            <div class="career-number">Вакансий:  0</div>
+            <div class="career-cursor">&#8250;</div>
+        </a>
+        <a href="{% url "career_administrator" %}">
+            <div class="career-name">Художественное оформление, анимация и звук
+                <div class="career-number-hidden">Вакансий:  0</div>
+            </div>
+            <div class="career-number">Вакансий:  0</div>
+            <div class="career-cursor">&#8250;</div>
+        </a>
+    </div>
+{% endblock acc-content %}
+
+{% block footer %}{% endblock footer %}
+
+{% block js %}{% endblock %}

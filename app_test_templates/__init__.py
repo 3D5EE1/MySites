@@ -1,0 +1,1 @@
+default_app_config = 'app_test_templates.apps.TestTemplatesConfig'
