@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-    background: var(--black) url("../../account/img/tree.jpg")  center top -250px no-repeat;
+    background: var(--black) url("../../app_account/img/tree.jpg")  center top -250px no-repeat;
 }
 
 .header {

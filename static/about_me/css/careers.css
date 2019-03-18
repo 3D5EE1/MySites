@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    background: #000 url("../../account/img/tree.jpg")  center top -250px no-repeat;
+    background: #000 url("../../app_account/img/tree.jpg")  center top -250px no-repeat;
 }
 
 .header {

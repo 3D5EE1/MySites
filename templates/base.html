@@ -28,7 +28,8 @@
                 </a>
                 <div class="header-items">
                     <div class="header-menu">МОИ САЙТЫ
-                        <div id="arrow">&#709</div>
+                        <div id="arrow">&#9662</div>
+                        <div id="cube-menu"></div>
                     </div>
                     <a href="#">
                         <div class="links header-news">НОВОСТИ</div>
@@ -66,17 +67,15 @@
                         </li>
                     </ul>
                     {% if user.is_authenticated %}
-                        {% block logout %}
+                        <div class="header-logout">{{ user.email }}
+                            <div id="arrow-login">&#9662</div>
+                        </div>
 
-                                <div class="header-logout">ВЫХОД</div>
-
-                        {% endblock logout %}
                     {% else %}
-                        {% block login %}
-                            <a href="#">
-                                <div class="header-login">ВХОД</div>
-                            </a>
-                        {% endblock login %}
+                        <div class="header-login">Моя учетная запись
+                            <div id="arrow-login">&#9662</div>
+                        </div>
+
                     {% endif %}
                 </div>
             </div>

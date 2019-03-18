@@ -20,6 +20,7 @@ window.onload = function() {
     let arrowMenu = $('arrow');
     let shadow = $s('.shadow');
     let links = $S('.links');
+    let cubeMenu = $('cube-menu');
 
     // let arrowUp = document.createTextNode("▲");
     // let arrowDown = document.createTextNode("▼");
@@ -28,7 +29,10 @@ window.onload = function() {
     function hiddenMenuSites () {
         hiddenMenu.style.display = 'none';
         shadow.style.display = 'none';
-        arrowMenu.innerHTML = "˅";
+        arrowMenu.innerHTML = "▾";
+        arrowMenu.style.top = '6px';
+        cubeMenu.style.display = 'none';
+
         for (let i of links) {
             i.style.color = '#b8b8b8';
             i.onmouseover = function () {
@@ -43,7 +47,10 @@ window.onload = function() {
     function visibleMenuSites () {
         hiddenMenu.style.display = 'block';
         shadow.style.display = 'block';
-        arrowMenu.innerHTML = "˄";
+        arrowMenu.innerHTML = "▴";
+        arrowMenu.style.top = '4px';
+        cubeMenu.style.display = 'block';
+
         for (let i of links) {
             i.style.color = '#676767';
             i.onmouseover = function () {

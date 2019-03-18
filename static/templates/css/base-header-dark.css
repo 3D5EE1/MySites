@@ -17,6 +17,15 @@ a {
     text-decoration: none;
 }
 
+.shadow {
+    position: fixed;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
 .header {
     position: relative;
     height: 39px;
@@ -46,11 +55,35 @@ a {
     color: #0abaf5;
 }
 
-.header-items, .header-menu, #arrow, .header-profileItems .header-profileItems-menu {
+.header-items,
+.header-menu,
+#arrow,
+.header-profileItems .header-profileItems-menu,
+.header-profileItems .header-login,
+.header-profileItems .header-logout{
     display: inline-block;
 }
 
+.header-profileItems {
+    display: inline-block;
+    margin: 10px;
+    float: right;
+}
+
+
+.header-profileItems a > div {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.header-items a > div {
+    display: inline-block;
+    padding: 10px;
+}
+
 .header-menu {
+    position: relative;
+    margin-right: 16px;
     padding: 10px;
     color: #e0e1e1;
     text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31);
@@ -66,10 +99,29 @@ a {
 }
 
 #arrow {
-    padding-left: 4px;
+    position: absolute;
+    top: 6px;
+    right: -14px;
     color: #b8b8b8;
+    font-size: 24px;
     font-weight: 600;
     text-shadow: none;
+}
+
+#cube-menu {
+    position: absolute;
+    display: none;
+    bottom: -9px;
+    right: -14px;
+    height: 10px;
+    width: 10px;
+    background: #1b2331;
+    border-top: 1px solid rgba(255,255,255,.15);
+    border-right: 1px solid rgba(255,255,255,.15);
+    -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+    -ms-transform: translate(-50%,-50%) rotate(-45deg);
+    transform: translate(-50%,-50%) rotate(-45deg);
+    z-index: 101;
 }
 
 .hidden-menu {
@@ -85,31 +137,38 @@ a {
     z-index: 100;
 }
 
-.shadow {
-    position: fixed;
-    top: 0;
-    display: none;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .5);
+.header-login,
+.header-logout {
+    position: relative;
+    margin: 0 20px 0 10px;
 }
 
-.header-items a > div {
-    display: inline-block;
-    padding: 10px;
+.header-login:hover,
+.header-logout:hover {
+    color: #e0e1e1;
+    cursor: pointer;
 }
 
-.header-profileItems {
-    display: inline-block;
-    margin: 10px;
-    float: right;
+#arrow-login {
+    position: absolute;
+    top: -3px;
+    right: -24px;
+    color: #b8b8b8;
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: none;
+}
+
+.header-login:hover #arrow-login,
+.header-logout:hover #arrow-login {
+    color: #e0e1e1;
+    text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31);
 }
 
 
-.header-profileItems a > div {
-    display: inline-block;
-    margin-left: 20px;
-}
+
+
+
 
 
 /*----------------------------------------------*/

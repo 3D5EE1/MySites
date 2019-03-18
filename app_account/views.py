@@ -27,13 +27,13 @@ def creation(request):
             user.save()
             current_site = get_current_site(request)
             subject = 'Подтверждение E-mail Вашей учетной записи rypy.ru entertainment'
-            text_message = render_to_string('account/acc-active-email.txt', {
+            text_message = render_to_string('app_account/acc-active-email.txt', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
                 'token': account_activation_token.make_token(user),
             })
-            html_message = render_to_string('account/acc-active-email.html', {
+            html_message = render_to_string('app_account/acc-active-email.html', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
@@ -45,7 +45,7 @@ def creation(request):
             email = EmailMultiAlternatives(subject, text_message, to=[to_email])
             email.attach_alternative(html_message, "text/html")
             email.send()
-            return render(request, 'account/acc-confirm-email.html', {'email': to_email})
+            return render(request, 'app_account/acc-confirm-email.html', {'email': to_email})
             # return HttpResponse('Please confirm your email address to complete the registration')
         else:
             context = {
@@ -61,7 +61,7 @@ def creation(request):
                 'username': request.POST['username'],
                 'email': request.POST['email'],
             }
-            return render(request, 'account/acc-creation.html', context)
+            return render(request, 'app_account/acc-creation.html', context)
     else:
         form = MyUserForm()
     context = {
@@ -70,7 +70,7 @@ def creation(request):
         'now_date2': now_date2,
         'month_off': 'disabled'
     }
-    return render(request, 'account/acc-creation.html', context)
+    return render(request, 'app_account/acc-creation.html', context)
 
 
 def activate(request, uid64, token):
@@ -84,7 +84,7 @@ def activate(request, uid64, token):
         user.save()
         login(request, user)
         return redirect('profile')
-        # return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
+        # return HttpResponse('Thank you for your email confirmation. Now you can login your app_account.')
     else:
         return HttpResponse('Activation link is invalid!')
 
@@ -93,7 +93,7 @@ def profile(request):
     if not request.user.is_authenticated:
         return redirect('login/profile')
     else:
-        return render(request, 'account/acc-profile.html')
+        return render(request, 'app_account/acc-profile.html')
 
 
 def login_redirect(request, site_redirect='menu'):
@@ -110,9 +110,9 @@ def login_redirect(request, site_redirect='menu'):
         else:
             context['login_error'] = 'Пожалуйста, введите корректные адрес электронной почты и пароль учётной записи.' \
                                      ' Оба поля могут быть чувствительны к регистру.'
-            return render_to_response('account/acc-login.html', context)
+            return render_to_response('app_account/acc-login.html', context)
     else:
-        return render_to_response('account/acc-login.html', context)
+        return render_to_response('app_account/acc-login.html', context)
 
 
 
@@ -128,7 +128,7 @@ def login_redirect(request, site_redirect='menu'):
 #
 #
 # def home(request):
-#     return render(request, 'account/home.html')
+#     return render(request, 'app_account/home.html')
 #
 #
 # def login_redirect(request, site_redirect='menu'):
@@ -145,12 +145,12 @@ def login_redirect(request, site_redirect='menu'):
 #         else:
 #             context['login_error'] = 'Пожалуйста, введите корректные адрес электронной почты и пароль учётной записи.' \
 #                                      ' Оба поля могут быть чувствительны к регистру.'
-#             return render_to_response('account/acc-login.html', context)
+#             return render_to_response('app_account/acc-login.html', context)
 #     else:
-#         return render_to_response('account/acc-login.html', context)
+#         return render_to_response('app_account/acc-login.html', context)
 
 
-# @login_required(login_url='/account/login')
+# @login_required(login_url='/app_account/login')
 # def profile(request):
 #     return redirect('')
 #
@@ -168,7 +168,7 @@ def login_redirect(request, site_redirect='menu'):
 #
 # @login_required(login_url='/test_account/auth-app/login')
 # def auth_app_home(request):
-#     return render(request, 'test_account/../../account/templates/account/home1.html')
+#     return render(request, 'test_account/../../app_account/templates/app_account/home1.html')
 #
 #
 # def auth_app_sign_up(request):
@@ -194,7 +194,7 @@ def login_redirect(request, site_redirect='menu'):
 #
 #             return redirect(auth_app_home)
 #
-#     return render(request, 'test_account/../../account/templates/account/sign_up.html', context)
+#     return render(request, 'test_account/../../app_account/templates/app_account/sign_up.html', context)
 
 
 # def login(request):

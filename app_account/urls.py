@@ -16,7 +16,7 @@ Including another URLconf
 
 from django.urls import path, re_path
 from django.conf.urls import url
-from account import views
+from app_account import views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -28,7 +28,7 @@ urlpatterns = [
 
 
 # from django.urls import path
-# from account import views
+# from app_account import views
 #
 # urlpatterns = [
 #     path('home/', views.home, name='home'),
