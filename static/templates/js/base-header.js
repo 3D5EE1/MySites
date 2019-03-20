@@ -15,12 +15,18 @@ window.onload = function() {
         return document.querySelectorAll(siteSelectors);
     }
 
-    let headerMenu = $s('.header-menu');
-    let hiddenMenu = $s('.hidden-menu');
-    let arrowMenu = $('arrow');
-    let shadow = $s('.shadow');
-    let links = $S('.links');
-    let cubeMenu = $('cube-menu');
+    let headerMenu = $s('.header-menu'),
+        hiddenMenu = $s('.hidden-menu'),
+        arrowMenu = $('arrow'),
+        shadow = $s('.shadow'),
+        links = $S('.links'),
+        cubeMenu = $('cube-menu'),
+        headerLoginMenu = $s('.header-login-menu'),
+        arrowLoginMenu = $('arrow-login'),
+        headerBlockLogin = $s('.header-block-login')
+
+
+    ;
 
     // let arrowUp = document.createTextNode("▲");
     // let arrowDown = document.createTextNode("▼");
@@ -62,12 +68,39 @@ window.onload = function() {
         }
     }
 
+    let hiddenLoginMenu = function () {
+        headerBlockLogin.style.display = 'none';
+        shadow.style.display = 'none';
+        arrowLoginMenu.innerHTML = "▾";
+        arrowLoginMenu.style.top = '6px';
+    };
+
+    let visibleLoginMenu = function () {
+        headerBlockLogin.style.display = 'block';
+        shadow.style.display = 'block';
+        arrowLoginMenu.innerHTML = "▴";
+        arrowLoginMenu.style.top = '4px';
+    };
+
+    let logoutMenu = function () {
+
+    };
+
+
+
     addEventListener('click', function(e) {
         if (e.target === headerMenu) {
             if (hiddenMenu.style.display === 'block') hiddenMenuSites();
             else visibleMenuSites();
         } else if (e.target !== hiddenMenu) {
             hiddenMenuSites();
+        }
+
+        if (e.target === headerLoginMenu) {
+            if (headerBlockLogin.style.display === 'block') hiddenLoginMenu();
+            else visibleLoginMenu();
+        } else if (e.target !== headerLoginMenu) {
+            hiddenLoginMenu()
         }
     });
 

@@ -73,18 +73,21 @@
                         </div>
 
                     {% else %}
-                        <div class="header-login">Моя учетная запись
-                            <div id="arrow-login">&#9662</div>
-                        </div>
-                        <div class="header-block-login">
-                            <div class="header-login-button">
-                                <a href="">Вход</a>
+                        <div class="header-login">
+                            <div class="header-login-menu">Моя учетная запись
+                                <div id="arrow-login">&#9662</div>
                             </div>
-                            <div class="header-params">
-                                <a href="">Параметры</a>
-                            </div>
-                            <div class="header-create-acc">
-                                <a href="">Создать учетную запись</a>
+                            <div class="header-block-login">
+                                <div id="cube-block-login"></div>
+                                <div class="header-login-button">
+                                    {% block login %}{% endblock login %}
+                                </div>
+                                <div class="header-params">
+                                    <a id="header-link-params" href="{% url 'profile' %}">Параметры</a>
+                                </div>
+                                <div class="header-create-acc">
+                                    <a id="header-link-create" href="{% url 'creation' %}">Создать учетную запись</a>
+                                </div>
                             </div>
                         </div>
                     {% endif %}
