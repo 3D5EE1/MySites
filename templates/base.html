@@ -69,13 +69,24 @@
                     {% if user.is_authenticated %}
                         <div class="header-logout">{{ user.email }}
                             <div id="arrow-login">&#9662</div>
+
                         </div>
 
                     {% else %}
                         <div class="header-login">Моя учетная запись
                             <div id="arrow-login">&#9662</div>
                         </div>
-
+                        <div class="header-block-login">
+                            <div class="header-login-button">
+                                <a href="">Вход</a>
+                            </div>
+                            <div class="header-params">
+                                <a href="">Параметры</a>
+                            </div>
+                            <div class="header-create-acc">
+                                <a href="">Создать учетную запись</a>
+                            </div>
+                        </div>
                     {% endif %}
                 </div>
             </div>
