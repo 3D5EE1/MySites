@@ -48,7 +48,7 @@
                     </a>
                 </div>
                 <div class="header-profileItems">
-                    <ul class="header-profileItems-menu">
+                    <ul class="links header-profileItems-menu">
                         <li><a href=#>1234</a>
                             <ul class="submenu">
                                 <li><a href=#>Sudmenu 1</a></li>
@@ -57,8 +57,8 @@
                             </ul>
                         </li>
                     </ul>
-                    <ul class="header-profileItems-menu">
-                        <li>1234
+                    <ul class="links header-profileItems-menu">
+                        <li><a href=#>1234</a>
                             <ul class="submenu">
                                 <li><a href=#>Sudmenu 1</a></li>
                                 <li><a href=#>Sudmenu 2</a></li>
@@ -67,15 +67,31 @@
                         </li>
                     </ul>
                     {% if user.is_authenticated %}
-                        <div class="header-logout">{{ user.email }}
-                            <div id="arrow-login">&#9662</div>
-
+                        <div class="header-logout">
+                            <div class="links header-logout-menu">{{ user.username }}
+                                <div class="links" id="arrow-logout">&#9662</div>
+                            </div>
+                            <div class="header-block-logout">
+                                <div id="cube-block-logout"></div>
+                                <div class="header-logout-user">
+                                    <div class="header-logout-username">{{ user.username }}</div>
+                                    <div class="header-logout-email">{{ user.email }}</div>
+                                </div>
+                                <div class="header-params">
+                                    <a id="header-link-params" href="{% url 'profile' %}">Параметры</a>
+                                </div>
+                                <div class="header-gifts">
+                                    <a id="header-link-gifts" href="{% url 'creation' %}">Мои подарки</a>
+                                </div>
+                                <div class="header-logout-exit">
+                                    {% block logout %}{% endblock logout %}
+                                </div>
+                            </div>
                         </div>
-
                     {% else %}
                         <div class="header-login">
-                            <div class="header-login-menu">Моя учетная запись
-                                <div id="arrow-login">&#9662</div>
+                            <div class="links header-login-menu">Моя учетная запись
+                                <div class="links" id="arrow-login">&#9662</div>
                             </div>
                             <div class="header-block-login">
                                 <div id="cube-block-login"></div>

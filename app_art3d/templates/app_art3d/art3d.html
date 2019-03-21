@@ -23,9 +23,7 @@
 {% endblock %}
 
 {% block logout %}
-    <a href="{% url 'art3d_logout' %}">
-        <div class="header-logout">ВЫХОД</div>
-    </a>
+    <a id="header-link-logout" href="{% url 'art3d_logout' %}">Выход</a>
 {% endblock %}
 
 
@@ -35,7 +33,7 @@
 
 {% block content %}
     {% if user.is_authenticated  %}
-        authenticated
+
     {% else %}
 
     {% endif %}

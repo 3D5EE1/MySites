@@ -60,7 +60,8 @@ a {
 
 .header-items,
 .header-menu,
-#arrow,
+#arrow-logout,
+#arrow-login,
 .header-profileItems .header-profileItems-menu,
 .header-profileItems .header-login,
 .header-profileItems .header-logout{
@@ -147,19 +148,20 @@ a {
 }
 
 .header-login-menu,
-.header-logout {
+.header-logout-menu {
     position: relative;
     color: #b8b8b8;
     padding: 10px;
 }
 
 .header-login-menu:hover,
-.header-logout:hover {
+.header-logout-menu:hover {
     color: #e0e1e1;
     cursor: pointer;
 }
 
-#arrow-login {
+#arrow-login,
+#arrow-logout{
     position: absolute;
     top: 6px;
     right: -14px;
@@ -170,11 +172,12 @@ a {
 }
 
 .header-login-menu:hover #arrow-login,
-.header-logout:hover #arrow-login {
+.header-logout-menu:hover #arrow-logout {
     color: #e0e1e1;
     text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31);
 }
 
+.header-block-logout,
 .header-block-login {
     position: absolute;
     display: none;
@@ -185,6 +188,7 @@ a {
     border: solid 1px rgba(255, 255, 255, .15);
 }
 
+#cube-block-logout,
 #cube-block-login {
     position: absolute;
     top: -1px;
@@ -221,21 +225,36 @@ a {
 }
 
 #header-link-params,
-#header-link-create {
+#header-link-create,
+#header-link-gifts,
+#header-link-logout {
     display: block;
     color: #b8b8b8;;
-    padding: 10px;
+    padding: 10px 20px;
     border-top: solid 1px rgba(255, 255, 255, .15);
 }
 
 #header-link-params:hover,
-#header-link-create:hover {
+#header-link-create:hover,
+#header-link-gifts:hover,
+#header-link-logout:hover {
     color: #fff;
 }
 
+.header-logout-user {
+    padding: 20px 160px 20px 20px;
+}
 
+.header-logout-username {
+    color: #7dbcf4;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
 
-
+.header-logout-email {
+    color: #607785;
+    font-size: 14px;
+}
 
 
 
