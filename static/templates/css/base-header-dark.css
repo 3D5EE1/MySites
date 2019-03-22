@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Arsenal|Montserrat+Alternates");
 
+:root {
+  --header-links-color: #ffda1e;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -19,8 +23,8 @@ a {
 
 .shadow {
     position: fixed;
-    top: 0;
     display: none;
+    top: 0;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, .5);
@@ -104,7 +108,6 @@ a {
 
 #arrow {
     position: absolute;
-    top: 6px;
     right: -14px;
     color: #b8b8b8;
     font-size: 24px;
@@ -112,7 +115,15 @@ a {
     text-shadow: none;
 }
 
-#cube-menu {
+.arrow-up {
+    top: 4px;
+}
+
+.arrow-down {
+    top: 6px;
+}
+
+.cube-menu {
     position: absolute;
     display: none;
     bottom: -9px;
@@ -141,6 +152,24 @@ a {
     z-index: 100;
 }
 
+.hidden-menu-visible {
+    position: relative;
+    top: -1px;
+    display: block;
+    height: 200px;
+    width: 100%;
+    background: rgba(21, 26, 35, .65) radial-gradient(ellipse farthest-side at center top, #283244 0%,
+                rgba(21, 26, 35, .85) 100%);
+    border-top: solid 1px rgba(255, 255, 255, .15);
+    border-bottom: solid 1px rgba(255, 255, 255, .15);
+    z-index: 100;
+}
+
+.hidden-menu-fixed {
+    position: fixed;
+}
+
+
 .header-login,
 .header-logout {
     position: relative;
@@ -160,7 +189,7 @@ a {
     cursor: pointer;
 }
 
-#arrow-login,
+.arrow-login,
 #arrow-logout{
     position: absolute;
     top: 6px;
@@ -171,7 +200,7 @@ a {
     text-shadow: none;
 }
 
-.header-login-menu:hover #arrow-login,
+.header-login-menu:hover .arrow-login,
 .header-logout-menu:hover #arrow-logout {
     color: #e0e1e1;
     text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31);
@@ -262,9 +291,25 @@ a {
 
 
 
+.color-shadow-profile {
+    color: #676767;
+}
 
+.color-shadow-profile:hover {
+    color: var(--header-links-color);
+}
 
+.color-shadow-menu {
+    color: #b8b8b8;
+}
 
+.color-shadow-menu:hover {
+    color: #e0e1e1;
+}
+
+.element-visible {
+    display: block;
+}
 
 /*----------------------------------------------*/
 

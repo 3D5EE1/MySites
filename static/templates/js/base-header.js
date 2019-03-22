@@ -1,32 +1,28 @@
 window.onload = function() {
-    function $(id) {
-        return document.getElementById(id);
+    function $qS(Selector) {
+        return document.querySelector(Selector)
     }
 
-    function $c(siteClass) {
-        return document.getElementsByClassName(siteClass);
+    function $qSA(Selector) {
+        return document.querySelectorAll(Selector)
     }
 
-    function $s(siteSelector) {
-        return document.querySelector(siteSelector);
-    }
+    let shadow = $qS('[data-name=shadow]'),
 
-    function $S(siteSelectors) {
-        return document.querySelectorAll(siteSelectors);
-    }
+        headerMenu = $qS('[data-name=header-menu]'),
+        hiddenMenu = $qS('[data-name=hidden-menu]'),
+        arrowMenu = $qS('[data-name=arrow]'),
+        cubeMenu = $qS('[data-name=cube-menu]'),
 
-    let headerMenu = $s('.header-menu'),
-        hiddenMenu = $s('.hidden-menu'),
-        arrowMenu = $('arrow'),
-        shadow = $s('.shadow'),
-        links = $S('.links'),
-        cubeMenu = $('cube-menu'),
-        headerLoginMenu = $s('.header-login-menu'),
-        arrowLoginMenu = $('arrow-login'),
-        headerBlockLogin = $s('.header-block-login'),
-        headerLogoutMenu = $s('.header-logout-menu'),
-        arrowLogoutMenu = $('arrow-logout'),
-        headerBlockLogout = $s('.header-block-logout');
+        itemsMenu = $qSA('[data-items]'),
+
+        headerLoginMenu = $qS('[data-name=header-login-menu]'),
+        arrowLoginMenu = $qS('[data-name=arrow-login]'),
+        headerBlockLogin = $qS('[data-name=header-block-login]'),
+
+        headerLogoutMenu = $qS('[data-name=header-logout-menu]'),
+        arrowLogoutMenu = $qS('[data-name=arrow-logout]'),
+        headerBlockLogout = $qS('[data-name=header-block-logout]');
 
     // let arrowUp = document.createTextNode("▲");
     // let arrowDown = document.createTextNode("▼");
@@ -76,21 +72,25 @@ window.onload = function() {
     }
 
     function hiddenMenuSites () {
-        hiddenMenu.style.display = 'none';
-        shadow.style.display = 'none';
+        hiddenMenu.className = 'hidden-menu';
+        shadow.className = 'shadow';
         arrowMenu.innerHTML = "▾";
-        arrowMenu.style.top = '6px';
-        cubeMenu.style.display = 'none';
-        hiddenLinks();
+        arrowMenu.className = 'arrow-down';
+        cubeMenu.className = 'cube-menu';
+        headerLoginMenu.className = 'header-login-menu';
+        arrowLoginMenu.className = 'arrow-login';
+        for (let i of itemsMenu) i.className = '';
     }
 
     function visibleMenuSites () {
-        hiddenMenu.style.display = 'block';
-        shadow.style.display = 'block';
+        hiddenMenu.className = 'hidden-menu-visible';
+        shadow.className = 'shadow element-visible';
         arrowMenu.innerHTML = "▴";
-        arrowMenu.style.top = '4px';
-        cubeMenu.style.display = 'block';
-        visibleLinks();
+        arrowMenu.className = 'arrow-up';
+        cubeMenu.className = 'cube-menu element-visible';
+        headerLoginMenu.className = 'header-login-menu color-shadow-profile';
+        arrowLoginMenu.className = 'arrow-login color-shadow-profile';
+        for (let i of itemsMenu) i.className = 'color-shadow-profile';
     }
 
     function hiddenLinksProfile () {
@@ -100,67 +100,67 @@ window.onload = function() {
 
     }
 
-    let hiddenLoginMenu = function () {
-        headerBlockLogin.style.display = 'none';
-        shadow.style.display = 'none';
-        arrowLoginMenu.innerHTML = "▾";
-        arrowLoginMenu.style.top = '6px';
-        hiddenLinksProfile();
-    };
-
-    let visibleLoginMenu = function () {
-        headerBlockLogin.style.display = 'block';
-        shadow.style.display = 'block';
-        arrowLoginMenu.innerHTML = "▴";
-        arrowLoginMenu.style.top = '4px';
-    };
-
-    let hiddenLogoutMenu = function () {
-        headerBlockLogout.style.display = 'none';
-        shadow.style.display = 'none';
-        arrowLogoutMenu.innerHTML = "▾";
-        arrowLogoutMenu.style.top = '6px';
-        hiddenLinksProfile();
-    };
-
-    let visibleLogoutMenu = function () {
-        headerBlockLogout.style.display = 'block';
-        shadow.style.display = 'block';
-        arrowLogoutMenu.innerHTML = "▴";
-        arrowLogoutMenu.style.top = '4px';
-    };
+    // let hiddenLoginMenu = function () {
+    //     headerBlockLogin.style.display = 'none';
+    //     shadow.className = 'shadow-hidden';
+    //     arrowLoginMenu.innerHTML = "▾";
+    //     arrowLoginMenu.style.top = '6px';
+    //     hiddenLinksProfile();
+    // };
+    //
+    // let visibleLoginMenu = function () {
+    //     headerBlockLogin.style.display = 'block';
+    //     shadow.className = 'shadow-visible';
+    //     arrowLoginMenu.innerHTML = "▴";
+    //     arrowLoginMenu.style.top = '4px';
+    // };
+    //
+    // let hiddenLogoutMenu = function () {
+    //     headerBlockLogout.style.display = 'none';
+    //     shadow.className = 'shadow-hidden';
+    //     arrowLogoutMenu.innerHTML = "▾";
+    //     arrowLogoutMenu.style.top = '6px';
+    //     hiddenLinksProfile();
+    // };
+    //
+    // let visibleLogoutMenu = function () {
+    //     headerBlockLogout.style.display = 'block';
+    //     shadow.className = 'shadow-visible';
+    //     arrowLogoutMenu.innerHTML = "▴";
+    //     arrowLogoutMenu.style.top = '4px';
+    // };
 
 
 
     addEventListener('click', function(e) {
         if (e.target === headerMenu) {
-            if (hiddenMenu.style.display === 'block') hiddenMenuSites();
+            if (hiddenMenu.className === "hidden-menu-visible") hiddenMenuSites();
             else visibleMenuSites();
         } else if (e.target !== hiddenMenu) {
             hiddenMenuSites();
         }
 
-        if (e.target === headerLoginMenu) {
-            if (headerBlockLogin.style.display === 'block') hiddenLoginMenu();
-            else visibleLoginMenu();
-        } else if (e.target !== headerLoginMenu && headerBlockLogin) {
-            hiddenLoginMenu()
-        }
-
-        if (e.target === headerLogoutMenu) {
-            if (headerBlockLogout.style.display === 'block') hiddenLogoutMenu();
-            else visibleLogoutMenu();
-        } else if (e.target !== headerLogoutMenu && headerLogoutMenu) {
-            hiddenLogoutMenu()
-        }
+        // if (e.target === headerLoginMenu) {
+        //     if (headerBlockLogin.style.display === 'block') hiddenLoginMenu();
+        //     else visibleLoginMenu();
+        // } else if (e.target !== headerLoginMenu && headerBlockLogin) {
+        //     hiddenLoginMenu()
+        // }
+        //
+        // if (e.target === headerLogoutMenu) {
+        //     if (headerBlockLogout.style.display === 'block') hiddenLogoutMenu();
+        //     else visibleLogoutMenu();
+        // } else if (e.target !== headerLogoutMenu && headerLogoutMenu) {
+        //     hiddenLogoutMenu()
+        // }
     });
 
     addEventListener('scroll', function(){
-        if (window.pageYOffset > 38) {
-            hiddenMenu.style.position = 'fixed';
+        if (window.pageYOffset > 38 && hiddenMenu.className === "hidden-menu-visible") {
+            hiddenMenu.className = 'hidden-menu-visible hidden-menu-fixed';
         }
-        if (window.pageYOffset < 38) {
-            hiddenMenu.style.position = 'relative';
+        if (window.pageYOffset < 38 && hiddenMenu.className === 'hidden-menu-visible hidden-menu-fixed') {
+            hiddenMenu.className = 'hidden-menu-visible';
         }
     });
 };
