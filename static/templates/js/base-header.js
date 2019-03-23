@@ -3,12 +3,11 @@ window.onload = function() {
         return document.querySelector(Selector)
     }
 
-    function $qSA(Selector) {
-        return document.querySelectorAll(Selector)
+    function $qSA(SelectorAll) {
+        return document.querySelectorAll(SelectorAll)
     }
 
     let shadow = $qS('[data-name=shadow]'),
-
         headerMenu = $qS('[data-name=header-menu]'),
         hiddenMenu = $qS('[data-name=hidden-menu]'),
         arrowMenu = $qS('[data-name=arrow]'),
@@ -16,6 +15,7 @@ window.onload = function() {
 
         itemsMenu = $qSA('[data-items]'),
 
+        shadowLogin = $qS('[data-name=shadow-login]'),
         headerLoginMenu = $qS('[data-name=header-login-menu]'),
         arrowLoginMenu = $qS('[data-name=arrow-login]'),
         headerBlockLogin = $qS('[data-name=header-block-login]'),
@@ -88,33 +88,27 @@ window.onload = function() {
         arrowMenu.innerHTML = "▴";
         arrowMenu.className = 'arrow-up';
         cubeMenu.className = 'cube-menu element-visible';
-        headerLoginMenu.className = 'header-login-menu color-shadow-profile';
+        headerLoginMenu.className = 'header-login-menu-shadow color-shadow-profile';
         arrowLoginMenu.className = 'arrow-login color-shadow-profile';
         for (let i of itemsMenu) i.className = 'color-shadow-profile';
     }
 
-    function hiddenLinksProfile () {
-        headerMenu.style.color = '#676767';
+    let hiddenLoginMenu = function () {
+        headerBlockLogin.className = 'header-block-login';
+        shadowLogin.className = 'shadow';
+        arrowLoginMenu.innerHTML = "▾";
+        arrowLoginMenu.style.top = '6px';
+        for (let i of itemsMenu) i.className = '';
+    };
 
+    let visibleLoginMenu = function () {
+        headerBlockLogin.className = 'header-block-login-visible';
+        shadowLogin.className = 'shadow element-visible';
+        arrowLoginMenu.innerHTML = "▴";
+        arrowLoginMenu.style.top = '4px';
+        for (let i of itemsMenu) i.className = 'color-shadow-profile';
+    };
 
-
-    }
-
-    // let hiddenLoginMenu = function () {
-    //     headerBlockLogin.style.display = 'none';
-    //     shadow.className = 'shadow-hidden';
-    //     arrowLoginMenu.innerHTML = "▾";
-    //     arrowLoginMenu.style.top = '6px';
-    //     hiddenLinksProfile();
-    // };
-    //
-    // let visibleLoginMenu = function () {
-    //     headerBlockLogin.style.display = 'block';
-    //     shadow.className = 'shadow-visible';
-    //     arrowLoginMenu.innerHTML = "▴";
-    //     arrowLoginMenu.style.top = '4px';
-    // };
-    //
     // let hiddenLogoutMenu = function () {
     //     headerBlockLogout.style.display = 'none';
     //     shadow.className = 'shadow-hidden';
@@ -134,19 +128,16 @@ window.onload = function() {
 
     addEventListener('click', function(e) {
         if (e.target === headerMenu) {
-            if (hiddenMenu.className === "hidden-menu-visible") hiddenMenuSites();
-            else visibleMenuSites();
-        } else if (e.target !== hiddenMenu) {
-            hiddenMenuSites();
-        }
+            if (hiddenMenu.className === "hidden-menu") visibleMenuSites();
+            else if (hiddenMenu.className === "hidden-menu-visible") hiddenMenuSites();
+        } else if (e.target !== hiddenMenu && hiddenMenu.className === "hidden-menu-visible") hiddenMenuSites();
 
-        // if (e.target === headerLoginMenu) {
-        //     if (headerBlockLogin.style.display === 'block') hiddenLoginMenu();
-        //     else visibleLoginMenu();
-        // } else if (e.target !== headerLoginMenu && headerBlockLogin) {
-        //     hiddenLoginMenu()
-        // }
-        //
+        if (e.target === headerLoginMenu) {
+            if (headerBlockLogin.className === "header-block-login") visibleLoginMenu();
+            else if (headerBlockLogin.className === "header-block-login-visible") hiddenLoginMenu();
+        } else if (e.target !== headerBlockLogin &&
+            headerBlockLogin.className === "header-block-login-visible") hiddenLoginMenu();
+
         // if (e.target === headerLogoutMenu) {
         //     if (headerBlockLogout.style.display === 'block') hiddenLogoutMenu();
         //     else visibleLogoutMenu();

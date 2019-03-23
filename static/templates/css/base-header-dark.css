@@ -21,7 +21,8 @@ a {
     text-decoration: none;
 }
 
-.shadow {
+.shadow,
+.shadow-login {
     position: fixed;
     display: none;
     top: 0;
@@ -177,7 +178,10 @@ a {
 }
 
 .header-login-menu,
-.header-logout-menu {
+.header-logout-menu,
+.header-login-menu-shadow,
+.header-logout-menu-shadow {
+    cursor: pointer;
     position: relative;
     color: #b8b8b8;
     padding: 10px;
@@ -206,6 +210,13 @@ a {
     text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31);
 }
 
+.header-login-menu-shadow:hover .arrow-login,
+.header-logout-menu-shadow:hover #arrow-logout {
+    cursor: pointer;
+    color: var(--header-links-color);
+    text-shadow: 0 0 15px #d6d6d6, 0 0 30px rgba(255, 255, 255, 0.31);
+}
+
 .header-block-logout,
 .header-block-login {
     position: absolute;
@@ -216,6 +227,18 @@ a {
                 rgba(21, 26, 35, .85) 100%);
     border: solid 1px rgba(255, 255, 255, .15);
 }
+
+.header-block-logout-visible,
+.header-block-login-visible {
+    position: absolute;
+    display: block;
+    top: 38px;
+    right: -26px;
+    background: rgba(21, 26, 35, .65) radial-gradient(ellipse farthest-side at center top, #283244 0%,
+                rgba(21, 26, 35, .85) 100%);
+    border: solid 1px rgba(255, 255, 255, .15);
+}
+
 
 #cube-block-logout,
 #cube-block-login {
@@ -309,6 +332,10 @@ a {
 
 .element-visible {
     display: block;
+}
+
+.element-fixed {
+    position: fixed;
 }
 
 /*----------------------------------------------*/

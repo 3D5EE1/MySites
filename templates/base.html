@@ -21,6 +21,7 @@
 <body>
     {% block header %}
         <div class="shadow" data-name="shadow"></div>
+        <div class="shadow-login" data-name="shadow-login"></div>
         <div class="header">
             <div class="header-desktop">
                 <a href="{% url 'app_about_me' %}">
@@ -93,7 +94,7 @@
                             <div class="header-login-menu" data-name="header-login-menu">Моя учетная запись
                                 <div class="arrow-login" data-name="arrow-login">&#9662</div>
                             </div>
-                            <div class="header-block-login">
+                            <div class="header-block-login" data-name="header-block-login">
                                 <div id="cube-block-login"></div>
                                 <div class="header-login-button">
                                     {% block login %}{% endblock login %}
