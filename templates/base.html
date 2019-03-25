@@ -69,10 +69,10 @@
                     </ul>
                     {% if user.is_authenticated %}
                         <div class="header-logout">
-                            <div class="header-logout-menu">{{ user.username }}
-                                <div id="arrow-logout">&#9662</div>
+                            <div class="header-logout-menu" data-name="header-logout-menu">{{ user.username }}
+                                <div id="arrow-logout" data-name="arrow-logout">&#9662</div>
                             </div>
-                            <div class="header-block-logout">
+                            <div class="header-block-logout" data-name="header-block-logout">
                                 <div id="cube-block-logout"></div>
                                 <div class="header-logout-user">
                                     <div class="header-logout-username">{{ user.username }}</div>
@@ -92,7 +92,7 @@
                     {% else %}
                         <div class="header-login">
                             <div class="header-login-menu" data-name="header-login-menu">Моя учетная запись
-                                <div class="arrow-login" data-name="arrow-login">&#9662</div>
+                                <div id="arrow-login" data-name="arrow-login">&#9662</div>
                             </div>
                             <div class="header-block-login" data-name="header-block-login">
                                 <div id="cube-block-login"></div>
@@ -131,6 +131,3 @@
     {% block js %}{% endblock js %}
 </body>
 </html>
-
-
-
