@@ -19,6 +19,18 @@ body {
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
 }
 
+.header-block-logout-visible,
+.header-block-login-visible {
+    top: 38px;
+}
+
+.ul-languages {
+    background: hsla(0, 0%, 100%, 0.08);
+    border-left: 1px solid hsla(0, 0%, 100%, 0.13);
+    border-right: 1px solid hsla(0, 0%, 100%, 0.13);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
+}
+
 .wrapper {
     position: relative;
     width: 100%;

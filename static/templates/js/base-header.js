@@ -24,7 +24,11 @@ window.onload = function() {
         headerLogoutMenu = $qS('[data-name=header-logout-menu]'),
         arrowLogoutMenu = $qS('[data-name=arrow-logout]'),
         headerBlockLogout = $qS('[data-name=header-block-logout]'),
-        headerBlockLogoutSize;
+        headerBlockLogoutSize,
+
+        headerLanguagesMenuInactive = $qS('[data-name=header-languages-menu]'),
+        svgSearch = document.getElementById('svg-search'),
+        svgLanguages = document.getElementById('svg-languages');
 
     // let arrowUp = document.createTextNode("▲");
     // let arrowDown = document.createTextNode("▼");
@@ -79,6 +83,9 @@ window.onload = function() {
         arrowMenu.innerHTML = "▾";
         arrowMenu.className = 'arrow-down';
         cubeMenu.className = 'cube-menu';
+        svgSearch.className.baseVal = 'svg-search';
+        svgLanguages.className.baseVal = 'svg-languages';
+        headerLanguagesMenuInactive.className = 'header-languages-menu';
         if (headerLoginMenu) headerLoginMenu.className = 'header-login-menu';
         if (arrowLoginMenu) arrowLoginMenu.className = 'arrow-login';
         if (headerLogoutMenu) headerLogoutMenu.className = 'header-logout-menu';
@@ -94,6 +101,9 @@ window.onload = function() {
         arrowMenu.innerHTML = "▴";
         arrowMenu.className = 'arrow-up';
         cubeMenu.className = 'cube-menu element-visible';
+        svgSearch.className.baseVal = 'svg-search color-shadow-svg';
+        svgLanguages.className.baseVal = 'svg-languages color-shadow-svg-languages';
+        headerLanguagesMenuInactive.className = 'header-languages-menu-inactive';
         if (headerLoginMenu) headerLoginMenu.className = 'header-login-menu-shadow color-shadow-profile';
         if (arrowLoginMenu) arrowLoginMenu.className = 'arrow-login color-shadow-profile';
         if (headerLogoutMenu) headerLogoutMenu.className = 'header-logout-menu-shadow color-shadow-profile';
@@ -103,7 +113,7 @@ window.onload = function() {
 
     let hiddenLoginMenu = function () {
         if (headerBlockLogin) {
-            headerBlockLogin.style.right = '-26px'
+            headerBlockLogin.style.right = '-26px';
             headerBlockLogin.className = 'header-block-login';
         }
         shadowLogin.className = 'shadow';
@@ -113,6 +123,9 @@ window.onload = function() {
         }
         headerMenu.className = 'header-menu';
         arrowMenu.className = 'arrow-down';
+        svgSearch.className.baseVal = 'svg-search';
+        svgLanguages.className.baseVal = 'svg-languages';
+        headerLanguagesMenuInactive.className = 'header-languages-menu';
         for (let i of itemsMenu) i.className = '';
     };
 
@@ -124,21 +137,27 @@ window.onload = function() {
         arrowLoginMenu.className = 'arrow-login-up';
         headerMenu.className = 'header-menu-shadow color-shadow-profile';
         arrowMenu.className = 'arrow-down color-shadow-profile';
+        svgSearch.className.baseVal = 'svg-search color-shadow-svg';
+        svgLanguages.className.baseVal = 'svg-languages color-shadow-svg-languages';
+        headerLanguagesMenuInactive.className = 'header-languages-menu-inactive';
         for (let i of itemsMenu) i.className = 'color-shadow-profile';
     };
 
     let hiddenLogoutMenu = function () {
         if (headerBlockLogout) {
-            headerBlockLogout.style.right = '-26px'
+            headerBlockLogout.style.right = '-26px';
             headerBlockLogout.className = 'header-block-logout';
         }
-        shadowLogin.className = 'shadow';;
+        shadowLogin.className = 'shadow';
         if (arrowLogoutMenu) {
             arrowLogoutMenu.innerHTML = "▾";
             arrowLogoutMenu.className = 'arrow-logout-down';
         }
         headerMenu.className = 'header-menu';
         arrowMenu.className = 'arrow-down';
+        svgSearch.className.baseVal = 'svg-search';
+        svgLanguages.className.baseVal = 'svg-languages';
+        headerLanguagesMenuInactive.className = 'header-languages-menu';
         for (let i of itemsMenu) i.className = '';
     };
 
@@ -150,25 +169,28 @@ window.onload = function() {
         arrowLogoutMenu.className = 'arrow-logout-up';
         headerMenu.className = 'header-menu-shadow color-shadow-profile';
         arrowMenu.className = 'arrow-down color-shadow-profile';
+        svgSearch.className.baseVal = 'svg-search color-shadow-svg';
+        svgLanguages.className.baseVal = 'svg-languages color-shadow-svg-languages';
+        headerLanguagesMenuInactive.className = 'header-languages-menu-inactive';
         for (let i of itemsMenu) i.className = 'color-shadow-profile';
     };
 
 
 
     addEventListener('click', function(e) {
-        if (e.target === headerMenu) {
+        if (e.target === headerMenu || e.target === arrowMenu) {
             if (hiddenMenu.className === "hidden-menu") visibleMenuSites();
             else if (hiddenMenu.className === "hidden-menu-visible") hiddenMenuSites();
         } else if ((e.target !== hiddenMenu &&
             hiddenMenu.className === "hidden-menu-visible") || e.target === shadow) hiddenMenuSites();
 
-        if (e.target === headerLoginMenu) {
+        if (e.target === headerLoginMenu || e.target === arrowLoginMenu) {
             if (headerBlockLogin.className === "header-block-login") visibleLoginMenu();
             else if (headerBlockLogin.className === "header-block-login-visible") hiddenLoginMenu();
         } else if ((e.target !== headerBlockLogin && headerBlockLogin &&
             headerBlockLogin.className === "header-block-login-visible") || e.target === shadowLogin) hiddenLoginMenu();
 
-        if (e.target === headerLogoutMenu) {
+        if (e.target === headerLogoutMenu || e.target === arrowLogoutMenu) {
             if (headerBlockLogout.className === "header-block-logout") visibleLogoutMenu();
             else if (headerBlockLogout.className === "header-block-logout-visible") hiddenLogoutMenu();
         } else if (e.target !== headerBlockLogout && headerBlockLogout &&
