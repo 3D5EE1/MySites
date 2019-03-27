@@ -15,8 +15,10 @@ body {
 }
 
 .header {
+    position: absolute;
     background: hsla(0, 0%, 100%, 0.08);
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
+    z-index: 99;
 }
 
 .wrapper {
@@ -32,11 +34,6 @@ body {
     padding-bottom: 250px;
     color: #fff;
     text-align: center;
-}
-
-.header {
-    position: absolute;
-    z-index: 1;
 }
 
 @media (max-width: 1240px) {

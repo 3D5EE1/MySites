@@ -75,18 +75,6 @@ a {
     display: inline-block;
 }
 
-.header-profileItems {
-    display: inline-block;
-    margin-right: 30px;
-    float: right;
-}
-
-
-.header-profileItems a > div {
-    display: inline-block;
-    margin-left: 20px;
-}
-
 .header-items a > div {
     display: inline-block;
     padding: 10px;
@@ -179,6 +167,55 @@ a {
     border-top: solid 1px rgba(255, 255, 255, .15);
     border-bottom: solid 1px rgba(255, 255, 255, .15);
     z-index: 100;
+}
+
+.header-profileItems {
+    display: inline-block;
+    margin-right: 30px;
+    float: right;
+}
+
+.header-profileItems-menu {
+    position: relative;
+    top: 3px;
+    margin: 0 15px 0 25px;
+}
+
+#svg-search {
+    width: 20px;
+    height: 20px;
+    fill: #b8b8b8;
+    stroke: #b8b8b8;
+    stroke-width: 10;
+    cursor: pointer;
+}
+
+
+#svg-languages {
+    width: 22px;
+    height: 21px;
+    fill: #b8b8b8;
+    stroke: #b8b8b8;
+    stroke-width: 10;
+    cursor: pointer;
+}
+
+#svg-search:hover {
+    fill: #ffda1e;
+    stroke: #ffda1e;
+}
+
+#svg-languages:hover {
+    fill: #ffda1e;
+    stroke: #ffda1e;
+}
+
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
 }
 
 .header-login,
@@ -326,12 +363,6 @@ a {
     font-size: 14px;
 }
 
-
-
-
-
-
-
 .color-shadow-profile {
     color: #676767 !important;
 }
@@ -356,75 +387,6 @@ a {
     position: fixed;
     top: -1px;
 }
-
-/*----------------------------------------------*/
-
-ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-ul:after {
-    display: block;
-    content: ' ';
-    clear: both;
-    float: none;
-}
-
-ul.menu > li {
-  float: left;
-  position: relative;
-}
-
-ul > li:hover {
-  border-bottom: 3px #ff0006;
-}
-
-ul.menu > li > a {
-  display: block;
-  padding: 10px;
-  color: #808080;
-  background-color: #000000;
-  text-decoration: none;
-}
-
-ul.menu > li > a:hover {
-  background-color: black;
-  color: #0abaf5;
-}
-
-ul.submenu {
-  display: none;
-  position: absolute;
-  width: 120px;
-  top: 37px;
-  left: 0;
-  background-color: #7b7b7b;
-  border: 1px solid #000000;
-}
-
-ul.submenu > li {
-  display: block;
-}
-
-ul.submenu > li > a {
-  display: block;
-  padding: 10px;
-  color: #878787;
-  background-color: #000000;
-  text-decoration: none;
-}
-
-ul.submenu > li > a:hover {
-  color: #ffffff;
-}
-
-ul.menu > li:hover > .submenu {
-  display: block;
-}
-
 
 @media (max-width: 1920px) {
     .header-desktop {

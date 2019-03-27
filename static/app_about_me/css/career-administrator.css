@@ -18,7 +18,7 @@ body {
     position: absolute;
     background: hsla(0, 0%, 100%, 0.08);
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
-    z-index: 1;
+    z-index: 99;
 }
 
 p {

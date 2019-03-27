@@ -24,15 +24,11 @@
 {% endblock %}
 
 {% block login %}
-    <a href="{% url 'login' site_redirect='menu' %}">
-        <div class="header-login">ВХОД</div>
-    </a>
+    <a id="header-link-login" href="{% url 'login' site_redirect='privacy_policy' %}">Вход</a>
 {% endblock %}
 
 {% block logout %}
-    <a href="{% url 'menu_logout' %}">
-        <div class="header-logout">ВЫХОД</div>
-    </a>
+    <a id="header-link-logout" href="{% url 'about_me_logout' %}">Выход</a>
 {% endblock %}
 
 {% block navbar %}{% endblock %}

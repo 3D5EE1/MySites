@@ -13,7 +13,6 @@
 {% block base_css %}
     <link rel="stylesheet" href="{% static 'templates/css/base-header-dark.css' %}">
     <link rel="stylesheet" href="{% static 'templates/css/acc-base-footer.css' %}">
-    <link rel="stylesheet" href="{% static 'templates/css/base-footer-dark.css' %}">
 {% endblock base_css %}
 
 {% block css %}
@@ -25,15 +24,11 @@
 {% endblock %}
 
 {% block login %}
-    <a href="{% url 'login' site_redirect='menu' %}">
-        <div class="header-login">ВХОД</div>
-    </a>
+    <a id="header-link-login" href="{% url 'login' site_redirect='legal' %}">Вход</a>
 {% endblock %}
 
 {% block logout %}
-    <a href="{% url 'menu_logout' %}">
-        <div class="header-logout">ВЫХОД</div>
-    </a>
+    <a id="header-link-logout" href="{% url 'about_me_logout' %}">Выход</a>
 {% endblock %}
 
 {% block navbar %}{% endblock %}

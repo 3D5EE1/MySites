@@ -39,7 +39,17 @@ def contact(request):
         email = message_form.cleaned_data.get('email')
         return render(request, 'app_message/message-confirm.html', {'email': email})
     else:
-        return render(request, 'app_about_me/contact.html')
+        return render(request, 'app_about_me/contact.html', {'page': 'contact'})
+
+
+def contact_404(request):
+    message_form = MessageForm(request.POST)
+    if request.method == 'POST' and message_form.is_valid():
+        message_form.save()
+        email = message_form.cleaned_data.get('email')
+        return render(request, 'app_message/message-confirm.html', {'email': email})
+    else:
+        return render(request, 'app_about_me/contact.html', {'page': '404'})
 
 
 def press(request):

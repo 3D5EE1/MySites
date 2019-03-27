@@ -16,12 +16,14 @@ Including another URLconf
 from django.urls import path
 from app_about_me import views
 from app_account import views as account_views
+from django.contrib.auth import views as auth_views
 from app_message import views as message_views
 
 urlpatterns = [
-    path('', views.about_me, name='app_about_me'),
+    path('', views.about_me, name='about_me'),
     path('profile', account_views.profile, name='profile'),
     path('login/<str:site_redirect>', account_views.login_redirect, name='login'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='about_me'), name='about_me_logout'),
     path('legal', views.legal, name='legal'),
     path('license-agreement/<str:site>', views.license_agreement, name='license_agreement'),
     path('privacy-policy', views.privacy_policy, name='privacy_policy'),
@@ -29,6 +31,7 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('support', views.support, name='support'),
     path('contact', views.contact, name='contact'),
+    path('contact_404', views.contact_404, name='contact_404'),
     path('press', views.press, name='press'),
     path('api', views.api, name='api'),
     path('career-administrator', views.career_administrator, name='career_administrator'),
