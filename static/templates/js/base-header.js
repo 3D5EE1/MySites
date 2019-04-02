@@ -28,7 +28,8 @@ window.onload = function() {
 
         headerLanguagesMenuInactive = $qS('[data-name=header-languages-menu]'),
         svgSearch = document.getElementById('svg-search'),
-        svgLanguages = document.getElementById('svg-languages');
+        svgLanguages = document.getElementById('svg-languages'),
+        headerSearchForm = document.getElementById('header-search-form');
 
     // let arrowUp = document.createTextNode("▲");
     // let arrowDown = document.createTextNode("▼");
@@ -195,6 +196,11 @@ window.onload = function() {
             else if (headerBlockLogout.className === "header-block-logout-visible") hiddenLogoutMenu();
         } else if (e.target !== headerBlockLogout && headerBlockLogout &&
             headerBlockLogout.className === "header-block-logout-visible" || e.target === shadowLogin) hiddenLogoutMenu();
+
+        if (e.target === svgSearch) {
+            svgSearch.className.baseVal = 'element-hide';
+            headerSearchForm.className = 'header-search-form element-visible';
+        }
     });
 
     addEventListener('scroll', function(){
