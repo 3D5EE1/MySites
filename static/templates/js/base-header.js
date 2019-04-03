@@ -14,6 +14,7 @@ window.onload = function() {
         cubeMenu = $qS('[data-name=cube-menu]'),
 
         itemsMenu = $qSA('[data-items]'),
+        headerItems = $qS('[data-name=header-items]'),
 
         shadowLogin = $qS('[data-name=shadow-login]'),
         headerLoginMenu = $qS('[data-name=header-login-menu]'),
@@ -27,9 +28,13 @@ window.onload = function() {
         headerBlockLogoutSize,
 
         headerLanguagesMenuInactive = $qS('[data-name=header-languages-menu]'),
+        svgSearchBlock = $qS('[data-name=svg-search-block]'),
         svgSearch = document.getElementById('svg-search'),
         svgLanguages = document.getElementById('svg-languages'),
-        headerSearchForm = document.getElementById('header-search-form');
+        headerSearchButtonClose = $qS('[data-name=header-search-button-close]'),
+        headerSearchInput = document.getElementById('header-search-input'),
+        headerSearchClose = document.getElementById('header-search-close'),
+        buttonSvgSearch = $qS('[data-name=button-svg-search]');
 
     // let arrowUp = document.createTextNode("▲");
     // let arrowDown = document.createTextNode("▼");
@@ -176,7 +181,27 @@ window.onload = function() {
         for (let i of itemsMenu) i.className = 'color-shadow-profile';
     };
 
+    let searchVisible = function () {
+        svgSearchBlock.className = 'svg-search-block element-hidden';
+        headerItems.className = 'header-items element-hidden';
+        headerSearchInput.className = 'header-search-input';
+        headerSearchButtonClose.className = 'header-search-button-close';
+        if (headerSearchInput.volume === '') buttonSvgSearch.className = 'button-svg-search';
+        else if (headerSearchInput.value !== '') buttonSvgSearch.className = 'button-svg-search element-visible';
+    };
 
+    let searchHidden = function () {
+        svgSearchBlock.className = 'svg-search-block element-visible';
+        headerItems.className = 'header-items';
+        headerSearchInput.className = 'header-search-input input-search-hidden';
+        headerSearchButtonClose.className = 'element-hidden';
+        buttonSvgSearch.className = 'element-hidden';
+    };
+
+    headerSearchInput.oninput = function () {
+        if (headerSearchInput.value !== '') buttonSvgSearch.className = 'button-svg-search element-visible';
+        else buttonSvgSearch.className = 'button-svg-search';
+    };
 
     addEventListener('click', function(e) {
         if (e.target === headerMenu || e.target === arrowMenu) {
@@ -197,10 +222,10 @@ window.onload = function() {
         } else if (e.target !== headerBlockLogout && headerBlockLogout &&
             headerBlockLogout.className === "header-block-logout-visible" || e.target === shadowLogin) hiddenLogoutMenu();
 
-        if (e.target === svgSearch) {
-            svgSearch.className.baseVal = 'element-hide';
-            headerSearchForm.className = 'header-search-form element-visible';
-        }
+        if (e.target === svgSearch || e.target === svgSearchBlock) searchVisible();
+        else if (e.target === headerSearchClose || e.target !== headerSearchInput) searchHidden();
+
+
     });
 
     addEventListener('scroll', function(){

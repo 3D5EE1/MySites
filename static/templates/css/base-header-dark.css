@@ -58,10 +58,15 @@ a {
 }
 
 .header-logo {
-    font-size: 20px;
     display: inline-block;
+    font-size: 20px;
+    padding: 6px 0;
     margin: 0 10px 0 20px;
-    color: #0abaf5;
+    color: #0e9fed;
+}
+
+.header-logo:hover {
+    color: #00aeff;
 }
 
 .header-items,
@@ -184,6 +189,7 @@ a {
     margin: 0 15px 0 25px;
 }
 
+.svg-search-start,
 .svg-search {
     width: 20px;
     height: 20px;
@@ -193,23 +199,35 @@ a {
     cursor: pointer;
 }
 
-.svg-search:hover {
-    fill: #ffda1e;
-    stroke: #ffda1e;
-}
-
 /*------------------------------------------------------------------------------------*/
+
+.svg-search-block {
+    position: absolute;
+    bottom: 2px;
+    padding: 8px 8px 6px;
+    cursor: pointer;
+    z-index: 1;
+}
 
 .header-search-form {
     position: relative;
-    display: none;
+    overflow: hidden;
     bottom: 6px;
-    left: -302px;
-    width: 330px;
+    left: -364px;
+    width: 400px;
 }
 
-#header-search-input {
+.header-search-input-start {
     float: right;
+    display: block;
+    height: 32px;
+    width: 0;
+    border: none;
+}
+
+.header-search-input {
+    float: right;
+    display: block;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -222,40 +240,113 @@ a {
     font-family: 'Montserrat Alternates', sans-serif, 'Arsenal', sans-serif, Arial;
     font-weight: 600;
     color: #fff;
+    animation: buttonSvgVisible .3s linear;
 }
 
-#button-svg-search {
+.input-search-hidden {
+    padding: 0;
+    width: 0;
+    animation: buttonSvgHidden .3s linear;
+}
+
+.button-svg-search {
     position: absolute;
+    display: none;
     padding-top: 4px;
     height: 32px;
     width: 34px;
-    left: 261px;
+    left: 332px;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     cursor: pointer;
 }
 
+@keyframes buttonSvgVisible {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    25% {
+        width: 25%;
+        opacity: 0;
+    }
+
+    50% {
+        width: 50%;
+        opacity: .50%;
+    }
+
+    75% {
+        width: 75%;
+        opacity: .75%;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes buttonSvgHidden {
+    0% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    25% {
+        width: 75%;
+        opacity: .75%;
+    }
+
+    50% {
+        width: 50%;
+        opacity: .50%;
+    }
+
+    75% {
+        width: 25%;
+        opacity: 0;
+    }
+
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
 .header-search-button-close {
-    position: relative;
+    position: absolute;
     height: 32px;
     width: 34px;
-    bottom: 32px;
-    padding: 5px 5px 5px 7px;
+    top: 0;
+    right: 0;
+    padding: 7px 5px 5px 7px;
     float: right;
 
 }
 
-.header-search-close{
-    width: 20px;
-    height: 20px;
+.header-search-close {
+    width: 18px;
+    height: 18px;
     fill: #b8b8b8;
     stroke: #b8b8b8;
     stroke-width: 2;
     cursor: pointer;
 }
 
+.svg-search-start:hover,
+.svg-search:hover,
+.header-search-close:hover,
+.header-search-button-close:hover > .header-search-close,
+.header-languages-menu:hover > .svg-languages,
+.button-svg-search:hover > .svg-search,
+.svg-search-block:hover > #svg-search {
+    fill: #ffda1e;
+    stroke: #ffda1e;
+}
 
-#button-svg-search:hover {
+.button-svg-search:hover {
     background-color: #505050;
     box-shadow: inset 0 0 1px 1px #737373;;
     cursor: pointer;
@@ -582,7 +673,7 @@ li > a:hover {
     display: block;
 }
 
-.element-hide {
+.element-hidden {
     display: none;
 }
 
