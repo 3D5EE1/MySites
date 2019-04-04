@@ -9,3 +9,9 @@ body {
     padding: 0;
 }
 
+@media (max-width: 1070px) {
+    .header {
+        background: #111111;
+    }
+}
+

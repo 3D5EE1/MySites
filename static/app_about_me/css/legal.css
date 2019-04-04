@@ -31,6 +31,23 @@ body {
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.13);
 }
 
+.header-search-input {
+    background: hsla(0, 0%, 100%, 0.08);
+    border: 1px solid hsla(0, 0%, 100%, 0.23);
+}
+
+.button-svg-search:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.header-search-button-close:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.input-search-hidden {
+    border: none;
+}
+
 .wrapper {
     position: relative;
     width: 100%;

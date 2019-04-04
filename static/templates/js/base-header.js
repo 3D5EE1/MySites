@@ -223,7 +223,8 @@ window.onload = function() {
             headerBlockLogout.className === "header-block-logout-visible" || e.target === shadowLogin) hiddenLogoutMenu();
 
         if (e.target === svgSearch || e.target === svgSearchBlock) searchVisible();
-        else if (e.target === headerSearchClose || e.target !== headerSearchInput) searchHidden();
+        else if (headerSearchInput.className === 'header-search-input' &&
+            (e.target === headerSearchClose || e.target !== headerSearchInput)) searchHidden();
 
 
     });
