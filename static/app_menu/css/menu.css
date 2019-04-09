@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+}
+
 .img {
     display: block;
     position: absolute;
@@ -649,8 +653,8 @@ p {
         left: 310px;
     }
     .hexagon.hexagon11 {
-        top: 50px;
-        left: 310px;
+        top: 110px;
+        left: 370px;
     }
     .hexagon.hexagon12 {
         top: 50px;
@@ -667,4 +671,56 @@ p {
         height: 1000px;
         width: 1900px;
     }
+
+    .hexagon.hexagon1 {
+        top: 50px;
+        left: 30px;
+    }
+    .hexagon.hexagon2 {
+        top: 50px;
+        left: 310px;
+    }
+    .hexagon.hexagon3 {
+        top: 50px;
+        left: 310px;
+    }
+    .hexagon.hexagon4 {
+        top: 50px;
+        left: 310px;
+    }
+    .hexagon.hexagon5 {
+        top: 50px;
+        left: 310px;
+    }
+    .hexagon.hexagon6 {
+        top: 50px;
+        left: 310px;
+    }
+    .hexagon.hexagon7 {
+        top: 50px;
+        left: 310px;
+    }
+    .hexagon.hexagon8 {
+        top: 50px;
+        left: 310px;
+    }
+    .hexagon.hexagon9 {
+        top: 50px;
+        left: 310px;
+    }
+    .hexagon.hexagon10 {
+        top: 50px;
+        left: 310px;
+    }
+    .hexagon.hexagon11 {
+        top: 150px;
+        left: 180px;
+    }
+    .hexagon.hexagon12 {
+        top: 50px;
+        left: 310px;
+    }
+
 }
+
+

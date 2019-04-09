@@ -5,6 +5,10 @@
     <link rel="icon" href="{% static 'app_menu/img/menu.ico' %}" type="icon">
 {% endblock %}
 
+{% block base_css %}
+{% endblock base_css %}
+
+
 {% block css %}
     <link rel="stylesheet" href="{% static 'app_menu/css/menu.css' %}">
 {% endblock %}
@@ -69,90 +73,90 @@
                 <div class="hexRight"></div>
             </div>
         </a>
-        <a data-img="img2" href="{% url 'app_cinema' %}">
-            <div class="hexagon hexagon2">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img3" href="{% url 'app_company' %}">
-            <div class="hexagon hexagon3">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img4" href="{% url 'app_detective' %}">
-            <div class="hexagon hexagon4">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img5" href="{% url 'app_games' %}">
-            <div class="hexagon hexagon5">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img6" href="{% url 'app_planets' %}">
-            <div class="hexagon hexagon6">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img7" href="{% url 'app_shop' %}">
-            <div class="hexagon hexagon7">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img8" href="{% url 'app_stickers' %}">
-            <div class="hexagon hexagon8">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img9" href="{% url 'app_tattoo' %}">
-            <div class="hexagon hexagon9">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img10" href="{% url 'coming_soon' %}">
-            <div class="hexagon hexagon10">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
+{#        <a data-img="img2" href="{% url 'app_cinema' %}">#}
+{#            <div class="hexagon hexagon2">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img3" href="{% url 'app_company' %}">#}
+{#            <div class="hexagon hexagon3">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img4" href="{% url 'app_detective' %}">#}
+{#            <div class="hexagon hexagon4">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img5" href="{% url 'app_games' %}">#}
+{#            <div class="hexagon hexagon5">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img6" href="{% url 'app_planets' %}">#}
+{#            <div class="hexagon hexagon6">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img7" href="{% url 'app_shop' %}">#}
+{#            <div class="hexagon hexagon7">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img8" href="{% url 'app_stickers' %}">#}
+{#            <div class="hexagon hexagon8">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img9" href="{% url 'app_tattoo' %}">#}
+{#            <div class="hexagon hexagon9">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img10" href="{% url 'coming_soon' %}">#}
+{#            <div class="hexagon hexagon10">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
         <a data-img="img11" href="{% url 'coming_soon' %}">
             <div class="hexagon hexagon11">
                 <div class="hexLeft"></div>
                 <div class="hexRight"></div>
             </div>
         </a>
-        <a data-img="img12" href="{% url 'coming_soon' %}">
-            <div class="hexagon hexagon12">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img13" href="{% url 'coming_soon' %}">
-            <div class="hexagon hexagon13">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img14" href="{% url 'coming_soon' %}">
-            <div class="hexagon hexagon14">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
-        <a data-img="img15" href="{% url 'coming_soon' %}">
-            <div class="hexagon hexagon15">
-                <div class="hexLeft"></div>
-                <div class="hexRight"></div>
-            </div>
-        </a>
+{#        <a data-img="img12" href="{% url 'coming_soon' %}">#}
+{#            <div class="hexagon hexagon12">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img13" href="{% url 'coming_soon' %}">#}
+{#            <div class="hexagon hexagon13">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img14" href="{% url 'coming_soon' %}">#}
+{#            <div class="hexagon hexagon14">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a data-img="img15" href="{% url 'coming_soon' %}">#}
+{#            <div class="hexagon hexagon15">#}
+{#                <div class="hexLeft"></div>#}
+{#                <div class="hexRight"></div>#}
+{#            </div>#}
+{#        </a>#}
     </div>
 {% endblock %}
 
