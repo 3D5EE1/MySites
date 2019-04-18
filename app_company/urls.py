@@ -19,6 +19,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.company, name='app_company'),
+    path('company-jino1', views.company_jino1, name='company_jino1'),
     path('logout/', auth_views.LogoutView.as_view(next_page='app_company'), name='company_logout'),
 ]
 

@@ -26,7 +26,7 @@ urlpatterns = [
     path('art3d', include('app_art3d.urls')),
     path('cinema', include('app_cinema.urls')),
     path('message/', include('app_message.urls')),
-    path('company', include('app_company.urls')),
+    path('company/', include('app_company.urls')),
     path('detective', include('app_detective.urls')),
     path('games', include('app_games.urls')),
     path('menu', include('app_menu.urls')),
