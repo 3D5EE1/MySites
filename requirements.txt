@@ -3,6 +3,5 @@ gunicorn
 django
 pytz
 psycopg2
-setuptools
 pillow
 psycopg2-binary

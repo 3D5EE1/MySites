@@ -8,4 +8,4 @@ def company(request):
 
 
 def company_jino1(request):
-    return render(request, 'app_company/company-jino.html')
+    return render(request, 'app_company/company-1.html')

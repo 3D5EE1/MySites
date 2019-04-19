@@ -47,7 +47,7 @@ body
     max-width: 1092px
     width: 90%
     display: grid
-    grid-template-columns: repeat(12, 1fr)
+    grid-template-columns: repeat(12, 80px)
     grid-column-gap: 12px
 
     #logo1
@@ -195,13 +195,9 @@ body
     margin: 0 auto
     max-width: 1092px
     width: 90%
-    display: grid
-    grid-template-columns: repeat(12, 1fr)
-    grid-column-gap: 12px
 
     #logo2
       margin-top: 25px
-      grid-column: 1/6
       letter-spacing: 1px
 
       #svg-logo2
@@ -216,16 +212,22 @@ body
         font-family: $font-page-small
 
     #registration
-      grid-column: 3/11
       color: $color-black
       text-align: center
       font-size: 29px
       margin-top: 52px
 
+    #services
+      display: flex
+      flex-flow: row wrap
 
-
-
-
+    .services
+      flex: 1 80px
+      margin: 12px
+      height: 80px
+      background-color: #5aff53
+      padding: 10px
+      border: 1px solid #000
 
 
     .creation-acc
@@ -265,7 +267,7 @@ body
     max-width: 1092px
     width: 90%
     display: grid
-    grid-template-columns: repeat(12, 1fr)
+    grid-template-columns: repeat(12, 80px)
     grid-column-gap: 12px
 
     #logo3
