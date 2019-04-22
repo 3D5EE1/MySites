@@ -34,7 +34,9 @@ window.onload = function() {
         headerSearchButtonClose = $qS('[data-name=header-search-button-close]'),
         headerSearchInput = document.getElementById('header-search-input'),
         headerSearchClose = document.getElementById('header-search-close'),
-        buttonSvgSearch = $qS('[data-name=button-svg-search]');
+        buttonSvgSearch = $qS('[data-name=button-svg-search]'),
+
+        widthScreen = document.documentElement.clientWidth;
 
     // let arrowUp = document.createTextNode("▲");
     // let arrowDown = document.createTextNode("▼");
@@ -255,4 +257,10 @@ window.onload = function() {
             headerBlockLogout.style.right = '-26px'
         }
     });
+
+    addEventListener('resize', function(){
+        if (widthScreen !== document.documentElement.clientWidth) {
+            shadow.click();
+        }
+    })
 };

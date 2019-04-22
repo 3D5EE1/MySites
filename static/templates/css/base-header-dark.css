@@ -707,6 +707,31 @@ li > a:hover {
     .header-mobile {
         display: block;
     }
+
+    .header-mobile-menu-profile-button {
+        height: 48px;
+        width: 48px;
+        float: right;
+        cursor: pointer;
+    }
+
+    .header-mobile-menu-site-button{
+        height: 48px;
+        width: 48px;
+        float: left;
+        padding: 12px;
+        cursor: pointer;
+    }
+
+    #svg-mobile-menu-profile-button{
+        fill: #00aeff;
+        stroke: #00aeff;
+    }
+
+    #svg-mobile-menu-site-button{
+        fill: #f8b700;
+        stroke: #f8b700;
+    }
 }
 
 
