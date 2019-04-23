@@ -36,6 +36,12 @@ window.onload = function() {
         headerSearchClose = document.getElementById('header-search-close'),
         buttonSvgSearch = $qS('[data-name=button-svg-search]'),
 
+        mobileShadow = $qS('[data-name=mobile-shadow]'),
+        mobileMenuSiteButton = $qS('[data-name=mobile-menu-site-button]'),
+        mobileMenuProfileButton = $qS('[data-name=mobile-menu-profile-button]'),
+        headerMobileMenu = $qS('[data-name=header-mobile-menu]'),
+        headerMobileLogin = $qS('[data-name=header-mobile-login]'),
+
         widthScreen = document.documentElement.clientWidth;
 
     // let arrowUp = document.createTextNode("▲");
@@ -205,6 +211,26 @@ window.onload = function() {
         else buttonSvgSearch.className = 'button-svg-search';
     };
 
+    let mobileMenuSiteVisible = function() {
+        headerMobileMenu.className = 'header-mobile-menu element-visible';
+        mobileShadow.className = 'mobile-shadow element-visible';
+    };
+
+    let mobileMenuSiteHidden = function() {
+        headerMobileMenu.className = 'header-mobile-menu';
+        mobileShadow.className = 'mobile-shadow';
+    };
+
+    let mobileMenuProfileVisible = function() {
+        headerMobileLogin.className = 'header-mobile-login element-visible';
+        mobileShadow.className = 'mobile-shadow element-visible';
+    };
+
+    let mobileMenuProfileHidden = function() {
+        headerMobileLogin.className = 'header-mobile-login';
+        mobileShadow.className = 'mobile-shadow';
+    };
+
     addEventListener('click', function(e) {
         if (e.target === headerMenu || e.target === arrowMenu) {
             if (hiddenMenu.className === "hidden-menu") visibleMenuSites();
@@ -228,7 +254,11 @@ window.onload = function() {
         else if (headerSearchInput.className === 'header-search-input' &&
             (e.target === headerSearchClose || e.target !== headerSearchInput)) searchHidden();
 
+        if (e.target === mobileMenuSiteButton) mobileMenuSiteVisible();
+        else if (e.target === mobileShadow) mobileMenuSiteHidden();
 
+        if (e.target === mobileMenuProfileButton ) mobileMenuProfileVisible();
+        else if (e.target === mobileShadow) mobileMenuProfileHidden();
     });
 
     addEventListener('scroll', function(){

@@ -9,7 +9,7 @@ body {
     padding: 0;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1060px) {
     .header {
         background: #111111;
     }

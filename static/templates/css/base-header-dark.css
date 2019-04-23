@@ -36,9 +36,6 @@ a {
     display: none;
 }
 
-
-
-
 .header {
     position: relative;
     height: 39px;
@@ -679,11 +676,11 @@ li > a:hover {
 }
 
 .element-visible {
-    display: block;
+    display: block !important;
 }
 
 .element-hidden {
-    display: none;
+    display: none !important;
 }
 
 .element-fixed-top {
@@ -696,7 +693,7 @@ li > a:hover {
         max-width: 1600px; }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1060px) {
     .header {
         height: 48px;
     }
@@ -704,23 +701,51 @@ li > a:hover {
     .header-desktop {
         display: none;
     }
+
     .header-mobile {
         display: block;
     }
 
+    .header-mobile-logo {
+        display: block;
+        position: absolute;
+        width: 50%;
+        left: 25%;
+        text-align: center;
+    }
+
+    .header-mobile-menu-site-img,
+    .header-mobile-menu-profile-img {
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        z-index: 0;
+    }
+
+    .header-mobile-menu-site-button,
     .header-mobile-menu-profile-button {
         height: 48px;
         width: 48px;
-        float: right;
+        position: absolute;
+        top: 0;
         cursor: pointer;
+        z-index: 1;
     }
 
-    .header-mobile-menu-site-button{
-        height: 48px;
-        width: 48px;
-        float: left;
+    .header-mobile-menu-site-img,
+    .header-mobile-menu-site-button {
         padding: 12px;
-        cursor: pointer;
+        left: 0;
+    }
+
+    .header-mobile-menu-profile-img,
+    .header-mobile-menu-profile-button{
+        right: 0;
+    }
+
+    #svg-mobile-menu-site-button{
+        fill: #f8b700;
+        stroke: #f8b700;
     }
 
     #svg-mobile-menu-profile-button{
@@ -728,10 +753,60 @@ li > a:hover {
         stroke: #00aeff;
     }
 
-    #svg-mobile-menu-site-button{
-        fill: #f8b700;
-        stroke: #f8b700;
+    .mobile-shadow {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 98;
     }
+
+    .header-mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 400px;
+        z-index: 101;
+    }
+
+    .header-mobile-menu-site {
+        height: 100%;
+        margin-right: 48px;
+        background-color: #151a23;
+    }
+
+    .header-mobile-login {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 400px;
+        z-index: 101;
+    }
+
+    .header-mobile-menu-profile {
+        height: 100%;
+        margin-left: 48px;
+        background-color: #151a23;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
