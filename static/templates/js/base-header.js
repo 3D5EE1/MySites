@@ -40,7 +40,9 @@ window.onload = function() {
         mobileMenuSiteButton = $qS('[data-name=mobile-menu-site-button]'),
         mobileMenuProfileButton = $qS('[data-name=mobile-menu-profile-button]'),
         headerMobileMenu = $qS('[data-name=header-mobile-menu]'),
-        headerMobileLogin = $qS('[data-name=header-mobile-login]'),
+        headerMobileProfile = $qS('[data-name=header-mobile-profile]'),
+        headerMobileProfileCloser = $qS('[data-name=header-mobile-menu-profile-closer]'),
+        closeMobileMenuProfileButton = $qS('[data-name=close-mobile-menu-profile-button]'),
 
         widthScreen = document.documentElement.clientWidth;
 
@@ -222,12 +224,12 @@ window.onload = function() {
     };
 
     let mobileMenuProfileVisible = function() {
-        headerMobileLogin.className = 'header-mobile-login element-visible';
+        headerMobileProfile.className = 'header-mobile-profile-visible';
         mobileShadow.className = 'mobile-shadow element-visible';
     };
 
     let mobileMenuProfileHidden = function() {
-        headerMobileLogin.className = 'header-mobile-login';
+        headerMobileProfile.className = 'header-mobile-profile-hidden';
         mobileShadow.className = 'mobile-shadow';
     };
 
@@ -255,10 +257,11 @@ window.onload = function() {
             (e.target === headerSearchClose || e.target !== headerSearchInput)) searchHidden();
 
         if (e.target === mobileMenuSiteButton) mobileMenuSiteVisible();
-        else if (e.target === mobileShadow) mobileMenuSiteHidden();
+        else if (e.target === mobileShadow ) mobileMenuSiteHidden();
 
         if (e.target === mobileMenuProfileButton ) mobileMenuProfileVisible();
-        else if (e.target === mobileShadow) mobileMenuProfileHidden();
+        else if (e.target === mobileShadow || e.target === headerMobileProfileCloser ||
+        e.target === closeMobileMenuProfileButton) mobileMenuProfileHidden();
     });
 
     addEventListener('scroll', function(){

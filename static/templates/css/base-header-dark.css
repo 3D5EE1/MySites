@@ -779,11 +779,11 @@ li > a:hover {
         background-color: #151a23;
     }
 
-    .header-mobile-login {
+    .header-mobile-profile {
         display: none;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -353px;
         bottom: 0;
         width: 100%;
         max-width: 400px;
@@ -796,13 +796,99 @@ li > a:hover {
         background-color: #151a23;
     }
 
+    .header-mobile-menu-profile-closer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 48px;
+        height: 100%;
+    }
+
+    .header-mobile-profile-visible {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 400px;
+        z-index: 101;
+        animation: mobileProfileVisible .2s linear;
+    }
+
+    @keyframes mobileProfileVisible {
+        0% {
+            right: -353px;
+        }
+
+        100% {
+            right: 0;
+        }
+    }
+
+    .header-mobile-profile-hidden {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        bottom: 0;
+        width: 100%;
+        max-width: 400px;
+        z-index: 101;
+        animation: mobileProfileHidden .2s linear;
+    }
 
 
+    @keyframes mobileProfileHidden {
+        0% {
+            right: 0;
+        }
 
+        100% {
+            right: -400px;
+        }
+    }
 
+    #close-mobile-site-menu {
+        margin: 16px;
+        fill: #f8b700;
+        stroke: #f8b700;
+        stroke-width: 3;
+    }
 
+    #close-mobile-site-menu-button {
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        top: 0;
+        left: 0;
+    }
 
+    #close-mobile-menu-profile {
+        float: right;
+        margin: 16px;
+        fill: #00aeff;
+        stroke: #00aeff;
+        stroke-width: 3;
+    }
 
+    #close-mobile-menu-profile-button {
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        top: 0;
+        right: 0;
+    }
+
+    .header-mobile-logout-logo a{
+        display: block;
+        text-decoration: none;
+        height: 72px;
+        width: 100%;
+        color: #0e9fed;
+        font-size: 48px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, .15);
+    }
 
 
 
