@@ -36,9 +36,16 @@ window.onload = function() {
         headerSearchClose = document.getElementById('header-search-close'),
         buttonSvgSearch = $qS('[data-name=button-svg-search]'),
 
-        mobileShadow = $qS('[data-name=mobile-shadow]'),
+        mobileShadowSite = $qS('[data-name=mobile-shadow-site]'),
+        mobileShadowProfile = $qS('[data-name=mobile-shadow-profile]'),
+        shadowProfileButton = $qS('[data-name=shadow-profile-button]'),
+        shadowMenuButton = $qS('[data-name=shadow-menu-button]'),
+
         mobileMenuSiteButton = $qS('[data-name=mobile-menu-site-button]'),
         mobileMenuProfileButton = $qS('[data-name=mobile-menu-profile-button]'),
+        headerMobileMenuSiteCloser = $qS('[data-name=header-mobile-menu-site-closer]'),
+        closeMobileSiteMenuButton = $qS('[data-name=close-mobile-site-menu-button]'),
+
         headerMobileMenu = $qS('[data-name=header-mobile-menu]'),
         headerMobileProfile = $qS('[data-name=header-mobile-profile]'),
         headerMobileProfileCloser = $qS('[data-name=header-mobile-menu-profile-closer]'),
@@ -214,23 +221,23 @@ window.onload = function() {
     };
 
     let mobileMenuSiteVisible = function() {
-        headerMobileMenu.className = 'header-mobile-menu element-visible';
-        mobileShadow.className = 'mobile-shadow element-visible';
+        headerMobileMenu.className = 'header-mobile-menu-visible';
+        mobileShadowSite.className = 'mobile-shadow element-visible';
     };
 
     let mobileMenuSiteHidden = function() {
-        headerMobileMenu.className = 'header-mobile-menu';
-        mobileShadow.className = 'mobile-shadow';
+        headerMobileMenu.className = 'header-mobile-menu-hidden';
+        mobileShadowSite.className = 'mobile-shadow';
     };
 
     let mobileMenuProfileVisible = function() {
         headerMobileProfile.className = 'header-mobile-profile-visible';
-        mobileShadow.className = 'mobile-shadow element-visible';
+        mobileShadowProfile.className = 'mobile-shadow element-visible';
     };
 
     let mobileMenuProfileHidden = function() {
         headerMobileProfile.className = 'header-mobile-profile-hidden';
-        mobileShadow.className = 'mobile-shadow';
+        mobileShadowProfile.className = 'mobile-shadow';
     };
 
     addEventListener('click', function(e) {
@@ -257,11 +264,20 @@ window.onload = function() {
             (e.target === headerSearchClose || e.target !== headerSearchInput)) searchHidden();
 
         if (e.target === mobileMenuSiteButton) mobileMenuSiteVisible();
-        else if (e.target === mobileShadow ) mobileMenuSiteHidden();
+        else if (e.target === mobileShadowSite || e.target === headerMobileMenuSiteCloser ||
+        e.target === closeMobileSiteMenuButton) mobileMenuSiteHidden();
 
         if (e.target === mobileMenuProfileButton ) mobileMenuProfileVisible();
-        else if (e.target === mobileShadow || e.target === headerMobileProfileCloser ||
+        else if (e.target === mobileShadowProfile || e.target === headerMobileProfileCloser ||
         e.target === closeMobileMenuProfileButton) mobileMenuProfileHidden();
+
+        if (e.target === shadowProfileButton) {
+            mobileMenuSiteHidden();
+            mobileMenuProfileVisible();
+        } else if (e.target === shadowMenuButton) {
+            mobileMenuProfileHidden();
+            mobileMenuSiteVisible();
+        }
     });
 
     addEventListener('scroll', function(){
@@ -294,6 +310,10 @@ window.onload = function() {
     addEventListener('resize', function(){
         if (widthScreen !== document.documentElement.clientWidth) {
             shadow.click();
+            mobileShadowSite.click();
+            mobileShadowProfile.click();
+            headerMobileMenu.className = 'header-mobile-menu';
+            headerMobileProfile.className = 'header-mobile-profile';
         }
     })
 };
