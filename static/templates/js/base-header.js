@@ -54,6 +54,11 @@ window.onload = function() {
         headerMobileProfileCloser = $qS('[data-name=header-mobile-menu-profile-closer]'),
         closeMobileMenuProfileButton = $qS('[data-name=close-mobile-menu-profile-button]'),
 
+        headerMobileProfileMmenuSites = $qS('[data-name=header-mobile-profile-menu-sites]'),
+        headerMobileMySitesButton = $qS('[data-name=header-mobile-my-sites-button]'),
+        headerMobileArrow = $qS('[data-name=header-mobile-arrow]'),
+        hiddenMobileMenuItems = $qS('[data-name=hidden-mobile-menu-items]'),
+
         widthScreen = document.documentElement.clientWidth;
 
     // let arrowUp = document.createTextNode("▲");
@@ -247,6 +252,19 @@ window.onload = function() {
         body.className = '';
     };
 
+    let headerMobileMenuSitesVisible = function() {
+        hiddenMobileMenuItems.className = "hidden-mobile-menu-items-visible";
+        headerMobileProfileMmenuSites.className = "header-mobile-profile-menu-sites object-active";
+        headerMobileArrow.innerHTML = "▴";
+    };
+
+    let headerMobileMenuSitesHidden = function() {
+        hiddenMobileMenuItems.className = "hidden-mobile-menu-items-hidden";
+        headerMobileProfileMmenuSites.className = "header-mobile-profile-menu-sites";
+        headerMobileArrow.innerHTML = "▾";
+    };
+
+
     addEventListener('click', function(e) {
         if (e.target === headerMenu || e.target === arrowMenu) {
             if (hiddenMenu.className === "hidden-menu") visibleMenuSites();
@@ -285,6 +303,13 @@ window.onload = function() {
             mobileMenuProfileHidden();
             mobileMenuSiteVisible();
         }
+
+        if (e.target === headerMobileMySitesButton
+            && hiddenMobileMenuItems.className !== "hidden-mobile-menu-items-visible") headerMobileMenuSitesVisible();
+        else if (e.target === headerMobileMySitesButton
+            || e.target === headerMobileProfileCloser
+            || e.target === mobileShadowProfile
+            || e.target === closeMobileMenuProfileButton) headerMobileMenuSitesHidden();
     });
 
     addEventListener('scroll', function(){
@@ -319,6 +344,7 @@ window.onload = function() {
             shadow.click();
             mobileShadowSite.click();
             mobileShadowProfile.click();
+            headerSearchInput.className = 'header-search-input-start';
             headerMobileMenu.className = 'header-mobile-menu';
             headerMobileProfile.className = 'header-mobile-profile';
         }
