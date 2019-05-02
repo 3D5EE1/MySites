@@ -25,7 +25,7 @@ def careers(request):
 
 
 def about(request):
-    return render(request, 'app_about_me/about.html')
+    return render(request, 'app_about_me/about-site.html')
 
 
 def support(request):

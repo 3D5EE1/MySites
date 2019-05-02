@@ -1,0 +1,1 @@
+default_app_config = 'app_about_site.apps.AboutMeConfig'

@@ -1,37 +1,57 @@
 {% extends 'acc-base.html' %}
 {% load static %}
 
+
 {% block meta %}
     <meta name="description" content="страница авторизация разработчик Евгений Гурин.">
     <meta name="keywords" content="Evgeny Gurin, registration, rypy.ru, Python, Django, JS">
 {% endblock %}
 
+
 {% block icon %}
     <link rel="icon" href="{% static 'app_account/img/Blue-user.ico' %}" type="ico">
 {% endblock %}
+
 
 {% block base_css %}
     <link rel="stylesheet" href="{% static 'templates/css/base-header-dark.css' %}">
     <link rel="stylesheet" href="{% static 'templates/css/acc-base-footer.css' %}">
 {% endblock base_css %}
 
+
 {% block css %}
     <link rel="stylesheet" href="{% static 'app_about_me/css/support.css' %}">
 {% endblock %}
+
 
 {% block title %}
     Служба поддержки rypy.ru entertainment
 {% endblock %}
 
-{% block login %}
-    <a id="header-link-login" href="{% url 'login' site_redirect='support' %}">Вход</a>
-{% endblock %}
 
 {% block logout %}
-    <a id="header-link-logout" href="{% url 'about_me_logout' %}">Выход</a>
+    {% url 'about_me_logout' %}
 {% endblock %}
 
-{% block navbar %}{% endblock %}
+
+{% block mobile_logout %}
+    {% url 'about_me_logout' %}
+{% endblock mobile_logout %}
+
+
+{% block login %}
+    {% url 'login' site_redirect='support' %}
+{% endblock %}
+
+
+{% block mobile_login %}
+    {% url 'login' site_redirect='support' %}
+{% endblock mobile_login %}
+
+
+{% block navbar %}
+{% endblock %}
+
 
 {% block acc-content %}
     <div class="content">
@@ -39,6 +59,10 @@
     </div>
 {% endblock acc-content %}
 
-{% block footer %}{% endblock footer %}
 
-{% block js %}{% endblock %}
+{% block footer %}
+{% endblock footer %}
+
+
+{% block js %}
+{% endblock %}

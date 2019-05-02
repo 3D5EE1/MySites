@@ -7,7 +7,9 @@ window.onload = function() {
         return document.querySelectorAll(SelectorAll)
     }
 
-    let shadow = $qS('[data-name=shadow]'),
+    let body = $qS('[data-name=body]'),
+
+        shadow = $qS('[data-name=shadow]'),
         headerMenu = $qS('[data-name=header-menu]'),
         hiddenMenu = $qS('[data-name=hidden-menu]'),
         arrowMenu = $qS('[data-name=arrow]'),
@@ -30,6 +32,7 @@ window.onload = function() {
         headerLanguagesMenuInactive = $qS('[data-name=header-languages-menu]'),
         svgSearchBlock = $qS('[data-name=svg-search-block]'),
         svgSearch = document.getElementById('svg-search'),
+        svgSearchObject = document.getElementById('svg-search-object'),
         svgLanguages = document.getElementById('svg-languages'),
         headerSearchButtonClose = $qS('[data-name=header-search-button-close]'),
         headerSearchInput = document.getElementById('header-search-input'),
@@ -223,21 +226,25 @@ window.onload = function() {
     let mobileMenuSiteVisible = function() {
         headerMobileMenu.className = 'header-mobile-menu-visible';
         mobileShadowSite.className = 'mobile-shadow element-visible';
+        body.className = 'not-scroll';
     };
 
     let mobileMenuSiteHidden = function() {
         headerMobileMenu.className = 'header-mobile-menu-hidden';
         mobileShadowSite.className = 'mobile-shadow';
+        body.className = '';
     };
 
     let mobileMenuProfileVisible = function() {
         headerMobileProfile.className = 'header-mobile-profile-visible';
         mobileShadowProfile.className = 'mobile-shadow element-visible';
+        body.className = 'not-scroll';
     };
 
     let mobileMenuProfileHidden = function() {
         headerMobileProfile.className = 'header-mobile-profile-hidden';
         mobileShadowProfile.className = 'mobile-shadow';
+        body.className = '';
     };
 
     addEventListener('click', function(e) {
@@ -259,7 +266,7 @@ window.onload = function() {
         } else if (e.target !== headerBlockLogout && headerBlockLogout &&
             headerBlockLogout.className === "header-block-logout-visible" || e.target === shadowLogin) hiddenLogoutMenu();
 
-        if (e.target === svgSearch || e.target === svgSearchBlock) searchVisible();
+        if (e.target === svgSearch || e.target === svgSearchBlock || e.target === svgSearchObject) searchVisible();
         else if (headerSearchInput.className === 'header-search-input' &&
             (e.target === headerSearchClose || e.target !== headerSearchInput)) searchHidden();
 
