@@ -1,0 +1,321 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block meta %}
+{% endblock %}
+
+
+{% block icon %}
+    <link rel="icon" href="{% static 'app_company/img/company.ico' %}" type="ico">
+{% endblock %}
+
+
+{% block css %}
+{% endblock %}
+
+
+{% block title %}
+    company it first
+{% endblock %}
+
+
+{% block site_logo %}
+    ART_3D_LOGO
+{% endblock site_logo %}
+
+
+{% block mobile_menu_site %}
+{% endblock mobile_menu_site %}
+
+
+{% block logout %}
+    {% url 'company_logout' %}
+{% endblock %}
+
+
+{% block mobile_logout %}
+    {% url 'company_logout' %}
+{% endblock mobile_logout %}
+
+
+{% block login %}
+    {% url 'login' site_redirect='company_it_one_page' %}
+{% endblock %}
+
+
+{% block mobile_login %}
+    {% url 'login' site_redirect='company_it_one_page' %}
+{% endblock mobile_login %}
+
+
+{% block navbar %}
+{% endblock %}
+
+
+{% block content %}
+    <div id="shadow-login">
+        <form class="shadow-form" method="post">
+            {% csrf_token %}
+            <div id="error" style="{{ show_error }}">
+                {{ login_error }}
+            </div>
+            <div class="group">
+                <label for="">
+                    <input type="text" name="email"  class="email" required>
+                </label>
+                <span class="bar form"></span>
+                <label class="label-form">Е-мэил</label>
+            </div>
+            <div class="group">
+                <input type="password" name="password"  class="password" required>
+                <span class="bar form"></span>
+                <label class="label-form">Пароль</label>
+            </div>
+            <button class="button-form" name="login" type="submit">Вход</button>
+        </form>
+    </div>
+    <div id="shadow-create-acc" style="{{ show_error_registration }}">
+        <form  class="shadow-form" method="post" style="height: 70vh;{{ reg_err_padding }}">
+            {% csrf_token %}
+            {% for field in creation_form %}
+                <div id="error-registration" style="{{ show_error_registration }}">
+                    {% if field.help_text %}
+                      <small style="display: none">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <div class="group">
+                <input type="text" name="username"  class="username" required>
+                <span class="bar form"></span>
+                <label class="label-form">Имя пользователя</label>
+            </div>
+            <div class="group">
+                <input type="email" name="email"  class="email" required>
+                <span class="bar form"></span>
+                <label class="label-form">Е-мэил</label>
+            </div>
+            <div class="group">
+                <input type="password" name="password1"  class="password" required>
+                <span class="bar form"></span>
+                <label class="label-form">Пароль</label>
+            </div>
+            <div class="group">
+                <input type="password" name="password2"  class="password" required>
+                <span class="bar form"></span>
+                <label class="label-form">Пароль повторно</label>
+            </div>
+            <button class="button-form" name="creation" type="submit">Вход</button>
+        </form>
+    </div>
+    <div class="logo"></div>
+    <div class="text-logo">ItMagistr</div>
+    {% if user.is_authenticated %}
+        <div id="shadow">
+            <div id="login-params">
+                <div id="cube"></div>
+                <a href="{% url 'logout' %}">
+                    <span id="exit">Выход</span>
+                </a>
+            </div>
+        </div>
+        <div id="login">{{ user.email }}
+            <div id="arrow">&#9662</div>
+        </div>
+    {% else %}
+        <div id="shadow">
+            <div id="login-params" style="width: 300px; height: 160px">
+                <div id="cube"></div>
+                <div class="login-params enter">Вход</div>
+                <div class="login-params create">Создать учетную запись</div>
+            </div>
+        </div>
+        <div id="login">Моя учетная запись
+            <div id="arrow">&#9662</div>
+        </div>
+    {% endif %}
+    <video autoplay loop muted poster="{% static 'app_site/img/desktop_snapshot.jpg' %}"  style="width: 100%">
+        <source src="https://coubsecure-s.akamaihd.net/get/b84/p/coub/simple/cw_file/ed36ea3e865/7b1b1c5478cf0cb2e9c04/gifv_1471629803_gifv.mp4" type="video/mp4">
+    </video>
+    <div class="scrolling-content">
+        <div id="scrolling-area">
+            <div class="copy-section topic-itmagistr">
+                <div class="copy-content">
+                    <h1 class="animate-text">
+                        IT Magistr
+                    </h1>
+                    <p class="animate-body">
+                        Мы занимаемся интеграцией ИТ решений в бизнес как на коммерческих платформах, так и на бесплатных (свободное ПО).
+
+                        Все, предлагаемые нами решения, 100% надежные, и успешно используются нашими клиентами. Вы получаете полный спектр услуг не переплачивая за Бренд и раскрученность.
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-virtual">
+                <div class="copy-content">
+                    <h1 class="first-animate-text">
+                        Аренда
+                    </h1>
+                    <h1 class="second-animate-text">
+                        виртуальных серверов
+                    </h1>
+                    <p class="animate-body">
+                        На наших сереврах может быть установлена любая операционная система — Windows или Linux
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-setting-virtual">
+                <div class="copy-content">
+                    <h1 class="first-animate-text">
+                        Настройка
+                    </h1>
+                    <h1 class="second-animate-text">
+                        систем виртуализации
+                    </h1>
+                    <p class="animate-body">
+                        Системы виртуализации имеют неоспоримые преимущества по сравнению с физической инфраструктурой.
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-phone">
+                <div class="copy-content">
+                    <h1 class="first-animate-text">
+                        Аналоговая / IP
+                    </h1>
+                    <h1 class="second-animate-text">
+                        телефония
+                    </h1>
+                    <p class="animate-body">
+                        Мы предлагает решения на базе высокотехнологичного оборудования основных мировых производителей в области производства средств связи.
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-mail">
+                <div class="copy-content">
+                    <h1 class="first-animate-text">
+                        Настройка
+                    </h1>
+                    <h1 class="second-animate-text">
+                        почтовых систем
+                    </h1>
+                    <p class="animate-body">
+                        Организуем Вашу собственную почтовую систему, состоящую из почтового сервера и минимум одного почтового шлюза.
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-security">
+                <div class="copy-content">
+                    <h1 class="animate-text">
+                        ИТ аудит
+                    </h1>
+                    <p class="animate-body">
+                        Оценка текущего состояния ИТ-инфраструктуры и составление рекомендаций по повышению ее эффективности, локализация дефектов и обеспечение безопасности.
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-1c">
+                <div class="copy-content">
+                    <h1 class="animate-text">
+                        Решения на базе 1С
+                    </h1>
+                    <p class="animate-body">
+                        Мы предлагаем решение 1С в разных вариантах (файловые базы, MS SQL, PosGres SQL) и на разных платформах (коммерческое и свободное ПО — Microsoft и Linux).
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-installation">
+                <div class="copy-content">
+                    <h1 class="first-animate-text">
+                        Монтаж СКС
+                    </h1>
+                    <h1 class="second-animate-text">
+                        Монтаж видеонаблюдения
+                    </h1>
+                    <p class="animate-body">
+                        Кабельные системы являются базисом, на котором строятся все основные компоненты информационно-вычислительных комплексов предприятий и организаций.
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-outsourcing">
+                <div class="copy-content">
+                    <h1 class="animate-text">
+                        ИТ аутсорсинг
+                    </h1>
+                    <p class="animate-body">
+                        На все услуги, оказываемые компанией по договору абонентского обслуживания компьютеров, предоставляется гарантия.
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-request">
+                <div class="copy-content">
+                    <h1 class="animate-text" style="{{ hidden }};">
+                        Написать запрос
+                    </h1>
+                    <h1 id="request-complete" class="animate-text" style="{{ show }};">
+                        Ваш запрос отправлен !
+                    </h1>
+                    <p class="animate-body" style="{{ hidden }};">
+                        Свяжитесь с нами, чтобы обсудить ваш проект, и мы вышлем вам оценку, основанную на ваших потребностях.
+                    </p>
+                </div>
+            </div>
+
+            <div class="copy-section topic-form" style="{{ hidden }};">
+                <div class="copy-content">
+                    <div id="form-section">
+                        <form id="request-form" method="post">{% csrf_token %}
+                            <div class="app">
+                                <label>
+                                    <input type="text" name="application" value="users request" style="display:none"/>
+                                </label>
+                            </div>
+                            <div class="group">
+                                <input type="text" name="name"  class="name" required>
+                                <span class="bar"></span>
+                                <label>Имя</label>
+                            </div>
+                            <div class="group">
+                                <input type="text" name="company" class="company" required>
+                                <span class="bar"></span>
+                                <label>Компания</label>
+                            </div>
+                            <div class="group">
+                                <input type="text" name="email" class="company" required>
+                                <span class="bar"></span>
+                                <label>Адрес электронной почты</label>
+                            </div>
+                            <div class="group">
+                                <textarea name="message" required></textarea>
+                                <span class="bar"></span>
+                                <label>Опишите ваш вопрос</label>
+                            </div>
+                            <button id="submit-request" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mouse-indicator"></div>
+    <div class="request" style="{{ hidden }};">Написать запрос</div>
+{% endblock content %}
+
+
+{% block footer %}
+{% endblock %}
+
+
+{% block js %}
+{% endblock %}

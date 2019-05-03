@@ -3,22 +3,22 @@
 
 
 {% block meta %}
-{% endblock %}
+{% endblock meta %}
 
 
 {% block icon %}
     <link rel="icon" href="{% static 'app_art3d/img/art3d.ico' %}" type="ico">
-{% endblock %}
+{% endblock icon %}
 
 
 {% block css %}
     <link rel="stylesheet" href="{%  static 'app_art3d/css/art3d.css' %}">
-{% endblock %}
+{% endblock css %}
 
 
 {% block title %}
     ART 3D
-{% endblock %}
+{% endblock title %}
 
 
 {% block site_logo %}
@@ -32,7 +32,7 @@
 
 {% block logout %}
     {% url 'art3d_logout' %}
-{% endblock %}
+{% endblock logout  %}
 
 
 {% block mobile_logout %}
@@ -42,7 +42,7 @@
 
 {% block login %}
     {% url 'login' site_redirect='art3d' %}
-{% endblock %}
+{% endblock login %}
 
 
 {% block mobile_login %}
@@ -85,4 +85,4 @@
 
 
 {% block js %}
-{% endblock %}
+{% endblock js  %}

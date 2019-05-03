@@ -18,8 +18,8 @@ from app_company import views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('', views.company, name='app_company'),
-    path('company-jino1', views.company_jino1, name='company_jino1'),
+    path('company-it-first', views.company_it_one_page, name='company_it_one_page'),
+    path('company-it-second', views.company_it_domain, name='company_it_domain'),
     path('logout/', auth_views.LogoutView.as_view(next_page='app_company'), name='company_logout'),
 ]
 
