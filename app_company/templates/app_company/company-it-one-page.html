@@ -12,6 +12,7 @@
 
 
 {% block css %}
+    <link rel="stylesheet" href="{% static 'app_company/css/company-it-one-page.css' %}">
 {% endblock %}
 
 
@@ -54,89 +55,8 @@
 
 
 {% block content %}
-    <div id="shadow-login">
-        <form class="shadow-form" method="post">
-            {% csrf_token %}
-            <div id="error" style="{{ show_error }}">
-                {{ login_error }}
-            </div>
-            <div class="group">
-                <label for="">
-                    <input type="text" name="email"  class="email" required>
-                </label>
-                <span class="bar form"></span>
-                <label class="label-form">Е-мэил</label>
-            </div>
-            <div class="group">
-                <input type="password" name="password"  class="password" required>
-                <span class="bar form"></span>
-                <label class="label-form">Пароль</label>
-            </div>
-            <button class="button-form" name="login" type="submit">Вход</button>
-        </form>
-    </div>
-    <div id="shadow-create-acc" style="{{ show_error_registration }}">
-        <form  class="shadow-form" method="post" style="height: 70vh;{{ reg_err_padding }}">
-            {% csrf_token %}
-            {% for field in creation_form %}
-                <div id="error-registration" style="{{ show_error_registration }}">
-                    {% if field.help_text %}
-                      <small style="display: none">{{ field.help_text }}</small>
-                    {% endif %}
-                    {% for error in field.errors %}
-                        <p style="color: red">{{ error }}</p>
-                    {% endfor %}
-                </div>
-            {% endfor %}
-            <div class="group">
-                <input type="text" name="username"  class="username" required>
-                <span class="bar form"></span>
-                <label class="label-form">Имя пользователя</label>
-            </div>
-            <div class="group">
-                <input type="email" name="email"  class="email" required>
-                <span class="bar form"></span>
-                <label class="label-form">Е-мэил</label>
-            </div>
-            <div class="group">
-                <input type="password" name="password1"  class="password" required>
-                <span class="bar form"></span>
-                <label class="label-form">Пароль</label>
-            </div>
-            <div class="group">
-                <input type="password" name="password2"  class="password" required>
-                <span class="bar form"></span>
-                <label class="label-form">Пароль повторно</label>
-            </div>
-            <button class="button-form" name="creation" type="submit">Вход</button>
-        </form>
-    </div>
     <div class="logo"></div>
     <div class="text-logo">ItMagistr</div>
-    {% if user.is_authenticated %}
-        <div id="shadow">
-            <div id="login-params">
-                <div id="cube"></div>
-                <a href="{% url 'logout' %}">
-                    <span id="exit">Выход</span>
-                </a>
-            </div>
-        </div>
-        <div id="login">{{ user.email }}
-            <div id="arrow">&#9662</div>
-        </div>
-    {% else %}
-        <div id="shadow">
-            <div id="login-params" style="width: 300px; height: 160px">
-                <div id="cube"></div>
-                <div class="login-params enter">Вход</div>
-                <div class="login-params create">Создать учетную запись</div>
-            </div>
-        </div>
-        <div id="login">Моя учетная запись
-            <div id="arrow">&#9662</div>
-        </div>
-    {% endif %}
     <video autoplay loop muted poster="{% static 'app_site/img/desktop_snapshot.jpg' %}"  style="width: 100%">
         <source src="https://coubsecure-s.akamaihd.net/get/b84/p/coub/simple/cw_file/ed36ea3e865/7b1b1c5478cf0cb2e9c04/gifv_1471629803_gifv.mp4" type="video/mp4">
     </video>

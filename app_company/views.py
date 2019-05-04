@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 
 def company_it_one_page(request):
-    return render(request, 'app_company/company_it_one_page.html')
+    return render(request, 'app_company/company-it-one-page.html')
 
 
 def company_it_domain(request):
-    return render(request, 'app_company/company_it_domain.html')
+    return render(request, 'app_company/company-it-domain.html')
